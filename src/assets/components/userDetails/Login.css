@@ -1,0 +1,177 @@
+.login-form-main{
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    justify-content: center;
+}
+.login-form-wrapper{
+  width: 50%;
+}
+.login-form{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 2rem;
+}
+.login-form-wrapper h2{
+text-transform: capitalize;
+font-weight: 900;
+}
+.form-control{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+.sf-password{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.fpwssd{
+    color: #1882bb;
+}
+.fpwssd:hover{
+    color: #0cc2aa;
+}
+.form-control label{
+   font-weight: 500;
+}
+.form-control input{
+   outline: none;
+   border: 2px solid #e4e4e4;
+   padding: 0.6rem 0.8rem;
+   border-radius: 0.2rem;
+}
+
+.save-passsword{
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+.login-option-headings p{
+    color: #ababab;
+    font-size: 0.9rem;
+}
+.login-option-headings{
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+}
+.divider{
+    width: 100px;
+    height: 1.6px;
+    background-color: #e4e4e4;
+}
+.login-form-submit-btn{
+    margin: 0.5rem 0;
+}
+.login-form-submit-btn button{
+    width: 100%;
+    border: none;
+    padding: 0.6rem 0.8rem;
+    border-radius: 0.2rem;
+    background-color: #4E71FF;
+    text-transform: capitalize;
+    font-weight: 500;
+    color: #fff;
+    letter-spacing: 1px;
+    font-size: 1.02rem;
+}
+.other-login-option{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.google-github-btn-container{
+    margin:1.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+.google-github-btn-container button{
+    padding: 0.6rem 0.8rem;
+    border-radius: 0.2rem;
+    border: 2px solid #e4e4e4;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+.create-account-text{
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.create-account-text-link {
+    color: #0065F8;
+    cursor: pointer;
+    font-weight: 500;
+}
+.create-account-text-link:hover {
+    color: #0058db;
+}
+
+/* Side Container Styles */
+.side-form-container{
+    width: 50%;
+    background-image: linear-gradient(to top, #0a4fd8 0%, #91b5fc 100%, #6b8cce 100%, #a2b6df 100%);
+    padding: 1.5rem;
+    border-radius: 0.2rem;
+}
+.side-form-container h2{
+    line-height: 2rem;
+    font-size: 2.2rem;
+}
+.side-form-styled-text{
+    color: #006d75;
+}
+.challenges-count  {
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   gap: 0.4rem;
+   margin-top: 2.3rem;
+   margin-bottom: 1.9rem;
+}
+.challenges-count h3 {
+   display: flex;
+   flex-direction: column;
+   justify-content: left;
+   gap: 0.4rem;
+   font-size: 1.8rem;
+   color: #f0f0f0;
+}
+.challenges-count h3 span{
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: #ebebeb;
+}
+.side-form-btn-container{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #0063f83d;
+    border-radius: 0.2rem;
+}
+.side-form-btn-container p{
+    color: #ebebeb;
+}
+.side-form-btn-container button{
+    width: 100%;
+    border: none;
+    padding: 0.8rem 0.8rem;
+    border-radius: 0.2rem;
+    background-color: #003f9c;
+    text-transform: capitalize;
+    font-weight: 500;
+    color: #fff;
+    letter-spacing: 1px;
+    font-size: 0.8rem; 
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
