@@ -2,6 +2,7 @@ import React from 'react';
 import '../userDetails/Login.css';
 import { IoLogoGithub } from "react-icons/io";
 import { FcGoogle } from "react-icons/fc";
+import { IoEyeOffOutline } from "react-icons/io5";
 
 
 const LoginForm = () => {
@@ -33,6 +34,7 @@ const LoginForm = () => {
             <div className="form-control">
                 <label htmlFor="">Password</label>
                 <input type="email" name="" placeholder='Enter your password' />
+                <IoEyeOffOutline className='psswd-icon'/>
             </div>
             <div className="form-control sf-password">
                 <div className="save-passsword">
