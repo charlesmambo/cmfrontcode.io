@@ -2,6 +2,7 @@
     display: flex;
     gap: 4rem;
     justify-content: center;
+    position: relative;
 }
 .login-form-wrapper{
   width: 50%;
@@ -201,6 +202,13 @@ font-weight: 900;
     background-image: linear-gradient(to right, #688daa 0%, #204b6c 100%);
 }
 
+.reset-psswd-container {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 @media only screen and (max-width: 600px) {
   body {
     background-color: lightblue;
@@ -217,6 +225,9 @@ font-weight: 900;
 .side-form-container{
 background-image: linear-gradient(to top, #209cff 0%, #68e0cf 100%);
 }
+.reset-psswd-container {
+    top: 12%;
+}
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -229,5 +240,8 @@ background-image: linear-gradient(to top, #209cff 0%, #68e0cf 100%);
 .side-form-container{
     width: unset;
     background-image: linear-gradient(to right, #0acffe 0%, #0f21bc 100%);
+}
+.reset-psswd-container {
+    top: 10%;
 }
 }
