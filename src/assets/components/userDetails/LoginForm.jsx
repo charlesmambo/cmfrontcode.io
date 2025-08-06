@@ -31,7 +31,7 @@ const LoginForm = () => {
 
         <div className="side-form-btn-container">
           <p>New to cmfrontendcode Challenges?</p>
-          <button>Create Account</button>
+          <button>Start Building</button>
         </div>
       </div>
 
