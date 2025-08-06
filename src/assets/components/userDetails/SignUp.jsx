@@ -2,8 +2,13 @@ import React from 'react';
 import { IoEyeOffOutline } from "react-icons/io5";
 import { IoLogoGithub } from "react-icons/io";
 import { FcGoogle } from "react-icons/fc";
+import TextInput from '../customInputs/TextInput';
+import { LuUser } from 'react-icons/lu';
+import { MdOutlineEmail } from "react-icons/md";
+import { RiLockPasswordLine } from "react-icons/ri";
+import Primary from '../buttons/Primary';
 
-const SignUp = () => {
+const SignUp = ({ onSwitchToLogin }) => {
   return (
     <div>
     <div className="login-form-main">
@@ -29,27 +34,53 @@ const SignUp = () => {
 
         <form action="" className="login-form">
           <div className="form-control">
-            <label>Full Name</label>
-            <input type="text" placeholder="Enter your full name" />
+            <TextInput
+                label="Full Name"
+                placeholder="Enter your full name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                icon={LuUser}
+                name="fullName"
+                required
+            />
           </div>
           <div className="form-control">
-            <label>Email Address</label>
-            <input type="email" placeholder="Enter your email" />
+                <TextInput
+                label="Email Address"
+                placeholder="Enter your email"
+                icon={MdOutlineEmail}
+                name="Email"
+                required
+            />
           </div>
 
           <div className="form-control">
-            <label>Password</label>
-            <input type="password" placeholder="At least 8 Characters" />
+            <TextInput
+                label="Password"
+                placeholder="At least 8 Characters"
+                icon={RiLockPasswordLine}
+                name="Pasword"
+                required
+                type="password"
+            />
             <IoEyeOffOutline className="psswd-icon" />
           </div>
           <div className="form-control">
-            <label>Confirm Password</label>
-            <input type="password" placeholder="Re-enter password" />
+            <TextInput
+                label="Confirm Password"
+                placeholder="Re-enter password"
+                icon={RiLockPasswordLine}
+                name="Pasword"
+                required
+                type="password"
+            />
             <IoEyeOffOutline className="psswd-icon" />
           </div>
 
           <div className="login-form-submit-btn">
-            <button type="submit">Create Account</button>
+            <Primary type="submit">
+                Create Account
+            </Primary>
           </div>
 
           <div className="other-login-option">
@@ -72,7 +103,9 @@ const SignUp = () => {
 
             <p className="create-account-text">
               Already have an account?
-              <span className="create-account-text-link">Sign in here</span>
+              <span className="create-account-text-link"
+              onClick={onSwitchToLogin}
+              >Sign in here</span>
             </p>
           </div>
         </form>

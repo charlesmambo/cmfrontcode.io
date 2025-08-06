@@ -25,8 +25,9 @@ font-weight: 900;
 }
 .psswd-icon{
     position: absolute;
-    top: 2.5rem;
+    top: 2.4rem;
     right: 0.8rem;
+    color: #909090;
 }
 .sf-password{
     flex-direction: row;
@@ -37,7 +38,7 @@ font-weight: 900;
     color: #1882bb;
 }
 .fpwssd:hover{
-    color: #0cc2aa;
+    text-decoration: underline;
 }
 .form-control label{
    font-weight: 500;
@@ -52,11 +53,12 @@ font-weight: 900;
 .save-passsword{
     display: flex;
     align-items: center;
-    gap: 0.7rem;
+    gap: 0.5rem;
 }
 .login-option-headings p{
     color: #ababab;
     font-size: 0.9rem;
+    min-width: 120px;
 }
 .login-option-headings{
     display: flex;
@@ -136,7 +138,7 @@ font-weight: 900;
 /* Side Container Styles */
 .side-form-container{
     width: 50%;
-   background-image: linear-gradient(to top, #209bff63 0%, #00211d7e 100%);
+   background-image: linear-gradient(to top, #b0c2d062 0%, #cccccc62 100%);
     padding: 1.5rem;
     border-radius: 0.2rem;
 }
@@ -165,41 +167,42 @@ font-weight: 900;
    justify-content: left;
    gap: 0.4rem;
    font-size: 1.8rem;
-   color: #f0f0f0;
+   color: #8e8e8e;
 }
 .challenges-count h3 span{
     font-weight: 400;
     font-size: 0.9rem;
-    color: #ebebeb;
+    color: #5d5d5d;
 }
 .side-form-btn-container{
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    background-image: linear-gradient(to top, #002a4d3a 0%, #00211d7e 100%);
+    background-image: linear-gradient(to top, #b0c2d062 0%, #cccccc62 100%);
     border-radius: 0.2rem;
 }
 .side-form-btn-container p{
-    color: #ebebeb;
+    color: #4f4f4f;
 }
 .side-form-btn-container button{
     width: 100%;
     border: none;
     padding: 0.8rem 0.8rem;
     border-radius: 0.2rem;
-    background-image: linear-gradient(to top, #0a6ec0ad 0%, #004e82d0 100%);
     text-transform: capitalize;
     font-weight: 500;
-    color: #fff;
+    color: #343434;
     letter-spacing: 1px;
     font-size: 0.8rem; 
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
     transition: transform 0.6s ease, background-color 0.6s ease;
+    background-color: transparent;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
 }
 .side-form-btn-container button:hover{
-    background-image: linear-gradient(to right, #688daa 0%, #204b6c 100%);
+     background-color: #3452cb;
+     color: #f5f5f5;
 }
 
 .reset-psswd-container {

@@ -1,0 +1,20 @@
+.text-input-container input{
+   outline: none;
+   border: 2px solid #e4e4e4;
+   padding: 0.6rem 0.8rem;
+   border-radius: 0.2rem;
+   width: 100%;
+   box-sizing: border-box;
+   position: relative;
+   padding-left: 2rem;
+}
+.custom-input-icon{
+    color: #909090;
+    position: absolute;
+    bottom: 0.7rem;
+    left: 0.7rem;
+}
+.custom-input-label {
+  margin-bottom: 4px;
+  display: inline-block;
+}

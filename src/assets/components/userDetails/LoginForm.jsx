@@ -4,8 +4,12 @@ import { IoLogoGithub } from "react-icons/io";
 import { FcGoogle } from "react-icons/fc";
 import { IoEyeOffOutline } from "react-icons/io5";
 import ResetPassword from '../reset/ResetPassword';
+import TextInput from '../customInputs/TextInput';
+import { MdOutlineEmail } from "react-icons/md";
+import { RiLockPasswordLine } from "react-icons/ri";
+import Primary from '../buttons/Primary';
 
-const LoginForm = () => {
+const LoginForm = ({ onSwitchToSignUp }) => {
   const [showReset, setShowReset] = useState(false);
 
   const handleForgotPasswordClick = () => {
@@ -41,13 +45,26 @@ const LoginForm = () => {
 
         <form action="" className="login-form">
           <div className="form-control">
-            <label>Email Address</label>
-            <input type="email" placeholder="Enter your email" />
+            <TextInput
+                label="Email Address"
+                placeholder="Enter your email"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                icon={MdOutlineEmail}
+                name="Email"
+                required
+            />
           </div>
 
           <div className="form-control">
-            <label>Password</label>
-            <input type="password" placeholder="Enter your password" />
+            <TextInput
+                label="Password"
+                placeholder="Enter your password"
+                icon={RiLockPasswordLine}
+                name="Pasword"
+                required
+                type="password"
+            />
             <IoEyeOffOutline className="psswd-icon" />
           </div>
 
@@ -62,7 +79,9 @@ const LoginForm = () => {
           </div>
 
           <div className="login-form-submit-btn">
-            <button type="submit">sign In</button>
+            <Primary type="submit">
+                Sign In
+            </Primary>
           </div>
 
           <div className="other-login-option">
@@ -85,7 +104,9 @@ const LoginForm = () => {
 
             <p className="create-account-text">
               Don't have an account?
-              <span className="create-account-text-link">Create one</span>
+              <span className="create-account-text-link"
+              onClick={onSwitchToSignUp}
+              >Create one</span>
             </p>
           </div>
         </form>
