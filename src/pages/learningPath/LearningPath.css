@@ -1,0 +1,99 @@
+.learning-path-container{
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.learning-path-container-intro,
+.why-choose-us-wrapper-intro{
+   width: 44vw;
+}
+.learning-path-container-intro {
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+.learning-path-container-intro h1{
+    font-size: 2.7rem;
+}
+.learning-path-container-intro p{
+    font-size: var(--medium-text-size);
+}
+.learning-path-container-intro-btn{
+    margin-top: 2rem;
+    width:23vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.outline-btn{
+    background-color: transparent !important;
+    border: 2px solid var(--primary-color)  !important;
+    color: var(--primary-color) !important;
+}
+.why-choose-us-wrapper{
+    margin-top: 7rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.why-choose-us-wrapper-intro p{
+    font-size: var(--medium-text-size);
+}
+.why-choose-us-card-wrapper{
+    margin-top: var( --section-margin-top);
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+.community-card{
+    background-color: #117554 !important;
+}
+.access-card{
+    background-color: #4E6688 !important;
+}
+.learning-card{
+    background-color: #183B4E !important;
+}
+.mentoring-card{
+    background-color: #6C48C5 !important;
+}
+
+@media only screen and (max-width: 600px){
+ .why-choose-us-card-wrapper{
+    flex-direction: column;
+    gap: 1.3rem;
+}  
+.learning-path-container-intro,
+.why-choose-us-wrapper-intro{
+   width: unset;
+} 
+.learning-path-container-intro-btn{
+    margin-top: 2rem;
+    flex-direction: column;
+    gap: 1.3rem;
+    width: 100%;
+}
+.outline-btn,
+.solid-btn{
+  width: 86vw !important;  
+}
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+ .learning-path-container-intro,
+.why-choose-us-wrapper-intro{
+   width: 64vw;
+}  
+.learning-path-container-intro-btn{
+    width:40vw;
+    gap: 1rem;
+} 
+.why-choose-us-card-wrapper{
+   justify-content: center;
+}
+}

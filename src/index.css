@@ -19,11 +19,35 @@ h1, h2{
    letter-spacing: 1px;
    color: #0B1D51;
    font-weight: 900;
+   margin-bottom: 0.3rem;
 }
  h2{
    font-size: 1.8rem;
    padding-bottom: 0.5rem;
 }
+h3{
+    margin-bottom: 0.3rem;
+     font-size: 1.4rem;
+     font-family: "Roboto", sans-serif;
+}
+
+:root {
+  --primary-color: #1f5defa2;
+  --primary-white-color: #f7f7f7;
+  --primary-lightgrey-color: #dfdfdf;
+  --small-card-bg-color: #00809D;
+  --small-card-color: #004858;
+  --card-padding: 1.3rem 1rem;
+  --card-border-radius: 0.3rem;
+  --section-margin-top: 2rem;
+  --small-text-size: 0.8rem;
+  --medium-text-size: 1.2rem;
+}
+
+
+
+
+
 @media only screen and (max-width: 600px) {
   body{
   padding: 1.1rem;

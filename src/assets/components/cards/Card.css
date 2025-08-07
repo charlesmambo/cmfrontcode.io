@@ -1,0 +1,63 @@
+.small-card {
+  background-color: var(--small-card-bg-color);
+  padding: var(--card-padding);
+  border-radius: var(--card-border-radius);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 17.3vw;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.6s ease;
+  cursor: pointer;
+}
+
+.small-card:hover {
+  transform: scale(1.1);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+}
+
+.small-card-specification-text{
+    background-color: rgba(27, 27, 34, 0.149);
+    width: fit-content;
+    font-size: 0.7rem;
+    font-weight: 600;
+    border-radius: 2rem;
+    padding: 0.3rem 0.6rem;
+    color: var( --primary-white-color);
+}
+.small-card h3{
+ color: var( --primary-white-color);   
+ text-align: center;
+ font-size: 1.1rem;
+}
+.small-card p{
+    color: var(--primary-lightgrey-color);
+    font-size: var(--small-text-size);
+    text-align: center;
+}
+.small-card-icon{
+    font-size: 2rem;
+     background-color: rgba(24, 71, 72, 0.14);
+     padding: 0.5rem 0.7rem;
+     border-radius: 0.5rem;
+     color: var(--primary-lightgrey-color);
+     margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 600px){
+.small-card {
+  width: 100%;
+  box-sizing: border-box;
+} 
+.small-card:hover {
+  transform: scale(1.0);
+}
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+ .small-card {
+  width: 40.1vw;
+  box-sizing: border-box;
+}    
+}
