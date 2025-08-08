@@ -49,6 +49,7 @@
     align-items: center;
     gap: 1.5rem;
     flex-wrap: wrap;
+    justify-content: center;
 }
 .community-card{
     background-color: #117554 !important;
@@ -62,6 +63,7 @@
 .mentoring-card{
     background-color: #6C48C5 !important;
 }
+
 
 @media only screen and (max-width: 600px){
  .why-choose-us-card-wrapper{

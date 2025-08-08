@@ -17,7 +17,9 @@ const Navbar = () => {
     <div className="nav-wrapper">
       <nav>
         <div className="logo-container">
+          <a href="/">
           <img src={LOGO} alt="Logo" />
+          </a>
         </div>
 
         <div className="mode-signin-container">
