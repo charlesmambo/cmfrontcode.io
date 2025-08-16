@@ -7,6 +7,7 @@ import Total from '../../assets/components/totals/Total';
 import { LuUsers } from "react-icons/lu";
 import { HiArrowTrendingUp } from "react-icons/hi2";
 import { GoTrophy } from "react-icons/go";
+import Table from '../../assets/components/table/Table';
 
 const LeaderBoard = () => {
   const [activeBtn, setActiveBtn] = useState("all time");
@@ -87,6 +88,10 @@ const LeaderBoard = () => {
         iconColor="#640D5F"
         iconBg="#640d6022"
         />
+      </div>
+
+      <div className="table-container">
+        <Table/>
       </div>
     </div>
   )
