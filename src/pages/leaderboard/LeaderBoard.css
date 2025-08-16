@@ -1,0 +1,47 @@
+.leaderboard-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4rem;
+}
+
+.leaderboard-intro-headings{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.leaderboard-intro-headings h2{
+    margin-top: 0.2rem;
+}
+.leaderboard-toggle{
+    margin: 2rem 0;
+    display: flex;
+    background-color: var(--toggle-bg);
+    padding: var(--toggle-padding);
+    border-radius: var(--toggle-container-radius);
+    align-items: center;
+    gap: var(--toggle-flex-gap);
+}
+.toggle-btn {
+  text-transform: capitalize;
+  background-color: var(--toggle-btn-bg);
+  font-size: var(--toogle-btn-text-size);
+  padding: var(--toggle-padding);
+  border-radius: var(--toggle-container-radius);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-btn.active {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.top-performers{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}

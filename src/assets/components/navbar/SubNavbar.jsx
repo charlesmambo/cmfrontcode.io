@@ -3,21 +3,31 @@ import { NavLink } from 'react-router-dom';
 
 const SubNavbar = () => {
   return (
-    <div className='sub-navbar-container'>
+    <div className="sub-navbar-container">
       <ul>
         <li>
           <NavLink
-            to="/learning-path"
-            className={({ isActive }) => isActive ? 'active-link' : ''}
+            to="/leaderboard"
+            className={({ isActive }) => (isActive ? 'active-link' : '')}
           >
-            Learning Path
+            Leaderboard
           </NavLink>
         </li>
         <li>
-          <a href="#">Challenges</a>
+          <NavLink
+            to="/challenges"
+            className={({ isActive }) => (isActive ? 'active-link' : '')}
+          >
+            Challenges
+          </NavLink>
         </li>
         <li>
-          <a href="#">Solutions</a>
+          <NavLink
+            to="/solutions"
+            className={({ isActive }) => (isActive ? 'active-link' : '')}
+          >
+            Solutions
+          </NavLink>
         </li>
       </ul>
     </div>

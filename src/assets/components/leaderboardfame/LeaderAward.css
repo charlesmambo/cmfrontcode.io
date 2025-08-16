@@ -1,0 +1,76 @@
+.leaderaward-wrapper,
+.leaderaward-user-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.leaderaward-user-pro-container{
+    position: relative;
+
+}
+.leaderaward-icon{
+    position: absolute;
+    top: 0;
+    right: -0.6rem;
+    font-size: 1rem;
+    background-color: var(--gold-bg);
+    color: #bf8900;
+    padding: 0.2rem;
+    border-radius: 1rem;
+}
+.leaderaward-user-pro-card{
+    width: 50px;
+    height: 50px;
+    border-radius: 12rem;
+    background-color: #E9E9E9;
+    border: 3px solid rgb(220, 154, 154);
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    overflow: hidden;
+}
+.leaderaward-user-pro-card img{
+width: 100%;
+height: 100%;
+border-radius: 2rem;
+}
+
+.leaderaward-user-content{
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    gap: 0.3rem;  
+}
+
+.leaderaward-user-content p:first-of-type {
+  font-weight: bold; 
+  text-transform: capitalize;
+  margin-top: 0.5rem;
+  font-size: var(--toogle-btn-text-size);
+}
+.leaderaward-user-content p:nth-of-type(2) {
+   font-size: var(--small-text-size);
+   color: var(--dark-grey-color);
+}
+
+.leaderaward-user-content p:last-of-type {
+  font-weight: bold;
+  font-size: var(--toogle-btn-text-size);
+}
+
+.leaderaward-user-position{
+    width: 60px;
+    height: 50px;
+    background-color: var(--gold-bg);
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+    box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, rgba(148, 153, 4, 0.026) 0px 0px 0px 1px;
+    border-radius: 0.2rem;
+    color: #7e7e7e;
+    padding: 0.4rem;
+}
