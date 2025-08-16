@@ -1,0 +1,20 @@
+.total-wrapper{
+   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    background-color: #fff;
+    padding: 1.2rem;
+    border-radius: 0.3rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    min-width: 12vw;
+}
+.total-content p{
+    font-size: var(--toogle-btn-text-size);
+}
+.total-icon{
+    background-color: #1f5def1f;
+    font-size: 1.5rem;
+    border-radius: 0.3rem;
+    padding: 0.6rem;
+    color: #1f5defd5;
+}

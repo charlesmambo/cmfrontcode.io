@@ -3,6 +3,10 @@ import '../leaderboard/LeaderBoard.css'
 import LeaderAward from '../../assets/components/leaderboardfame/LeaderAward';
 import { TbAward } from "react-icons/tb";
 import { FaAward } from "react-icons/fa";
+import Total from '../../assets/components/totals/Total';
+import { LuUsers } from "react-icons/lu";
+import { HiArrowTrendingUp } from "react-icons/hi2";
+import { GoTrophy } from "react-icons/go";
 
 const LeaderBoard = () => {
   const [activeBtn, setActiveBtn] = useState("all time");
@@ -57,6 +61,32 @@ const LeaderBoard = () => {
         icon={FaAward}  
          bgColor="#EB8317" 
       />
+      </div>
+
+      <div className="totals-container">
+        <Total 
+        icon={LuUsers} 
+        value="5,234" 
+        label="Total Participants"
+        bgColor="#F5F7FF"
+        iconColor="#4A90E2"
+        />
+        <Total 
+        icon={HiArrowTrendingUp} 
+        value="28,567" 
+        label="Total Submissions"
+        bgColor="#009d54ff"
+        iconColor="#009d54ff"
+        iconBg="#009d541d"
+        />
+        <Total 
+        icon={GoTrophy} 
+        value="1,248" 
+        label="Average Points"
+        bgColor="#F5F7FF"
+        iconColor="#640D5F"
+        iconBg="#640d6022"
+        />
       </div>
     </div>
   )
