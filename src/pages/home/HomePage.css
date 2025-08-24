@@ -1,0 +1,70 @@
+.home_intro_section{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 4rem;
+    background-color: var(--header-bg-color);
+    color: var(--primary-lightgrey-color);
+}
+.home_intro_section h1{
+font-size: 2.8rem;
+text-align: center;
+width: 50vw;
+ color: var(--primary-lightgrey-color);
+}
+.home_intro_span{
+ color: var(--gold-bg) !important;
+}
+.home_intro_section p{
+font-size: 1.2rem;
+text-align: center;
+width: 50vw;
+margin-top: 1rem;
+}
+
+.home_intro_btns{
+    margin-top: var(--column-gap);
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.home_intro_solid_btn{
+    background-color: var(--primary-lightgrey-color) !important;
+    color: var(--primary-color) !important;
+     min-width: 180px !important;
+}
+.home_intro_solid_btn:hover{
+box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.home_intro_outline_btn{
+    background-color: transparent !important;
+    border: 1px solid var(--primary-lightgrey-color) !important;
+}
+.home_intro_outline_btn:hover{
+    background-color: var(--primary-lightgrey-color) !important;
+     color: var(--primary-color) !important;
+}
+
+.home_intro_abt{
+    margin-top: var(--section-medium-margin-top);
+    display: flex;
+    align-items: center;
+    width: 50vw;
+    justify-content: space-between;
+}
+.home_intro_abt_card{
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+}
+.home_intro_abt_card h3{
+   display: flex;
+   align-items: center;
+}
+.home_intro_abt_card p{
+    width: 120px;
+    font-size: var(--toogle-btn-text-size);
+    margin-top: 0;
+    text-align: left;
+}
