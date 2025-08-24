@@ -29,11 +29,11 @@ const HomePage = () => {
                 <h3>5,000 +</h3>
                 <p>Active Developers</p>
               </div>
-              <div className="home_intro_abt_card">
+              <div className="home_intro_abt_card home_intro_abt_card-last">
                 <h3>100 +</h3>
                 <p>Challenges</p>
               </div>
-              <div className="home_intro_abt_card">
+              <div className="home_intro_abt_card home_intro_abt_card-last">
                 <h3>25,000 +</h3>
                 <p>Submissions</p>
               </div>
