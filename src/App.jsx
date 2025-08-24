@@ -6,6 +6,7 @@ import LearningPath from './pages/learningPath/LearningPath'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LeaderBoard from './pages/leaderboard/LeaderBoard';
 import HomePage from './pages/home/HomePage'
+import Footer from './assets/components/footer/Footer'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -21,6 +22,7 @@ function App() {
     </Router>
      {/* <Login/> */}
      <HomePage/>
+     <Footer/>
     </>
   )
 }

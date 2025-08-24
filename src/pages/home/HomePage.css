@@ -70,6 +70,15 @@ box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     text-align: left;
 }
 
+/* home_everything_you_need */
+.home_everything_you_need{
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 @media only screen and (max-width: 600px) {
 .home_intro_section{
     padding: 1.5rem;

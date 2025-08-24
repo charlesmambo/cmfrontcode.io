@@ -1,6 +1,8 @@
 import React from 'react';
 import '../home/HomePage.css';
 import Primary from '../../assets/components/buttons/Primary';
+import { PiBracketsAngleBold } from "react-icons/pi";
+
 
 const HomePage = () => {
   return (
@@ -38,6 +40,19 @@ const HomePage = () => {
                 <p>Submissions</p>
               </div>
             </div>
+        </div>
+
+        <div className="home_everything_you_need">
+          <h2>Everything You Need to Level Up</h2>
+          <p>Our platform provides all the tools and resources you need to improve your frontend skills</p>
+
+          <div className="home_everything_you_need_card_container">
+            <div className="home_everything_you_need_card">
+              <div className="home_everything_you_need_card_icon">
+                <PiBracketsAngleBold />
+              </div>
+            </div>
+          </div>
         </div>
 
     </div>
