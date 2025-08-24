@@ -114,4 +114,13 @@ width: 100%;
 }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
+.home_intro_section h1{
+width: 87vw;
+}
+.home_intro_section p{
+width: 87vw;
+}
+.home_intro_abt{
+ width: 70vw;
+}
 }

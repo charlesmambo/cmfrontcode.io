@@ -76,7 +76,7 @@ h4{
 }
 @media (min-width: 768px) and (max-width: 1023px) {
  body{
-  padding: 2rem 4rem;
+  /* padding: 2rem 4rem; */
   background-color: #f3f3f3;
 }
 }
