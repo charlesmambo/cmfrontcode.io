@@ -72,11 +72,56 @@ box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
 /* home_everything_you_need */
 .home_everything_you_need{
-    padding: 4rem;
+     padding: 4rem 3rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.home_everything_you_need_card_container{
+margin-top: var(--section-margin-top);
+display: flex;
+align-items: center;
+gap: 1.5rem;
+}
+.home_everything_you_need_card{
+box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+padding: 1.6rem;
+width: 15vw;
+min-height: 150px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+border-radius: var(--card-border-radius);
+ background-color: #ffffff;
+ 
+}
+.home_everything_you_need_card_icon{
+    background-color:var(--header-bg-color);
+    padding: 0.8rem 1rem;
+    font-size: 1.4rem;
+        border-radius: var(--card-border-radius);
+    color:var(--gold-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+.home_everything_you_need_card_content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1.3rem;
+}
+.home_everything_you_need_card_content h4{
+font-size: 1.3rem;
+margin-bottom: 0.5rem;
+text-align: center;
+}
+.home_everything_you_need_card_content p{
+ text-align: center;
+ font-size: var(--toogle-btn-text-size);
 }
 
 @media only screen and (max-width: 600px) {
@@ -121,6 +166,23 @@ width: 100%;
   text-align: left;
   width: 100px;
 }
+.home_everything_you_need{
+    padding: 1.5rem;
+    padding-bottom: 3rem;
+}
+.home_everything_you_need h2{
+   text-align: center;
+}
+.home_everything_you_need p{
+   text-align: center;
+}
+.home_everything_you_need_card_container{
+    flex-direction: column;
+}
+.home_everything_you_need_card{
+width: 100%;
+box-sizing: border-box;
+}
 }
 @media (min-width: 768px) and (max-width: 1023px) {
 .home_intro_section h1{
@@ -131,5 +193,24 @@ width: 87vw;
 }
 .home_intro_abt{
  width: 70vw;
+}
+.home_everything_you_need{
+    padding: 2rem 2rem;
+    padding-bottom: 3rem;
+}
+.home_everything_you_need_card_container{
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+.home_everything_you_need_card{
+width: 41%;
+ 
+}
+.home_everything_you_need h2{
+   text-align: center;
+}
+.home_everything_you_need p{
+   text-align: center;
 }
 }

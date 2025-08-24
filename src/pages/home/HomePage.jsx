@@ -2,6 +2,9 @@ import React from 'react';
 import '../home/HomePage.css';
 import Primary from '../../assets/components/buttons/Primary';
 import { PiBracketsAngleBold } from "react-icons/pi";
+import { GoTrophy } from "react-icons/go";
+import { TbUsers } from "react-icons/tb";
+import { HiStar } from "react-icons/hi2";
 
 
 const HomePage = () => {
@@ -50,6 +53,40 @@ const HomePage = () => {
             <div className="home_everything_you_need_card">
               <div className="home_everything_you_need_card_icon">
                 <PiBracketsAngleBold />
+              </div>
+              <div className="home_everything_you_need_card_content">
+                <h4>100+ Design Challenges</h4>
+                <p>Premium UI/UX designs converted into coding challenges for skill development.</p>
+              </div>
+            </div>
+
+            <div className="home_everything_you_need_card">
+              <div className="home_everything_you_need_card_icon">
+                <GoTrophy  />
+              </div>
+              <div className="home_everything_you_need_card_content">
+                <h4>Points & Leaderboard</h4>
+                <p>Earn points for quality submissions and climb the global leaderboard.</p>
+              </div>
+            </div>
+
+            <div className="home_everything_you_need_card">
+              <div className="home_everything_you_need_card_icon">
+                <TbUsers  />
+              </div>
+              <div className="home_everything_you_need_card_content">
+                <h4>Code Reviews</h4>
+                <p>Get feedback from peers and review others' code to improve together.</p>
+              </div>
+            </div>
+
+            <div className="home_everything_you_need_card">
+              <div className="home_everything_you_need_card_icon">
+                <HiStar />
+              </div>
+              <div className="home_everything_you_need_card_content">
+                <h4>Premium Content</h4>
+                <p>Access exclusive premium challenges and advanced design systems.</p>
               </div>
             </div>
           </div>

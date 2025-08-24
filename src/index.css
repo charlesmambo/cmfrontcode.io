@@ -24,6 +24,7 @@ h1, h2{
  h2{
    font-size: 1.8rem;
    padding-bottom: 0.5rem;
+    color: #0B1D51;
 }
 h3{
     margin-bottom: 0.3rem;
@@ -33,6 +34,7 @@ h3{
 h4{
     margin-bottom: 0.3rem;
      font-family: "Roboto", sans-serif;  
+      color: #0B1D51;
 }
 
 :root {
