@@ -7,6 +7,9 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   padding-bottom: 10px;
 }
+.table-wrapper{
+    margin-bottom:5rem;
+}
 
 .header {
   margin-bottom: 32px;

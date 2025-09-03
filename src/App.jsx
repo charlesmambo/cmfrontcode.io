@@ -7,23 +7,23 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LeaderBoard from './pages/leaderboard/LeaderBoard';
 import HomePage from './pages/home/HomePage'
 import Footer from './assets/components/footer/Footer'
+import Challenges from './pages/Challenges/Challenges'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-      <Router>
+    <Router>
       <Navbar />
+
       <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/learning-path" element={<LearningPath />} />
-        <Route path="/leaderboard" element={<LeaderBoard/>} />
+        <Route path="/leaderboard" element={<LeaderBoard />} />
+        <Route path="/challenges" element={<Challenges/>} />
       </Routes>
+      <Footer />
     </Router>
-     {/* <Login/> */}
-     <HomePage/>
-     <Footer/>
-    </>
   )
 }
 
