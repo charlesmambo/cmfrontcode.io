@@ -29,7 +29,7 @@ width: fit-content;
   padding-left: 2.7rem !important;
   font-size: var(--toogle-btn-text-size);
   color: var(--primary-black-color);
-  min-width: 18vw;
+  min-width: 32vw;
 }
 
 .search_bar_input::placeholder {
@@ -43,4 +43,12 @@ width: fit-content;
     top: 0.6rem;
     left: 0.8rem;
 }
-
+.custom_card_container_wrapper{
+    margin-top: 2rem;
+}
+.custom_card_container{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
