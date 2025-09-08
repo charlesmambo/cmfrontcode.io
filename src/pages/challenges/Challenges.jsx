@@ -5,6 +5,7 @@ import Filter from '../../assets/components/filter/Filter';
 import CustomCard from '../../assets/components/customCard/CustomCard';
 import IMG from "../../../public/img1.png";
 import IMG2 from "../../../public/img2.png";
+import StartChallenge from '../../assets/components/startChallenge/StartChallenge';
 
 const options = [
   "All Difficulties",
@@ -96,6 +97,7 @@ const handleSelect = (value) => {
             />
         </div>
         </div>
+        <StartChallenge/>
     </div>
   )
 }
