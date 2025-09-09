@@ -12,7 +12,7 @@ const Footer = () => {
   return (
     <footer>
         <div className="footer_intro">
-            <h2>cmFrontCode</h2>
+            <h2>cmFrontendCode</h2>
             <p>Master frontend development through hands-on challenges and real-world projects. Join thousands of developers improving their skills daily.</p>
         </div>
         <div className="footer_links">

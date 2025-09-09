@@ -13,7 +13,7 @@
     align-items: center;
     justify-content: space-between;
     gap: var(--toggle-flex-gap);
-    width: 58vw;
+    width: 72vw;
 }
 .step_card{
     display: flex;
@@ -85,7 +85,7 @@
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     padding: 1.5rem;
     border-radius: var(--card-border-radius);
-    width: 25vw;
+    width: 28vw;
     border-top: 3px solid var(--dark-grey-color);
 }
 .start_challenge_content_card_headings_info{
@@ -215,7 +215,7 @@
 
 .start_challenge_design_review,
 .start_challenge_content_card_stats {
-    width: 30vw;
+    width: 40vw;
 }
 .start_challenge_design_review {
     border-top: 3px solid var(--primary-color);

@@ -80,7 +80,7 @@ const StartChallenge = ({
             </div>
             <p className="start_challenge_content_card_headings_lang">
                   {challenge.language}
-            </p>
+                </p>
             {/* <Primary type="submit" className="start_challenge">
               Start Challenge
             </Primary> */}
