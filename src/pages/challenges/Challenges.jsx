@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../challenges/Challenges.css';
 import { RiSearchLine } from "react-icons/ri";
 import Filter from '../../assets/components/filter/Filter';
@@ -6,6 +6,7 @@ import CustomCard from '../../assets/components/customCard/CustomCard';
 import IMG from "../../../public/img1.png";
 import IMG2 from "../../../public/img2.png";
 import StartChallenge from '../../assets/components/startChallenge/StartChallenge';
+import { LuDownload, LuCodeXml } from "react-icons/lu";
 
 const options = [
   "All Difficulties",
@@ -24,82 +25,119 @@ const category = [
 ];
 
 const Challenges = () => {
+  const [selectedChallenge, setSelectedChallenge] = useState(null);
 
-const handleSelect = (value) => {
+  const handleSelect = (value) => {
     console.log("Selected:", value);
   };
+
+  const challengesData = [
+    {
+      image: IMG,
+      title: "Order summary component",
+      description: "A perfect project for newbies who are starting to build confidence with layouts!",
+      languages: ["html", "css"],
+    },
+    {
+      image: IMG2,
+      title: "Stats preview card component",
+      description: "This is a great small challenge to help get you used to building to a design.",
+      languages: ["html", "css"],
+    },
+    {
+      image: IMG,
+      title: "Social Media Dashboard",
+      description: "Build a comprehensive social media analytics dashboard with charts and metrics",
+      languages: ["html", "css", "React"],
+    },
+    {
+      image: IMG,
+      title: "Interactive rating component",
+      description: "This is a nice, small project to practice handling user interactions and updating the DOM.",
+      languages: ["html", "css", "Javascript"],
+    },
+    {
+      image: IMG,
+      title: "3-column preview card component",
+      description: "This challenge is perfect for anyone wanting to test their CSS Grid skills.",
+      languages: ["html", "css"],
+    },
+    {
+      image: IMG,
+      title: "E-commerce Product Card",
+      description: "Create a responsive product card with image, price, and add to cart functionality",
+      languages: ["html", "css", "Javascript"],
+    },
+  ];
+
   return (
     <div className="challenges_main_wrapper">
-        <div className="filter_section_container">
+      {!selectedChallenge ? (
+        <>
+          {/* Filters */}
+          <div className="filter_section_container">
             <div className="search_bar">
-                <RiSearchLine className='search_bar_icon'/>
-               <input type="text" className='search_bar_input' name="search-bar" placeholder='Search challenges...' /> 
+              <RiSearchLine className='search_bar_icon' />
+              <input
+                type="text"
+                className='search_bar_input'
+                name="search-bar"
+                placeholder='Search challenges...'
+              />
             </div>
             <div className="filter_category_container">
-                <Filter options={options} defaultValue="All Difficulties" onSelect={handleSelect}/>
+              <Filter options={options} defaultValue="All Difficulties" onSelect={handleSelect} />
             </div>
             <div className="filter_category_container">
-                <Filter options={category} defaultValue="All Categories" onSelect={handleSelect}/>
+              <Filter options={category} defaultValue="All Categories" onSelect={handleSelect} />
             </div>
-        </div>
-        
-        <div className="custom_card_container_wrapper">
-        <div className="custom_card_container">
-            <CustomCard
-                image={IMG}
-                title="Order summary component"
-                description="A perfect project for newbies who are starting to build confidence with layouts!"
-                languages={["html", "css"]}
-                buttonText="Start Challenge"
-                onButtonClick={() => alert("Challenge Started!")}
-            />
-            <CustomCard
-                image={IMG2}
-                title="Stats preview card component"
-                description="This is a great small challenge to help get you used to building to a design."
-                languages={["html", "css"]}
-                buttonText="Start Challenge"
-                onButtonClick={() => alert("Challenge Started!")}
-            />
-            <CustomCard
-                image={IMG}
-                title="Social Media Dashboard"
-                description="Build a comprehensive social media analytics dashboard with charts and metrics"
-                languages={["html", "css", "React"]}
-                buttonText="Start Challenge"
-                onButtonClick={() => alert("Challenge Started!")}
-            />
-        </div>
-        <div className="custom_card_container">
-            <CustomCard
-                image={IMG}
-                title="Interactive rating component"
-                description="This is a nice, small project to practice handling user interactions and updating the DOM."
-                languages={["html", "css", "Javascript"]}
-                buttonText="Start Challenge"
-                onButtonClick={() => alert("Challenge Started!")}
-            />
-            <CustomCard
-                image={IMG}
-                title="3-column preview card component"
-                description="This challenge is perfect for anyone wanting to test their CSS Grid skills."
-                languages={["html", "css"]}
-                buttonText="Start Challenge"
-                onButtonClick={() => alert("Challenge Started!")}
-            />
-            <CustomCard
-                image={IMG}
-                title="E-commerce Product Card"
-                description="Create a responsive product card with image, price, and add to cart functionality"
-                languages={["html", "css", "Javascript"]}
-                buttonText="Start Challenge"
-                onButtonClick={() => alert("Challenge Started!")}
-            />
-        </div>
-        </div>
-        <StartChallenge/>
-    </div>
-  )
-}
+          </div>
 
-export default Challenges
+          {/* Cards */}
+          <div className="custom_card_container_wrapper">
+            <div className="custom_card_container">
+              {challengesData.map((challenge, index) => (
+                <CustomCard
+                  key={index}
+                  image={challenge.image}
+                  title={challenge.title}
+                  description={challenge.description}
+                  languages={challenge.languages}
+                  buttonText="Start Challenge"
+                  onButtonClick={() => setSelectedChallenge(challenge)}
+                />
+              ))}
+            </div>
+          </div>
+        </>
+      ) : (
+        <StartChallenge
+          onBack={() => setSelectedChallenge(null)}
+          steps={[
+            { number: 1, title: "Step 1", text: "Start challenge", active: true },
+            { number: 2, title: "Step 2", text: "Download assets", active: true },
+            { number: 3, title: "Step 3", text: "Submit solution", active: false },
+            { number: 4, title: "Step 4", text: "Review solutions", active: false },
+          ]}
+          challenge={{
+            language: selectedChallenge.languages.join(", "),
+            level: "Beginner", // you can extend challengeData with level info
+            price: "Free",
+            title: selectedChallenge.title,
+            description: selectedChallenge.description,
+          }}
+          resources={[
+            { icon: LuDownload, title: "Download Assets", subtitle: "Design file & images" },
+            { icon: LuCodeXml, title: "Submit Solution", subtitle: "Share your Work" },
+          ]}
+          stats={[
+            { value: "15,420", label: "Participants", color: "start_challenge_stats_blue" },
+            { value: "11,256", label: "Completed", color: "start_challenge_stats_green" },
+          ]}
+        />
+      )}
+    </div>
+  );
+};
+
+export default Challenges;

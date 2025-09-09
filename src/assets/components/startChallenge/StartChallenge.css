@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 4rem;
+    margin-top: 0rem;
 }
 .start_challenge_steps{
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
@@ -106,9 +106,14 @@
      font-family: "Nata Sans", sans-serif;
 }
 .start_challenge_content_card_headings_lang{
-    border: 2px solid var(--gold-bg);
+    background-color: #1f5def0c;
     padding: 0.5rem 1rem;
-    border-radius: var(--border-radius-lg);
+    border-radius: 0.3rem;
+    width: fit-content;
+    margin-top: 2rem;
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: var(--primary-color);
 }
 .start_challenge_content_card_headings_offer{
   background-color: var(--primary-color); 

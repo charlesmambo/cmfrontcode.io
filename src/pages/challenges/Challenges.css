@@ -45,10 +45,17 @@ width: fit-content;
 }
 .custom_card_container_wrapper{
     margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
 }
 .custom_card_container{
     display: flex;
     align-items: center;
     gap: 2rem;
     margin-top: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 65vw;
 }
