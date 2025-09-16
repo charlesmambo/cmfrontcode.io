@@ -6,7 +6,7 @@
     background-color: #f7f7f7;
     width: 20vw;
     position: fixed;
-    top: 20%;
+    top: 10%;
     z-index: 100;
 }
 .submit_challenge_wrapper h3{
@@ -40,6 +40,13 @@
 }
 .submit_challege_btn{
     margin-top: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100% !important;
+}
+.sumbit_solution_btns{
+    width: 140px !important;
 }
 .submit_challenge_icon{
     font-size: 1.5rem;
@@ -54,3 +61,16 @@
     color: var(--danger-color);
     font-size: 1.8rem;
 }
+
+.cancel-btn{
+    border: 1px solid var(--primary-lightgrey-color) !important;
+    background-color: transparent !important;
+    color: var(--primary-lightgrey-color) !important;
+    width: 140px !important;
+}
+.cancel-btn:hover{
+    border: 0px solid var(--primary-lightgrey-color) !important;
+    background-color: var(--danger-color) !important;
+    color: var( --primary-white-color) !important;
+}
+

@@ -7,7 +7,10 @@ import IMG from "../../../public/img1.png";
 import IMG2 from "../../../public/img2.png";
 import StartChallenge from "../../assets/components/startChallenge/StartChallenge";
 import { LuDownload, LuCodeXml } from "react-icons/lu";
-import SubmitChallenge from "../../assets/components/submitChallenge/SubmitChallenge";
+import { HiOutlineChatBubbleOvalLeft } from "react-icons/hi2";
+import { GrView } from "react-icons/gr";
+
+
 
 const options = [
   "All Difficulties",
@@ -121,8 +124,7 @@ const Challenges = () => {
             </div>
           </div>
         </>
-      ) : showSubmitChallenge ? (
-        <SubmitChallenge onClose={() => setShowSubmitChallenge(false)} />
+
       ) : (
         <StartChallenge
           onBack={() => setSelectedChallenge(null)}
@@ -141,16 +143,13 @@ const Challenges = () => {
           }}
           resources={[
             {
-              icon: LuDownload,
-              title: "Download Assets",
-              subtitle: "Design file & images",
+              icon: GrView,
+              title: "View Example Solutions",
             },
             {
-              icon: LuCodeXml,
-              title: "Submit Solution",
-              subtitle: "Share your Work",
-              onClick: () => setShowSubmitChallenge(true),
-            },
+              icon: HiOutlineChatBubbleOvalLeft,
+              title: "Join Discussion",
+            }
           ]}
           stats={[
             {

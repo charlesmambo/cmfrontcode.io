@@ -58,3 +58,11 @@ width: fit-content;
     justify-content: center;
     width: 82vw;
 }
+
+
+
+@media only screen and (min-width: 1544px) {
+  .custom_card_container{
+    width: 78vw;
+  }
+}

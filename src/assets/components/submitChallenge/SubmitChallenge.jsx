@@ -71,7 +71,8 @@ const SubmitChallenge = ({
         </div>
 
         <div className="submit_challege_btn">
-          <Primary type="submit">Submit Solution</Primary>
+          <Primary type="button" className="cancel-btn sumbit_solution_btns" onClick={onClose}>Cancel</Primary>
+          <Primary type="button" className="sumbit_solution_btns">Submit</Primary>
         </div>
       </form>
     </div>
