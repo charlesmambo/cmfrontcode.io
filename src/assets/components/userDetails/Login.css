@@ -3,6 +3,8 @@
     gap: 4rem;
     justify-content: center;
     position: relative;
+    padding: 6rem 30rem;
+    font-family: "Nata Sans", sans-serif;
 }
 .login-form-wrapper{
   width: 50%;

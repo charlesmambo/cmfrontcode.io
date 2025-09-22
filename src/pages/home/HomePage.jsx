@@ -8,8 +8,15 @@ import { HiStar } from "react-icons/hi2";
 import { MdOutlineDownload } from "react-icons/md";
 import { RiBracesLine } from "react-icons/ri";
 import { LuCircleCheck } from "react-icons/lu";
+import { useNavigate } from "react-router-dom";
+
 
 const HomePage = () => {
+   const navigate = useNavigate();
+
+  const handleBrowseChallenges = () => {
+    navigate("/challenges"); 
+  };
   const codeSnippets = [
     '{ }', '< >', '[ ]', '( )', '&&', '||', '===', '!==', 
     'JS', 'CSS', 'HTML', 'React', 'Bootstrap', 'Tailwind',
@@ -72,7 +79,7 @@ const HomePage = () => {
           <Primary type="submit" className='home_intro_solid_btn'>
             Get Started Free
           </Primary>
-          <Primary type="submit" className='home_intro_outline_btn'>
+          <Primary type="submit" className='home_intro_outline_btn' onClick={handleBrowseChallenges}>
             Browse Challenges
           </Primary>
         </div>

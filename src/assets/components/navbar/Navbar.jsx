@@ -5,12 +5,18 @@ import { MdLightMode } from "react-icons/md";
 import LOGO from '../../../../public/cmlogo.png';
 import SubNavbar from './SubNavbar';
 import ModeSwitch from '../modeSwitch/ModeSwitch';
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
   const [showModeSwitch, setShowModeSwitch] = useState(false);
+  const navigate = useNavigate(); 
 
   const toggleModeSwitch = () => {
     setShowModeSwitch(prev => !prev);
+  };
+
+   const handleLoginClick = () => {
+    navigate("/login");
   };
 
   return (
@@ -28,7 +34,7 @@ const Navbar = () => {
           </div>
 
           <div className="navbar-login-btn-container">
-            <Primary type="submit">
+            <Primary type="submit" onClick={handleLoginClick}>
               LOG IN
             </Primary>
           </div>
