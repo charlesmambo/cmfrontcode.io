@@ -8,6 +8,7 @@ import LeaderBoard from './pages/leaderboard/LeaderBoard';
 import HomePage from './pages/home/HomePage'
 import Footer from './assets/components/footer/Footer'
 import Challenges from './pages/Challenges/Challenges'
+import SolutionsList from './pages/solutions/SolutionsList'
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
         <Route path="/learning-path" element={<LearningPath />} />
         <Route path="/leaderboard" element={<LeaderBoard />} />
         <Route path="/challenges" element={<Challenges/>} />
+        <Route path="/Solutions" element={<SolutionsList/>} />
       </Routes>
       <Footer />
     </Router>
