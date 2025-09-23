@@ -81,6 +81,9 @@ h4{
     --sm-text-size: 0.9rem;
      --sm-margin-top: 0.8rem;
      --dim-dark-grey-color: #5f5f5f;
+     --md-text-size:  1rem;
+     --lg-padding:1.5rem;
+     --margin-top:1.5rem;
 }
 
 

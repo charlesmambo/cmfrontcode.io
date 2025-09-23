@@ -9,6 +9,7 @@ import StartChallenge from "../../assets/components/startChallenge/StartChalleng
 import { LuDownload, LuCodeXml } from "react-icons/lu";
 import { HiOutlineChatBubbleOvalLeft } from "react-icons/hi2";
 import { GrView } from "react-icons/gr";
+import SolutionCard from "../../assets/components/solutionsCard/SolutionCard";
 
 
 
@@ -106,6 +107,8 @@ const Challenges = () => {
               />
             </div>
           </div>
+
+          <SolutionCard/>
 
           {/* Cards */}
           <div className="custom_card_container_wrapper">
