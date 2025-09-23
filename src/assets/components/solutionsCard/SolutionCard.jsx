@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../solutionsCard/SolutionCard.css';
 import { LuClock } from "react-icons/lu";
 import { FaRegHeart } from "react-icons/fa6";
 import { FiMessageCircle, FiEye } from "react-icons/fi";
 import { HiOutlineExternalLink } from "react-icons/hi";
 import { IoLogoGithub } from "react-icons/io5";
+import { IoMdHeart } from "react-icons/io";
 
 const SolutionCard = ({
   title,
@@ -19,6 +20,18 @@ const SolutionCard = ({
   externalLink,
   githubLink,
 }) => {
+  const [liked, setLiked] = useState(false);
+  const [likeCount, setLikeCount] = useState(likes);
+
+  const handleLikeToggle = () => {
+    if (liked) {
+      setLikeCount(likeCount - 1);
+    } else {
+      setLikeCount(likeCount + 1);
+    }
+    setLiked(!liked);
+  };
+
   return (
     <div className='solution_card_container'>
       <div className="solution_links">
@@ -57,10 +70,19 @@ const SolutionCard = ({
         </div>
 
         <div className="social_card_user_interactions">
-          <p className='social_card_user_interactions_icon'>
-            <FaRegHeart />
-            <span>{likes}</span>
+          <p
+            className='social_card_user_interactions_icon'
+            onClick={handleLikeToggle}
+            style={{ cursor: "pointer" }}
+          >
+            {liked ? (
+              <IoMdHeart className='social_card_user_interactions_hearticon' />
+            ) : (
+              <FaRegHeart />
+            )}
+            <span>{likeCount}</span>
           </p>
+
           <p className='social_card_user_interactions_icon'>
             <FiMessageCircle />
             <span>{comments}</span>
