@@ -3,12 +3,13 @@
     align-items: center;
     justify-content: center;
     margin: 4rem 0;
+    flex-direction: column;
 }
 .all_solution_container{
     display: flex;
     align-items: center;
     gap: 1.5rem;
-    width: 70vw;
+    width: 76vw;
     flex-wrap: wrap;
     justify-content: space-between;
 }

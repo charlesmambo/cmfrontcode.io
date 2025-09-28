@@ -9,6 +9,7 @@ import { MdOutlineDownload } from "react-icons/md";
 import { RiBracesLine } from "react-icons/ri";
 import { LuCircleCheck } from "react-icons/lu";
 import { useNavigate } from "react-router-dom";
+import UserProfile from '../userProfile/UserProfile';
 
 
 const HomePage = () => {
@@ -199,6 +200,7 @@ const HomePage = () => {
       </div>
       </div>
 
+      <UserProfile/>
     </div>
   );
 };

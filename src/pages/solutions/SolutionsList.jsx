@@ -5,6 +5,7 @@ import IMG3 from '../../../public/sn4.png';
 import IMG4 from '../../../public/sn5.png';
 import SolutionCard from '../../assets/components/solutionsCard/SolutionCard';
 import '../solutions/SolutionsList.css';
+import ViewSolution from '../../assets/components/viewSolution/ViewSolution';
 
 const SolutionsList = () => {
   return (
@@ -89,6 +90,7 @@ const SolutionsList = () => {
         githubLink="https://github.com/example"
       />
       </div>
+      {/* <ViewSolution/> */}
     </div>
   );
 };
