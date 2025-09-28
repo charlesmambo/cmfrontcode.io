@@ -62,6 +62,7 @@
     /* padding: var(--lg-padding); */
     border-radius: var(--card-border-radius);
     width: 390px;
+    min-height: 230px;
 }
 .complete_challenge_card_header{
     display: flex;
@@ -119,6 +120,25 @@
     font-weight: 600;
     color: var(--greenColor);
 }
+.level-newbie {
+   color: var(--primary-white-color);
+}
+
+.level-junior {
+  background-color: var(--primary-color);
+   color: var(--primary-white-color);
+}
+
+.level-intermediate {
+  color: var(--primary-color);
+  background-color: var(--orange);
+}
+
+.level-advanced {
+ background-color: var(--gold-bg);
+ color: var(--primary-white-color);
+}
+
 @media only screen and (min-width: 1544px) {
  .custom_card {
     width: 422px;

@@ -123,7 +123,28 @@ const UserProfile = () => {
             </div>
 
             <div className="user_work_stats_challenges">
-                <CompletedChallenge/>
+               <CompletedChallenge
+                    title="Interactive Rating Component"
+                    level="Newbie"
+                    date="10/01/2025"
+                    points={15}
+                    technologies={["HTML", "CSS", "JavaScript"]}
+                />
+
+                <CompletedChallenge
+                    title="E-commerce Product Page"
+                    level="Junior"
+                    date="22/01/2025"
+                    points={30}
+                    technologies={["React", "Tailwind", "TypeScript"]}
+                />
+                <CompletedChallenge
+                    title="Multi-step Form"
+                    level="Advanced"
+                    date="24/01/2025"
+                    points={50}
+                    technologies={["React", "Css", "TypeScript"]}
+                />
             </div>
         </div>
         

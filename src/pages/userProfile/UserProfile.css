@@ -140,4 +140,9 @@
 }
 .user_work_stats_challenges{
     margin: var(--mr-top) 0;
+    display: flex;
+    align-items: center;
+    gap: var(--toggle-flex-gap);
 }
+
+
