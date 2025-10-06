@@ -10,6 +10,7 @@ import { RiBracesLine } from "react-icons/ri";
 import { LuCircleCheck } from "react-icons/lu";
 import { useNavigate } from "react-router-dom";
 import UserProfile from '../userProfile/UserProfile';
+import { NavLink } from 'react-router-dom';
 
 
 const HomePage = () => {
@@ -18,6 +19,7 @@ const HomePage = () => {
   const handleBrowseChallenges = () => {
     navigate("/challenges"); 
   };
+
   const codeSnippets = [
     '{ }', '< >', '[ ]', '( )', '&&', '||', '===', '!==', 
     'JS', 'CSS', 'HTML', 'React', 'Bootstrap', 'Tailwind',
@@ -26,6 +28,10 @@ const HomePage = () => {
     'API', 'JSON', 'HTTP', 'DOM', 'UI', 'UX',
     'git', 'npm', 'dev', 'prod', 'build'
   ];
+
+     const handleLoginClick = () => {
+    navigate("/login");
+  };
 
   useEffect(() => {
     function createBubble() {
@@ -77,7 +83,7 @@ const HomePage = () => {
         </p>
 
         <div className="home_intro_btns">
-          <Primary type="submit" className='home_intro_solid_btn'>
+          <Primary type="submit" className='home_intro_solid_btn'  onClick={handleLoginClick}>
             Get Started Free
           </Primary>
           <Primary type="submit" className='home_intro_outline_btn' onClick={handleBrowseChallenges}>
@@ -194,7 +200,7 @@ const HomePage = () => {
 
         
       <div className="home_to_start_your_journey_btns">
-          <Primary type="submit" className=''>
+          <Primary type="submit" className=''   onClick={handleLoginClick}>
             Start Free Today
           </Primary>
       </div>
