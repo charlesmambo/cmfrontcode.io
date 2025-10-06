@@ -12,6 +12,14 @@ import { IoIosGitBranch } from "react-icons/io";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import CompletedChallenge from '../../assets/components/customCard/CompletedChallenge';
+import AchievementCard from '../../assets/components/customCard/AchievementCard';
+import { GrTrophy } from "react-icons/gr";
+import { HiOutlineSquare3Stack3D } from "react-icons/hi2";
+import { HiOutlineSparkles } from "react-icons/hi";
+import { GoWorkflow } from "react-icons/go";
+
+
+
 
 
 
@@ -19,6 +27,7 @@ const UserProfile = () => {
  const [active, setActive] = useState("Completed");   
   return (
     <div className='user_profile_wrapper container-flex'>
+        <div className="user_profile_wrapper_width">
         <div className="user_profile_container">
             <div className="user_profile_card">
                 <div className="user_profile_card_avatar">
@@ -106,46 +115,80 @@ const UserProfile = () => {
             </div> */}
         </div>
 
-        <div className="user_work_stats_container">
-            <div className="user_work_stats_toggle">
-                <div
-                className={`user_work_stats_toggle_text ${active === "Completed" ? "active" : ""}`}
-                onClick={() => setActive("Completed")}
-                >
-                Completed
-                </div>
-                <div
-                className={`user_work_stats_toggle_text ${active === "Achievements" ? "active" : ""}`}
-                onClick={() => setActive("Achievements")}
-                >
-                Achievements
-                </div>
-            </div>
+       <div className="user_work_stats_container">
+  <div className="user_work_stats_toggle">
+    <div
+      className={`user_work_stats_toggle_text ${active === "Completed" ? "active" : ""}`}
+      onClick={() => setActive("Completed")}
+    >
+      Completed
+    </div>
+    <div
+      className={`user_work_stats_toggle_text ${active === "Achievements" ? "active" : ""}`}
+      onClick={() => setActive("Achievements")}
+    >
+      Achievements
+    </div>
+  </div>
 
-            <div className="user_work_stats_challenges">
-               <CompletedChallenge
-                    title="Interactive Rating Component"
-                    level="Newbie"
-                    date="10/01/2025"
-                    points={15}
-                    technologies={["HTML", "CSS", "JavaScript"]}
-                />
+  {/* Show Completed Challenges only if active === "Completed" */}
+  {active === "Completed" && (
+    <div className="user_work_stats_challenges">
+      <CompletedChallenge
+        title="Interactive Rating Component"
+        level="Newbie"
+        date="10/01/2025"
+        points={15}
+        technologies={["HTML", "CSS", "JavaScript"]}
+      />
+      <CompletedChallenge
+        title="E-commerce Product Page"
+        level="Junior"
+        date="22/01/2025"
+        points={30}
+        technologies={["React", "Tailwind", "TypeScript"]}
+      />
+      <CompletedChallenge
+        title="Multi-step Form"
+        level="Advanced"
+        date="24/01/2025"
+        points={50}
+        technologies={["React", "CSS", "TypeScript"]}
+      />
+    </div>
+  )}
 
-                <CompletedChallenge
-                    title="E-commerce Product Page"
-                    level="Junior"
-                    date="22/01/2025"
-                    points={30}
-                    technologies={["React", "Tailwind", "TypeScript"]}
-                />
-                <CompletedChallenge
-                    title="Multi-step Form"
-                    level="Advanced"
-                    date="24/01/2025"
-                    points={50}
-                    technologies={["React", "Css", "TypeScript"]}
-                />
-            </div>
+  {/* Show Achievements only if active === "Achievements" */}
+  {active === "Achievements" && (
+    <div className="achievements_container">
+      <AchievementCard
+        title="First Challenge"
+        description="Complete your first challenge"
+        earnedDate="20/10/2025"
+        Icon={GrTrophy}
+      />
+      <AchievementCard
+        title="Speed Demon"
+        description="Complete 5 challenges in one week"
+        earnedDate="15/10/2025"
+        Icon={HiOutlineSquare3Stack3D}
+      />
+      <AchievementCard
+        title="Perfectionist"
+        description="Get 100% accuracy on 10 challenges"
+        earnedDate="22/10/2025"
+        Icon={HiOutlineSparkles}
+      />
+      <AchievementCard
+        title="Collaboration Master"
+        description="Complete 5 collaborative projects"
+        earnedDate="17/09/2025"
+        Icon={GoWorkflow}
+      />
+    </div>
+  )}
+</div>
+
         </div>
         
     </div>

@@ -200,7 +200,7 @@ const HomePage = () => {
       </div>
       </div>
 
-      <UserProfile/>
+      {/* <UserProfile/> */}
     </div>
   );
 };

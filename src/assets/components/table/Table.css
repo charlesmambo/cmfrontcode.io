@@ -1,5 +1,5 @@
 .container {
-  width: 55vw;
+  width: 73vw;
   margin: 0 auto;
   background: white;
   border-radius: 12px;
@@ -7,8 +7,9 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   padding-bottom: 10px;
 }
-.table-wrapper{
-    margin-bottom:5rem;
+
+.table-wrapper {
+  margin-bottom: 5rem;
 }
 
 .header {
@@ -101,4 +102,3 @@
   color: #666;
   text-align: center;
 }
-
