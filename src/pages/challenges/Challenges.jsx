@@ -109,9 +109,25 @@ const Challenges = () => {
           
 
           {/* Cards */}
-          <div className="custom_card_container_wrapper">
-            <div className="custom_card_container">
-              {challengesData.map((challenge, index) => (
+        <div className="custom_card_container_wrapper">
+          <div className="custom_card_container">
+            {challengesData.map((challenge, index) => {
+              let challengeLevel = "Newbie"; // default
+
+              // 🧠 logic for assigning challenge levels
+              const langs = challenge.languages.map(l => l.toLowerCase());
+
+              if (langs.includes("react")) {
+                challengeLevel = "Advance";
+              } else if (
+                langs.includes("javascript") &&
+                langs.includes("html") &&
+                langs.includes("css")
+              ) {
+                challengeLevel = "Intermediate";
+              }
+
+              return (
                 <CustomCard
                   key={index}
                   image={challenge.image}
@@ -119,11 +135,14 @@ const Challenges = () => {
                   description={challenge.description}
                   languages={challenge.languages}
                   buttonText="Start Challenge"
+                  challengeLevel={challengeLevel} // 👈 dynamic level
                   onButtonClick={() => setSelectedChallenge(challenge)}
                 />
-              ))}
-            </div>
+              );
+            })}
           </div>
+        </div>
+
         </>
 
       ) : (
