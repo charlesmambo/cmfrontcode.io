@@ -1,24 +1,27 @@
 .challenges_main_wrapper {
- text-align: center;
- margin: 4rem 0;
- display: flex;
- flex-direction: column;
- align-items: center;
- justify-content: center;
+  text-align: center;
+  margin: 4rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-.filter_section_container{
-    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    padding: 1.5rem;
-    border-radius: 0.4rem;
-    background-color: #0d116405;
+
+.filter_section_container {
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  border-radius: 0.4rem;
+  background-color: #0d116405;
 }
-.search_bar{
-position: relative;
-width: fit-content;
+
+.search_bar {
+  position: relative;
+  width: fit-content;
 }
+
 .search_bar_input {
   background-color: transparent;
   padding: 0.7rem 1rem;
@@ -36,33 +39,45 @@ width: fit-content;
   font-family: "Open Sans", sans-serif;
   font-weight: 500;
 }
-.search_bar_icon{
-    position: absolute;
-    color: rgba(146, 146, 146, 0.699);
-    font-size: 1.4rem;
-    top: 0.6rem;
-    left: 0.8rem;
+
+.search_bar_icon {
+  position: absolute;
+  color: rgba(146, 146, 146, 0.699);
+  font-size: 1.4rem;
+  top: 0.6rem;
+  left: 0.8rem;
 }
-.custom_card_container_wrapper{
-    margin-top: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
+
+.custom_card_container_wrapper {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 }
-.custom_card_container{
-    display: flex;
-    gap: 2rem;
-    margin-top: 2rem;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 82vw;
+
+.custom_card_container {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 82vw;
 }
+
+.level_badge {
+  padding: 0.3rem 0.6rem;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  display: inline-block;
+}
+
 
 
 
 @media only screen and (min-width: 1544px) {
-  .custom_card_container{
+  .custom_card_container {
     width: 78vw;
   }
 }

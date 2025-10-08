@@ -6,16 +6,18 @@ import LOGO from '../../../../public/cmlogo.png';
 import SubNavbar from './SubNavbar';
 import ModeSwitch from '../modeSwitch/ModeSwitch';
 import { useNavigate } from 'react-router-dom';
+import { CgProfile } from "react-icons/cg";
 
 const Navbar = () => {
   const [showModeSwitch, setShowModeSwitch] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false); // <-- track login
   const navigate = useNavigate(); 
 
   const toggleModeSwitch = () => {
     setShowModeSwitch(prev => !prev);
   };
 
-   const handleLoginClick = () => {
+  const handleLoginClick = () => {
     navigate("/login");
   };
 
@@ -24,7 +26,7 @@ const Navbar = () => {
       <nav>
         <div className="logo-container">
           <a href="/">
-          <img src={LOGO} alt="Logo" />
+            <img src={LOGO} alt="Logo" />
           </a>
         </div>
 
@@ -34,9 +36,17 @@ const Navbar = () => {
           </div>
 
           <div className="navbar-login-btn-container">
-            <Primary type="submit" onClick={handleLoginClick}>
-              LOG IN
-            </Primary>
+            {!isLoggedIn && (
+              <Primary type="submit" onClick={handleLoginClick}>
+                LOG IN
+              </Primary>
+            )}
+
+            {isLoggedIn && (
+              <div className="navbar_profile">
+                <CgProfile className='navbar_profile_icon'/>
+              </div>
+            )}
           </div>
         </div>
 

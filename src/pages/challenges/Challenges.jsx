@@ -6,10 +6,8 @@ import CustomCard from "../../assets/components/customCard/CustomCard";
 import IMG from "../../../public/img1.png";
 import IMG2 from "../../../public/img2.png";
 import StartChallenge from "../../assets/components/startChallenge/StartChallenge";
-import { LuDownload, LuCodeXml } from "react-icons/lu";
 import { HiOutlineChatBubbleOvalLeft } from "react-icons/hi2";
 import { GrView } from "react-icons/gr";
-
 
 const options = [
   "All Difficulties",
@@ -20,11 +18,11 @@ const options = [
   "Advanced",
   "Guru",
 ];
+
 const category = ["All Categories", "HTML & CSS", "Javascript", "React"];
 
 const Challenges = () => {
   const [selectedChallenge, setSelectedChallenge] = useState(null);
-  const [showSubmitChallenge, setShowSubmitChallenge] = useState(false);
 
   const handleSelect = (value) => {
     console.log("Selected:", value);
@@ -106,45 +104,42 @@ const Challenges = () => {
             </div>
           </div>
 
-          
-
           {/* Cards */}
-        <div className="custom_card_container_wrapper">
-          <div className="custom_card_container">
-            {challengesData.map((challenge, index) => {
-              let challengeLevel = "Newbie"; // default
+          <div className="custom_card_container_wrapper">
+            <div className="custom_card_container">
+              {challengesData.map((challenge, index) => {
+                let challengeLevel = "Newbie";
 
-              // 🧠 logic for assigning challenge levels
-              const langs = challenge.languages.map(l => l.toLowerCase());
+                // Determine challenge level
+                const langs = challenge.languages.map((l) => l.toLowerCase());
+                if (langs.includes("react")) {
+                  challengeLevel = "Advanced";
+                } else if (
+                  langs.includes("javascript") &&
+                  langs.includes("html") &&
+                  langs.includes("css")
+                ) {
+                  challengeLevel = "Intermediate";
+                }
 
-              if (langs.includes("react")) {
-                challengeLevel = "Advance";
-              } else if (
-                langs.includes("javascript") &&
-                langs.includes("html") &&
-                langs.includes("css")
-              ) {
-                challengeLevel = "Intermediate";
-              }
-
-              return (
-                <CustomCard
-                  key={index}
-                  image={challenge.image}
-                  title={challenge.title}
-                  description={challenge.description}
-                  languages={challenge.languages}
-                  buttonText="Start Challenge"
-                  challengeLevel={challengeLevel} // 👈 dynamic level
-                  onButtonClick={() => setSelectedChallenge(challenge)}
-                />
-              );
-            })}
+                return (
+                  <CustomCard
+                    key={index}
+                    image={challenge.image}
+                    title={challenge.title}
+                    description={challenge.description}
+                    languages={challenge.languages}
+                    buttonText="Start Challenge"
+                    challengeLevel={challengeLevel} // Pass level to card
+                    onButtonClick={() =>
+                      setSelectedChallenge({ ...challenge, level: challengeLevel })
+                    }
+                  />
+                );
+              })}
+            </div>
           </div>
-        </div>
-
         </>
-
       ) : (
         <StartChallenge
           onBack={() => setSelectedChallenge(null)}
@@ -156,32 +151,18 @@ const Challenges = () => {
           ]}
           challenge={{
             language: selectedChallenge.languages.join(", "),
-            level: "Beginner",
+            level: selectedChallenge.level, // Pass level dynamically
             price: "Free",
             title: selectedChallenge.title,
             description: selectedChallenge.description,
           }}
           resources={[
-            {
-              icon: GrView,
-              title: "View Example Solutions",
-            },
-            {
-              icon: HiOutlineChatBubbleOvalLeft,
-              title: "Join Discussion",
-            }
+            { icon: GrView, title: "View Example Solutions" },
+            { icon: HiOutlineChatBubbleOvalLeft, title: "Join Discussion" },
           ]}
           stats={[
-            {
-              value: "15,420",
-              label: "Participants",
-              color: "start_challenge_stats_blue",
-            },
-            {
-              value: "11,256",
-              label: "Completed",
-              color: "start_challenge_stats_green",
-            },
+            { value: "15,420", label: "Participants", color: "start_challenge_stats_blue" },
+            { value: "11,256", label: "Completed", color: "start_challenge_stats_green" },
           ]}
         />
       )}

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { MdOutlineArrowBack } from "react-icons/md";
-import { LuDownload, LuCodeXml } from "react-icons/lu";
 import Primary from "../buttons/Primary";
 import "../startChallenge/StartChallenge.css";
 import { GoDotFill } from "react-icons/go";
@@ -42,11 +41,23 @@ const StatCard = ({ value, label, color }) => (
   </div>
 );
 
+// Helper function to get badge color
+const getLevelColor = (level) => {
+  switch (level.toLowerCase()) {
+    case "newbie":
+      return "level_green";
+    case "intermediate":
+      return "level_orange";
+    case "advanced":
+      return "level_red";
+    default:
+      return "level_default";
+  }
+};
+
 const StartChallenge = ({ steps = [], challenge = {}, resources = [], stats = [], onBack }) => {
-  // State to control SubmitChallenge visibility
   const [showSubmit, setShowSubmit] = useState(false);
 
-  // Handler for submit button click
   const handleSubmitClick = () => {
     setShowSubmit(true);
   };
@@ -55,17 +66,17 @@ const StartChallenge = ({ steps = [], challenge = {}, resources = [], stats = []
     <div className="start_challenge_wrapper">
       {/* Back Button */}
       <div className="challenge-steps">
-      <div className="back_btn" onClick={onBack}>
-        <MdOutlineArrowBack className="back_icon" />
-        back to challenge
-      </div>
+        <div className="back_btn" onClick={onBack}>
+          <MdOutlineArrowBack className="back_icon" />
+          back to challenge
+        </div>
 
-      {/* Steps */}
-      <div className="start_challenge_steps">
-        {steps.map((step, i) => (
-          <StepCard key={i} {...step} />
-        ))}
-      </div>
+        {/* Steps */}
+        <div className="start_challenge_steps">
+          {steps.map((step, i) => (
+            <StepCard key={i} {...step} />
+          ))}
+        </div>
       </div>
 
       {/* Main Content */}
@@ -75,7 +86,11 @@ const StartChallenge = ({ steps = [], challenge = {}, resources = [], stats = []
           <div className="start_challenge_content_card">
             <div className="start_challenge_content_card_headings">
               <div className="start_challenge_content_card_headings_info">
-                <div className="start_challenge_content_card_headings_level">
+                <div
+                  className={`start_challenge_content_card_headings_level ${getLevelColor(
+                    challenge.level
+                  )}`}
+                >
                   {challenge.level}
                 </div>
               </div>
@@ -104,11 +119,7 @@ const StartChallenge = ({ steps = [], challenge = {}, resources = [], stats = []
                 <ResourceCard key={i} {...res} />
               ))}
             </div>
-            <Primary
-              type="button"
-              className="start_challenge"
-              onClick={handleSubmitClick}
-            >
+            <Primary type="button" className="start_challenge" onClick={handleSubmitClick}>
               Submit Solution
             </Primary>
           </div>
@@ -122,7 +133,6 @@ const StartChallenge = ({ steps = [], challenge = {}, resources = [], stats = []
               ))}
             </div>
           </div>
-          
         </div>
 
         {/* Design & Stats */}
@@ -191,13 +201,9 @@ const StartChallenge = ({ steps = [], challenge = {}, resources = [], stats = []
           </div>
         </div>
       </div>
-       {/* Conditionally render SubmitChallenge */}
-        {showSubmit && (
-          <SubmitChallenge 
-            onClose={() => setShowSubmit(false)} // <-- important!
-          />
-        )}
 
+      {/* Conditionally render SubmitChallenge */}
+      {showSubmit && <SubmitChallenge onClose={() => setShowSubmit(false)} />}
     </div>
   );
 };
