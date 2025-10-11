@@ -13,7 +13,7 @@ const RecentCard = () => {
                 <IoIosArrowRoundForward className="recent_card_link_icon"/>
             </p>
         </div>
-
+        
         <div className="recent_card_content_wrapper">
            <RecentActivityCard
             icon={GoDotFill}
@@ -23,7 +23,7 @@ const RecentCard = () => {
             points={25}
             status="completed"
             statusColor="#10B981"
-            date="2 days ago"
+            date="3 days ago"
            />
            <RecentActivityCard
             icon={GoDotFill}
@@ -34,7 +34,7 @@ const RecentCard = () => {
             status="in progress"
             statusColor="#e49c21"
             statusBgColor="#e49d2116"
-            date="2 days ago"
+            date=""
            />
            <RecentActivityCard
             icon={GoDotFill}
@@ -44,7 +44,7 @@ const RecentCard = () => {
             points={20}
             status="Completed"
             statusColor="#10B981"
-            date="2 days ago"
+            date="5 days ago"
            />
         </div>
     </div>

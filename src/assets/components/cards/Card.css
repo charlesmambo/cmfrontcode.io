@@ -265,6 +265,72 @@
   color: var(--greencolor);
 }
 
+/* Action Card */
+.action_card {
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  border-radius: 0.4rem;
+  background-color: #0d116405;
+  width: 230px;
+  padding: var(--lg-padding);
+}
+
+.action_card_content {
+  margin-top: 1.5rem;
+}
+
+.action_card_link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem;
+  border-radius: 0.3rem;
+  color: var(--dim-dark-grey-color);
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.6s ease;
+}
+
+.action_card_link:hover {
+  background-color: #e3e3e3;
+  color: var(--primary-color);
+}
+
+.review_code_link:hover {
+  color: var(--greencolor);
+}
+
+.view_leaderboard_link:hover {
+  color: var(--berry-color);
+}
+
+.view_solution_link:hover {
+  color: var(--gold-bg);
+}
+
+.browse-icon {
+  font-size: var(--medium-icon-size);
+  background-color: #005f8f13;
+  padding: 0.5rem;
+  color: var(--primary-color);
+  border-radius: 0.3rem;
+}
+
+.review_code_icon {
+  background-color: #06923e18;
+  color: var(--greencolor);
+}
+
+.view_leaderboard_icon {
+  background-color: #d9165717;
+  color: var(--berry-color);
+}
+
+.view_solution_icon {
+  background-color: #e49d211d;
+  color: var(--gold-bg);
+}
+
 @media only screen and (max-width: 600px) {
   .small-card {
     width: 100%;

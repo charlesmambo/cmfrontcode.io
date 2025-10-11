@@ -21,4 +21,7 @@
 
 .quick_action_cards_wrapper {
     margin-top: var(--md-margin-top);
+    display: flex;
+    gap: 1.5rem;
+    justify-content: space-between;
 }

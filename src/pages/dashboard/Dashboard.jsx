@@ -6,6 +6,7 @@ import { PiBracketsCurly } from "react-icons/pi";
 import { LuMessageSquareCode } from "react-icons/lu";
 import { FaArrowTrendUp } from "react-icons/fa6";
 import RecentCard from '../../assets/components/cards/RecentCard';
+import ActionCard from '../../assets/components/cards/ActionCard';
 
 
 
@@ -56,6 +57,10 @@ const Dashboard = () => {
         {/* Quick Action Wrapper */}
         <div className="quick_action_cards_wrapper">
           <RecentCard/>
+
+          <div className="action_cards_wrapper">
+              <ActionCard/>
+          </div>
         </div>
     </div>
   )
