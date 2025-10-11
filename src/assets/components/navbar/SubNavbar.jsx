@@ -7,8 +7,8 @@ const SubNavbar = () => {
       <ul>
         <li>
           <NavLink
-            // to="/leaderboard"
-            // className={({ isActive }) => (isActive ? 'active-link' : '')}
+            to="/dashboard"
+            className={({ isActive }) => (isActive ? 'active-link' : '')}
           >
             Dashboard
           </NavLink>

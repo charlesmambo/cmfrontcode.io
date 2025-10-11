@@ -1,0 +1,20 @@
+.dasboard_wrapper {
+    margin: var(--margin-top-lg);
+    padding: 0 6rem;
+}
+
+.dashboard_level {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.dashboard_card_container {
+    margin-top: var(--md-margin-top);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dashboard_intro_container p {
+    font-weight: 500;
+}

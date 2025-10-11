@@ -9,12 +9,14 @@ import HomePage from './pages/home/HomePage'
 import Footer from './assets/components/footer/Footer'
 import Challenges from './pages/Challenges/Challenges'
 import SolutionsList from './pages/solutions/SolutionsList'
+import Dashboard from './pages/dashboard/Dashboard'
 
 function App() {
 
   return (
     <Router>
       <Navbar />
+      
 
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -23,6 +25,7 @@ function App() {
         <Route path="/leaderboard" element={<LeaderBoard />} />
         <Route path="/challenges" element={<Challenges/>} />
         <Route path="/Solutions" element={<SolutionsList/>} />
+        <Route path="/Dashboard" element={<Dashboard/>} />
       </Routes>
       <Footer />
     </Router>
