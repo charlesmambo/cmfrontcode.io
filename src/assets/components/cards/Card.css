@@ -168,6 +168,103 @@
 }
 
 
+/* Recent Cards Container Styles */
+.recent_card_wrapper {
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  border-radius: 0.4rem;
+  background-color: #0d116405;
+  width: 55vw;
+  padding: var(--lg-padding);
+}
+
+.recent_card_headings {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.recent_card_link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--primary-color);
+  font-weight: 500;
+  text-transform: capitalize;
+  font-size: var(--toogle-btn-text-size);
+  transition: all 0.25s ease-in-out;
+  cursor: pointer;
+}
+
+.recent_card_link:hover {
+  color: var(--berry-color);
+  transform: translateY(-2px);
+}
+
+.recent_card_link_icon {
+  font-size: 1.5rem;
+}
+
+.recent_card_content_wrapper {
+  margin-top: var(--md-margin-top);
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.recent_activity_card_icon {
+  font-size: var(--medium-icon-size);
+  color: var(--header-bg-color);
+}
+
+.recent_activity_card_content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.recent_activity_card_content_headings h4 {
+  font-size: 1rem;
+}
+
+.recent_activity_card_content_headings p {
+  font-size: var(--sm-text-size);
+  font-weight: 500;
+  color: var(--dim-dark-grey-color);
+}
+
+.recent_activity_card {
+  background-color: #fafafa89;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.recent_activity_ld {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.recent_activity_ld_date {
+  font-size: var(--sm-text-size);
+  font-weight: 500;
+  color: var(--dim-dark-grey-color);
+}
+
+.recent_activity_ld_level {
+  text-transform: capitalize;
+  font-size: 0.7rem;
+  font-weight: 600;
+  background-color: #008f401f;
+  padding: 0.3rem 0.5rem;
+  border-radius: var(--border-radius-lg);
+  color: var(--greencolor);
+}
+
 @media only screen and (max-width: 600px) {
   .small-card {
     width: 100%;

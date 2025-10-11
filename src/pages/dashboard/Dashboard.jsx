@@ -5,6 +5,7 @@ import { GoTrophy } from "react-icons/go";
 import { PiBracketsCurly } from "react-icons/pi";
 import { LuMessageSquareCode } from "react-icons/lu";
 import { FaArrowTrendUp } from "react-icons/fa6";
+import RecentCard from '../../assets/components/cards/RecentCard';
 
 
 
@@ -50,6 +51,11 @@ const Dashboard = () => {
             iconColor="#9E1C60"    
             valueColor="#990250ff"
           />
+        </div>
+
+        {/* Quick Action Wrapper */}
+        <div className="quick_action_cards_wrapper">
+          <RecentCard/>
         </div>
     </div>
   )

@@ -18,3 +18,7 @@
 .dashboard_intro_container p {
     font-weight: 500;
 }
+
+.quick_action_cards_wrapper {
+    margin-top: var(--md-margin-top);
+}
