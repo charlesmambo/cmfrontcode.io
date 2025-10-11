@@ -46,6 +46,26 @@ const RecentCard = () => {
             statusColor="#10B981"
             date="5 days ago"
            />
+           <RecentActivityCard
+            icon={GoDotFill}
+            iconColor="#10B981"
+            title="Landing Page Hero"
+            level="Beginner"
+            points={20}
+            status="Completed"
+            statusColor="#10B981"
+            date="5 days ago"
+           />
+           <RecentActivityCard
+            icon={GoDotFill}
+            iconColor="#10B981"
+            title="Landing Page Hero"
+            level="Beginner"
+            points={20}
+            status="Completed"
+            statusColor="#10B981"
+            date="5 days ago"
+           />
         </div>
     </div>
   )

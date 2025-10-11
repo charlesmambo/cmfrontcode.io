@@ -3,6 +3,7 @@ import { HiOutlineCodeBracketSquare } from "react-icons/hi2";
 import { RiMessage3Line } from "react-icons/ri";
 import { FaRegEye } from "react-icons/fa";
 import { LuEye } from "react-icons/lu";
+import { IoTrophyOutline } from "react-icons/io5";
 
 
 const ActionCard = () => {
@@ -20,7 +21,7 @@ const ActionCard = () => {
              <p>Review Code</p>
            </div> 
            <div className="action_card_link view_leaderboard_link">
-             <FaRegEye  className='browse-icon view_leaderboard_icon'/>
+             <IoTrophyOutline   className='browse-icon view_leaderboard_icon'/>
              <p>View Leaderboard</p>
            </div> 
            <div className="action_card_link view_solution_link">

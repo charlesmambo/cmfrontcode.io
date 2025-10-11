@@ -331,6 +331,51 @@
   color: var(--gold-bg);
 }
 
+.achivements_action_card {
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  border-radius: 0.4rem;
+  background-color: #0d116405;
+  width: 230px;
+  padding: var(--lg-padding);
+  margin-top: 1.8rem;
+}
+
+.achivements_action_card_content {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.achivements_action_card_icon {
+  background-color: #e49d211d;
+  color: var(--gold-bg);
+  font-size: 1.3rem;
+  padding: 0.7rem 0.9rem;
+  border-radius: 0.3rem;
+}
+
+.achivements_action_card_heading {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.achivements_action_card_heading h5 {
+  font-size: 0.90rem;
+  color: var(--header-bg-color);
+}
+
+.achivements_action_card_heading_text {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--dim-dark-grey-color);
+}
+
+.achivements_action_card_content_wrapper {
+  margin-top: 1.3rem;
+}
+
 @media only screen and (max-width: 600px) {
   .small-card {
     width: 100%;

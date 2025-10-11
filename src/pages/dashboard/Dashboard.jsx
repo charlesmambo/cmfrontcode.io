@@ -7,6 +7,8 @@ import { LuMessageSquareCode } from "react-icons/lu";
 import { FaArrowTrendUp } from "react-icons/fa6";
 import RecentCard from '../../assets/components/cards/RecentCard';
 import ActionCard from '../../assets/components/cards/ActionCard';
+import AchievementCard from '../../assets/components/customCard/AchievementCard';
+import Achievement from '../../assets/components/cards/Achievement';
 
 
 
@@ -60,6 +62,7 @@ const Dashboard = () => {
 
           <div className="action_cards_wrapper">
               <ActionCard/>
+              <Achievement/>
           </div>
         </div>
     </div>
