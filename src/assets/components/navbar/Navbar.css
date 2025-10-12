@@ -94,6 +94,58 @@ nav {
   color: var(--primary-color);
 }
 
+.logout_dropdown {
+  background-color: var(--toggle-bg);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+  padding: 1.2rem;
+  position: absolute;
+  top: 2.2rem;
+  left: -9rem;
+  width: fit-content;
+  border-radius: 0.3rem;
+}
+
+.name {
+  font-weight: 700;
+  text-transform: capitalize;
+  margin-bottom: 0.5rem;
+  color: var(--header-bg-color);
+  border-bottom: 1px solid var(--primary-lightgrey-color);
+  padding-bottom: 0.6rem;
+}
+
+.settings {
+  font-weight: 500;
+  font-size: var(--toogle-btn-text-size);
+}
+
+.navbar-profile-container {
+  position: relative;
+}
+
+.logout_btn {
+  margin-top: 0.7rem;
+  border-radius: 0.4rem;
+  text-transform: capitalize;
+  font-size: var(--toogle-btn-text-size);
+  width: 100%;
+  font-weight: 500;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  border: none;
+  background-color: transparent;
+  transition: all 0.6s;
+  cursor: pointer;
+}
+
+
+.logout_btn:hover {
+  padding: 0.5rem 0.9rem;
+  background-color: var(--danger-color);
+  color: var(--primary-white-color);
+}
 
 @media only screen and (max-width: 600px) {
   .sub-navbar-container {

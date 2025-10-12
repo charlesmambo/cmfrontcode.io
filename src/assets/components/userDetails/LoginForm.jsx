@@ -8,12 +8,38 @@ import TextInput from '../customInputs/TextInput';
 import { MdOutlineEmail } from "react-icons/md";
 import { RiLockPasswordLine } from "react-icons/ri";
 import Primary from '../buttons/Primary';
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../auth/AuthContext'; 
 
 const LoginForm = ({ onSwitchToSignUp }) => {
-  const [showReset, setShowReset] = useState(false);
+  const { login } = useAuth();
+  const navigate = useNavigate();
 
-  const handleForgotPasswordClick = () => {
-    setShowReset(true);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [showReset, setShowReset] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleForgotPasswordClick = () => setShowReset(true);
+
+  const validateForm = () => {
+    if (!email) return "Email is required.";
+    if (!/\S+@\S+\.\S+/.test(email)) return "Please enter a valid email.";
+    if (!password) return "Password is required.";
+    return null;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const validationError = validateForm();
+    if (validationError) return setError(validationError);
+
+    const result = login(email, password);
+    if (result.success) {
+      navigate("/dashboard");
+    } else {
+      setError(result.message);
+    }
   };
 
   return (
@@ -40,33 +66,37 @@ const LoginForm = ({ onSwitchToSignUp }) => {
       </div>
 
       <div className="login-form-wrapper">
-        <h2>welcome back</h2>
+        <h2>Welcome back</h2>
         <p>Sign in to continue building with cmfrontendcode Challenges.</p>
 
-        <form action="" className="login-form">
+        <form onSubmit={handleSubmit} className="login-form">
           <div className="form-control">
             <TextInput
-                label="Email Address"
-                placeholder="Enter your email"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                icon={MdOutlineEmail}
-                name="Email"
-                required
+              label="Email Address"
+              placeholder="Enter your email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              icon={MdOutlineEmail}
+              name="email"
+              required
             />
           </div>
 
           <div className="form-control">
             <TextInput
-                label="Password"
-                placeholder="Enter your password"
-                icon={RiLockPasswordLine}
-                name="Pasword"
-                required
-                type="password"
+              label="Password"
+              placeholder="Enter your password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              icon={RiLockPasswordLine}
+              name="password"
+              required
+              type="password"
             />
             <IoEyeOffOutline className="psswd-icon" />
           </div>
+
+          {error && <p className="error-message">{error}</p>}
 
           <div className="form-control sf-password">
             <div className="save-passsword">
@@ -80,7 +110,7 @@ const LoginForm = ({ onSwitchToSignUp }) => {
 
           <div className="login-form-submit-btn">
             <Primary type="submit">
-                Sign In
+              Sign In
             </Primary>
           </div>
 
@@ -92,32 +122,27 @@ const LoginForm = ({ onSwitchToSignUp }) => {
             </div>
 
             <div className="google-github-btn-container">
-              <button>
-                <IoLogoGithub />
-                GitHub
+              <button type="button">
+                <IoLogoGithub /> GitHub
               </button>
-              <button>
-                <FcGoogle />
-                Google
+              <button type="button">
+                <FcGoogle /> Google
               </button>
             </div>
 
             <p className="create-account-text">
               Don't have an account?
-              <span className="create-account-text-link"
-              onClick={onSwitchToSignUp}
-              >Create one</span>
+              <span className="create-account-text-link" onClick={onSwitchToSignUp}>Create one</span>
             </p>
           </div>
         </form>
       </div>
 
-        {showReset && (
+      {showReset && (
         <div className="reset-psswd-container">
-            <ResetPassword onClose={() => setShowReset(false)} />
+          <ResetPassword onClose={() => setShowReset(false)} />
         </div>
-        )}
-
+      )}
     </div>
   );
 };
