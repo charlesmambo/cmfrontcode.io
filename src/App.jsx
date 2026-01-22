@@ -10,6 +10,7 @@ import Challenges from './pages/Challenges/Challenges'
 import SolutionsList from './pages/solutions/SolutionsList'
 import Dashboard from './pages/dashboard/Dashboard'
 import { AuthProvider, useAuth } from './assets/components/auth/AuthContext'
+import Settings from './assets/components/settings/Settings';
 
 // Route guard for authenticated pages
 const ProtectedRoute = ({ children }) => {
@@ -30,6 +31,7 @@ function App() {
           <Route path="/leaderboard" element={<LeaderBoard />} />
           <Route path="/challenges" element={<Challenges />} />
           <Route path="/solutions" element={<SolutionsList />} />
+          <Route path="/settings" element={<Settings />} />
 
           {/* Only logged-in users can access this route */}
           <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />

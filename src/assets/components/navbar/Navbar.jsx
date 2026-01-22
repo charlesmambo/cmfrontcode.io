@@ -8,7 +8,9 @@ import ModeSwitch from '../modeSwitch/ModeSwitch';
 import { useNavigate } from 'react-router-dom';
 import { CgProfile } from "react-icons/cg";
 import { useAuth } from '../auth/AuthContext';
-import { FaArrowRightLong } from "react-icons/fa6";
+import { FaArrowRightLong } from "react-icons/fa6"
+import { IoSettingsOutline } from "react-icons/io5";
+
 
 
 const Navbar = () => {
@@ -22,6 +24,11 @@ const Navbar = () => {
   const handleLoginClick = () => navigate("/login");
 
   const dropdownRef = useRef(null);
+
+    // 👇 dynamic logo click based on login
+  const handleSettingsClick = () => {
+      navigate("/settings");
+    }
 
     // 👇 toggle dropdown when clicking profile icon
   const handleProfileClick = () => {
@@ -42,6 +49,7 @@ const Navbar = () => {
     } else {
       navigate("/");
     }
+
     
   };
 
@@ -80,7 +88,8 @@ const Navbar = () => {
                 {showDropdown && (
                   <div className="logout_dropdown">
                     <p className="name">Charles mambo</p>
-                    <p className='settings'>Settings</p>
+                    <p onClick={handleSettingsClick} className='settings'><IoSettingsOutline />Settings</p>
+                    <p onClick={handleSettingsClick} className='settings'>Profile</p>
                     <button className="logout_btn" onClick={handleLogout}>
                       Log Out
                       <FaArrowRightLong />
