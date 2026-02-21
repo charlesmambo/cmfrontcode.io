@@ -79,7 +79,7 @@ const HomePage = () => {
           Master Frontend Development with <span className='home_intro_span'>Real Design Challenges</span>
         </h1>
         <p>
-          Turn beautiful UI/UX designs into code. Build, submit, get reviewed, and earn points while mastering frontend development with real-world challenges.
+          Solve real-world UI challenges, get instant feedback, and showcase your work to the dev community.
         </p>
 
         <div className="home_intro_btns">

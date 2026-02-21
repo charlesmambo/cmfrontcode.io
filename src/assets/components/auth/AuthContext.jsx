@@ -7,7 +7,7 @@ export const AuthProvider = ({ children }) => {
   const login = (email, password) => {
     if (email === "chylah11st@gmail.com" && password === "1126") {
       setIsLoggedIn(true);
-      return { success: true };
+      return { success: true, message: "Logged in successfully!" };
     } else {
       return { success: false, message: "Invalid email or password" };
     }

@@ -1,64 +1,64 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React from 'react';
 import '../navbar/Navbar.css';
-import Primary from '../buttons/Primary';
-import { MdLightMode } from "react-icons/md";
-import LOGO from '../../../../public/cmlogo.png';
+// import Primary from '../buttons/Primary';
+// import { MdLightMode } from "react-icons/md";
+// import LOGO from '../../../../public/cmlogo.png';
 import SubNavbar from './SubNavbar';
-import ModeSwitch from '../modeSwitch/ModeSwitch';
-import { useNavigate } from 'react-router-dom';
-import { CgProfile } from "react-icons/cg";
-import { useAuth } from '../auth/AuthContext';
-import { FaArrowRightLong } from "react-icons/fa6"
-import { IoSettingsOutline } from "react-icons/io5";
+// import ModeSwitch from '../modeSwitch/ModeSwitch';
+// import { useNavigate } from 'react-router-dom';
+// import { CgProfile } from "react-icons/cg";
+// import { useAuth } from '../auth/AuthContext';
+// import { FaArrowRightLong } from "react-icons/fa6"
+// import { IoSettingsOutline } from "react-icons/io5";
 
 
 
 const Navbar = () => {
-  const [showModeSwitch, setShowModeSwitch] = useState(false);
-  const [showDropdown, setShowDropdown] = useState(false); // dropdown visibility
-  const { isLoggedIn,logout } = useAuth(); 
-  const navigate = useNavigate();
+  // const [showModeSwitch, setShowModeSwitch] = useState(false);
+  // const [showDropdown, setShowDropdown] = useState(false); // dropdown visibility
+  // const { isLoggedIn,logout } = useAuth(); 
+  // const navigate = useNavigate();
 
-  const toggleModeSwitch = () => setShowModeSwitch(prev => !prev);
+  // const toggleModeSwitch = () => setShowModeSwitch(prev => !prev);
 
-  const handleLoginClick = () => navigate("/login");
+  // const handleLoginClick = () => navigate("/login");
 
-  const dropdownRef = useRef(null);
+  // const dropdownRef = useRef(null);
 
-    // 👇 dynamic logo click based on login
-  const handleSettingsClick = () => {
-      navigate("/settings");
-    }
+  //   // 👇 dynamic logo click based on login
+  // const handleSettingsClick = () => {
+  //     navigate("/settings");
+  //   }
 
-    // 👇 toggle dropdown when clicking profile icon
-  const handleProfileClick = () => {
-    setShowDropdown(prev => !prev);
-  };
+  //   // 👇 toggle dropdown when clicking profile icon
+  // const handleProfileClick = () => {
+  //   setShowDropdown(prev => !prev);
+  // };
 
-    const handleLogout = () => {
-    logout(); // 👈 call logout from context
-    setShowDropdown(false);
-    navigate("/"); // 👈 redirect after logout (optional)
-  };
+  //   const handleLogout = () => {
+  //   logout(); // 👈 call logout from context
+  //   setShowDropdown(false);
+  //   navigate("/"); // 👈 redirect after logout (optional)
+  // };
 
   // 👇 dynamic logo click based on login
-  const handleLogoClick = (e) => {
-    e.preventDefault();
-    if (isLoggedIn) {
-      navigate("/dashboard");
-    } else {
-      navigate("/");
-    }
+  // const handleLogoClick = (e) => {
+  //   e.preventDefault();
+  //   if (isLoggedIn) {
+  //     navigate("/dashboard");
+  //   } else {
+  //     navigate("/");
+  //   }
 
     
-  };
+  // };
 
   return (
     <div className="nav-wrapper">
-      <nav>
+      {/* <nav>
         <div className="logo-container">
           <a href="#" onClick={handleLogoClick}>
-            <img src={LOGO} alt="Logo" />
+            <h4>cmFrontendCode</h4>
           </a>
         </div>
 
@@ -68,7 +68,6 @@ const Navbar = () => {
           </div>
 
           <div className="navbar-login-btn-container">
-            {/* LOGIN BUTTON */}
             {!isLoggedIn && (
               <div className="navbar-login-btn">
                 <Primary type="button" onClick={handleLoginClick}>
@@ -77,7 +76,7 @@ const Navbar = () => {
               </div>
             )}
 
-           {/* PROFILE ICON + DROPDOWN */}
+           PROFILE ICON + DROPDOWN 
             {isLoggedIn && (
               <div className="navbar-profile-container" ref={dropdownRef}>
                 <CgProfile
@@ -106,7 +105,7 @@ const Navbar = () => {
             <ModeSwitch />
           </div>
         )}
-      </nav>
+      </nav>*/}
 
       <SubNavbar />
     </div>

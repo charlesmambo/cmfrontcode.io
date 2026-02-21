@@ -1,11 +1,53 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { useAuth } from '../auth/AuthContext';
+import  { useState, useEffect, useRef } from 'react';
+import '../navbar/Navbar.css';
+import Primary from '../buttons/Primary';
+import { MdLightMode } from "react-icons/md";
+// import LOGO from '../../../../public/cmlogo.png';
+import ModeSwitch from '../modeSwitch/ModeSwitch';
+import { useNavigate } from 'react-router-dom';
+import { CgProfile } from "react-icons/cg";
+import { FaArrowRightLong } from "react-icons/fa6"
+import { IoSettingsOutline } from "react-icons/io5";
 
 const SubNavbar = () => {
-  const { isLoggedIn } = useAuth(); // check login state
+  
+  // const { isLoggedIn } = useAuth(); // check login state
+  const [showDropdown, setShowDropdown] = useState(false); // dropdown visibility
+  const { isLoggedIn,logout } = useAuth(); 
+  const navigate = useNavigate();
+
+
+  const handleLoginClick = () => navigate("/login");
+
+  const dropdownRef = useRef(null);
+
+    // 👇 dynamic logo click based on login
+  const handleSettingsClick = () => {
+      navigate("/settings");
+    }
+
+    // 👇 toggle dropdown when clicking profile icon
+  const handleProfileClick = () => {
+    setShowDropdown(prev => !prev);
+  };
+
+    const handleLogout = () => {
+    logout(); // 👈 call logout from context
+    setShowDropdown(false);
+    navigate("/"); // 👈 redirect after logout (optional)
+  };
+
+  // (removed unused handleLogoClick function)
   return (
     <div className="sub-navbar-container">
+      <div className="logo">
+        <NavLink to="/">
+          <h4 className='logo'>cmFrontendCode</h4>
+        </NavLink>
+      </div>
       <ul>
           {/*Only show Dashboard if logged in */}
         {isLoggedIn && (
@@ -43,6 +85,38 @@ const SubNavbar = () => {
           </NavLink>
         </li>
       </ul>
+                <div className="navbar-login-btn-container">
+            {/* LOGIN BUTTON */}
+            {!isLoggedIn && (
+              <div className="navbar-login-btn">
+                <Primary type="button" onClick={handleLoginClick}>
+                  LOG IN
+                </Primary>
+              </div>
+            )}
+
+           {/* PROFILE ICON + DROPDOWN */}
+            {isLoggedIn && (
+              <div className="navbar-profile-container" ref={dropdownRef}>
+                <CgProfile
+                  className='navbar_profile_icon'
+                  onClick={handleProfileClick}
+                />
+
+                {showDropdown && (
+                  <div className="logout_dropdown">
+                    <p className="name">Charles mambo</p>
+                    <p onClick={handleSettingsClick} className='settings'><IoSettingsOutline />Settings</p>
+                    <p onClick={handleSettingsClick} className='settings'>Profile</p>
+                    <button className="logout_btn" onClick={handleLogout}>
+                      Log Out
+                      <FaArrowRightLong />
+                    </button>
+                  </div>
+                )}
+              </div>
+            )}
+          </div>
     </div>
   );
 };

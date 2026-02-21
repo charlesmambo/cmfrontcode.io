@@ -10,6 +10,8 @@ import { RiLockPasswordLine } from "react-icons/ri";
 import Primary from '../buttons/Primary';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../auth/AuthContext'; 
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const LoginForm = ({ onSwitchToSignUp }) => {
   const { login } = useAuth();
@@ -18,7 +20,6 @@ const LoginForm = ({ onSwitchToSignUp }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showReset, setShowReset] = useState(false);
-  const [error, setError] = useState("");
 
   const handleForgotPasswordClick = () => setShowReset(true);
 
@@ -29,18 +30,23 @@ const LoginForm = ({ onSwitchToSignUp }) => {
     return null;
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const validationError = validateForm();
-    if (validationError) return setError(validationError);
+const handleSubmit = async (e) => {
+  e.preventDefault();
 
-    const result = login(email, password);
-    if (result.success) {
-      navigate("/dashboard");
-    } else {
-      setError(result.message);
-    }
-  };
+  const validationError = validateForm();
+  if (validationError) {
+    toast.error(validationError, { position: "top-right", autoClose: 6000 });
+    return;
+  }
+
+  const result = await login(email, password); // wait for login
+  if (result.success) {
+    toast.success(result.message, { position: "top-right", autoClose: 6000 });
+    setTimeout(() => navigate("/dashboard"), 2000);
+  } else {
+    toast.error(result.message, { position: "top-right", autoClose: 6000 });
+  }
+};
 
   return (
     <div className="login-form-main">
@@ -96,8 +102,6 @@ const LoginForm = ({ onSwitchToSignUp }) => {
             <IoEyeOffOutline className="psswd-icon" />
           </div>
 
-          {error && <p className="error-message">{error}</p>}
-
           <div className="form-control sf-password">
             <div className="save-passsword">
               <input type="checkbox" />
@@ -109,9 +113,7 @@ const LoginForm = ({ onSwitchToSignUp }) => {
           </div>
 
           <div className="login-form-submit-btn">
-            <Primary type="submit">
-              Sign In
-            </Primary>
+            <Primary type="submit">Sign In</Primary>
           </div>
 
           <div className="other-login-option">
@@ -143,6 +145,19 @@ const LoginForm = ({ onSwitchToSignUp }) => {
           <ResetPassword onClose={() => setShowReset(false)} />
         </div>
       )}
+
+      {/* ToastContainer to show top-right popups */}
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </div>
   );
 };
