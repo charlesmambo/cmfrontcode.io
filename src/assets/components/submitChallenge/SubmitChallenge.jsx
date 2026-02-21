@@ -70,6 +70,11 @@ const SubmitChallenge = ({
           />
         </div>
 
+        <div className="submit_challenge_form_control">
+          <label htmlFor="liveUrl">Notes  <span className="submit_challenge_notes"> ( Optional )</span></label>
+         <textarea name="" id="" placeholder="Explain your experience"></textarea>
+        </div>
+
         <div className="submit_challege_btn">
           <Primary type="button" className="cancel-btn sumbit_solution_btns" onClick={onClose}>Cancel</Primary>
           <Primary type="button" className="sumbit_solution_btns">Submit</Primary>

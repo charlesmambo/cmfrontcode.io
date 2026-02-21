@@ -1,5 +1,6 @@
 import React from 'react';
 import '../footer/Footer.css';
+import { NavLink } from 'react-router-dom';
 import { PiNewspaperClipping } from "react-icons/pi";
 import { CgCommunity } from "react-icons/cg";
 import { RiUserCommunityFill } from "react-icons/ri";
@@ -26,17 +27,26 @@ const Footer = () => {
           {/* 👇 Only show Dashboard if logged in */}
           {isLoggedIn && (
             <li>
-              <a href="/dashboard">Dashboard</a>
+            <NavLink
+              to="/dashboard">
+              Dashboard
+               </NavLink>
             </li>
           )}
           <li>
-            <a href="/challenges">Challenges</a>
+            <NavLink
+              to="/challenges">Challenges
+            </NavLink>
           </li>
           <li>
-            <a href="/solutions">Solutions</a>
+            <NavLink
+            to="/solutions">Solutions
+            </NavLink>
           </li>
           <li>
-            <a href="/leaderboard">Leaderboard</a>
+            <NavLink 
+            to="/leaderboard">Leaderboard
+            </NavLink>
           </li>
         </ul>
       </div>

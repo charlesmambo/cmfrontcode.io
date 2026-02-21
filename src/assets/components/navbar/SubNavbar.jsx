@@ -4,18 +4,17 @@ import { useAuth } from '../auth/AuthContext';
 import  { useState, useEffect, useRef } from 'react';
 import '../navbar/Navbar.css';
 import Primary from '../buttons/Primary';
-import { MdLightMode } from "react-icons/md";
-// import LOGO from '../../../../public/cmlogo.png';
-import ModeSwitch from '../modeSwitch/ModeSwitch';
 import { useNavigate } from 'react-router-dom';
 import { CgProfile } from "react-icons/cg";
 import { FaArrowRightLong } from "react-icons/fa6"
 import { IoSettingsOutline } from "react-icons/io5";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const SubNavbar = () => {
   
   // const { isLoggedIn } = useAuth(); // check login state
-  const [showDropdown, setShowDropdown] = useState(false); // dropdown visibility
+  const [showDropdown, setShowDropdown] = useState(false); 
   const { isLoggedIn,logout } = useAuth(); 
   const navigate = useNavigate();
 
@@ -37,7 +36,12 @@ const SubNavbar = () => {
     const handleLogout = () => {
     logout(); // 👈 call logout from context
     setShowDropdown(false);
-    navigate("/"); // 👈 redirect after logout (optional)
+
+
+      toast.success("Logged out successfully", {
+      autoClose: 2000,
+      });
+    navigate("/"); 
   };
   useEffect(() => {
 const handleClickOutside = (event) => {

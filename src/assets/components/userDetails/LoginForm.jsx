@@ -42,7 +42,7 @@ const handleSubmit = async (e) => {
   const result = await login(email, password); // wait for login
   if (result.success) {
     toast.success(result.message, { position: "top-right", autoClose: 6000 });
-    setTimeout(() => navigate("/dashboard"), 2000);
+    setTimeout(() => navigate("/dashboard"), 300);
   } else {
     toast.error(result.message, { position: "top-right", autoClose: 6000 });
   }

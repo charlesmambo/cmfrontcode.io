@@ -4,7 +4,7 @@
     margin-top: 2rem;
     border-radius: var(--card-border-radius);
     background-color: #f7f7f7;
-    width: 20vw;
+    width: 30vw;
     position: fixed;
     top: 10%;
     z-index: 100;
@@ -74,3 +74,19 @@
     color: var( --primary-white-color) !important;
 }
 
+.submit_challenge_notes{
+    font-size: 0.8rem;
+    color: var(--dark-grey-color);
+}
+.submit_challenge_form_control textarea{
+   border: 1px solid var(--primary-lightgrey-color) !important;
+    background-color: transparent !important;
+    color: var(--dark-grey-color) !important;  
+    outline: none;
+    padding: 0.9rem;
+    border-radius: 0.2rem;
+    width: 100% !important;
+    box-sizing: border-box;
+    height: 100px;
+    resize: none;
+}

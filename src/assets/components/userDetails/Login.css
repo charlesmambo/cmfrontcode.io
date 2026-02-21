@@ -164,6 +164,7 @@
     background-image: linear-gradient(to top, #b0c2d062 0%, #cccccc62 100%);
     padding: 1.5rem;
     border-radius: 0.2rem;
+    position: relative;
 }
 
 .side-form-container h2 {
@@ -242,6 +243,26 @@
     top: 30%;
     left: 50%;
     transform: translateX(-50%);
+}
+.bubble {
+  position: absolute;
+  bottom: -100px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  animation: floatUp linear infinite;
+  color: white;
+}
+
+/* Alternate colors */
+.bubble:nth-child(odd) {
+  background-color: #1e3a8a; /* deep blue */
+}
+
+.bubble:nth-child(even) {
+  background-color: #d18f1c4b; /* dark orange */
 }
 
 @media only screen and (max-width: 600px) {

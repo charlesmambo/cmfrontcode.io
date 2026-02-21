@@ -46,7 +46,7 @@
     display: flex;
     align-items: center;
     text-transform: uppercase;
-    font-weight: 900;
+    font-weight: 700;
     font-size: var(--small-text-size);
     background-color: #1f5def11;
     color: #062979;
@@ -54,6 +54,7 @@
     border-radius: 1rem;
     min-width: 40px;
     justify-content: center;
+    letter-spacing: 0.8px;
 }
 
 .custom_card_img {

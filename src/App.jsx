@@ -11,6 +11,8 @@ import SolutionsList from './pages/solutions/SolutionsList'
 import Dashboard from './pages/dashboard/Dashboard'
 import { AuthProvider, useAuth } from './assets/components/auth/AuthContext'
 import Settings from './assets/components/settings/Settings';
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 // Route guard for authenticated pages
 const ProtectedRoute = ({ children }) => {
@@ -39,6 +41,7 @@ function App() {
 
         <Footer />
       </Router>
+      <ToastContainer position="top-right" autoClose={5000} />
     </AuthProvider>
   );
 }

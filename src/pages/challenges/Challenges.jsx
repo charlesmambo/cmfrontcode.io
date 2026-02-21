@@ -12,8 +12,6 @@ import { GrView } from "react-icons/gr";
 const options = [
   "All Difficulties",
   "Newbie",
-  "Beginner",
-  "Junior",
   "Intermediate",
   "Advanced",
   "Guru",
@@ -52,6 +50,20 @@ const Challenges = () => {
     },
     {
       image: IMG,
+      title: "Social Media Dashboard",
+      description:
+        "Build a comprehensive social media analytics dashboard with charts and metrics",
+      languages: ["html", "css", "React"],
+    },
+    {
+      image: IMG,
+      title: "Interactive rating component",
+      description:
+        "This is a nice, small project to practice handling user interactions and updating the DOM.",
+      languages: ["html", "css", "Javascript"],
+    },
+    {
+      image: IMG,
       title: "Interactive rating component",
       description:
         "This is a nice, small project to practice handling user interactions and updating the DOM.",
@@ -63,6 +75,13 @@ const Challenges = () => {
       description:
         "This challenge is perfect for anyone wanting to test their CSS Grid skills.",
       languages: ["html", "css"],
+    },
+    {
+      image: IMG,
+      title: "E-commerce Product Card",
+      description:
+        "Create a responsive product card with image, price, and add to cart functionality",
+      languages: ["html", "css", "Javascript"],
     },
     {
       image: IMG,
