@@ -103,10 +103,35 @@ nav {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
   padding: 1.2rem;
   position: absolute;
-  top: 2.2rem;
-  left: -9rem;
-  width: fit-content;
+  top: 2.9rem;
+  right: 0.4rem;
+  min-width: 200px ;
   border-radius: 0.3rem;
+  z-index: 100;
+}
+.user_drops_info{
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: flex-end;
+  width: 100%;
+  gap: 1rem !important;
+  border-bottom: 2px solid rgba(165, 165, 165, 0.133);
+  padding-bottom: 0.8rem;
+}
+.user_drops_info li{
+  width: fit-content;
+  text-align: left !important;
+  width: 100%;
+  transition: all 0.6s;
+  font-weight: 500;
+}
+.user_drops_info li:first-child {
+font-weight: 600;
+color: var(--primary-color);
+}
+.user_drops_info li:not(:first-child):hover {
+  color: var(--primary-color);
 }
 
 .name {
@@ -149,14 +174,16 @@ nav {
   align-items: center;
   gap: 0.7rem;
   border: none;
-  background-color: transparent;
+  background-color: #dbdbdb;
   transition: all 0.6s;
   cursor: pointer;
+  padding: 0.6rem 0.9rem;
+  margin-top: 1rem;
 }
 
 
 .logout_btn:hover {
-  padding: 0.5rem 0.9rem;
+  padding: 0.6rem 0.9rem;
   background-color: var(--danger-color);
   color: var(--primary-white-color);
 }

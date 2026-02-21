@@ -39,12 +39,27 @@ const SubNavbar = () => {
     setShowDropdown(false);
     navigate("/"); // 👈 redirect after logout (optional)
   };
+  useEffect(() => {
+const handleClickOutside = (event) => {
+if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+setShowDropdown(false);
+}
+};
 
-  // (removed unused handleLogoClick function)
+
+document.addEventListener("mousedown", handleClickOutside);
+
+
+return () => {
+document.removeEventListener("mousedown", handleClickOutside);
+};
+}, []);
+
+  
   return (
     <div className="sub-navbar-container">
       <div className="logo">
-        <NavLink to="/">
+       <NavLink to={isLoggedIn ? "/dashboard" : "/"}>
           <h4 className='logo'>cmFrontendCode</h4>
         </NavLink>
       </div>
@@ -105,9 +120,12 @@ const SubNavbar = () => {
 
                 {showDropdown && (
                   <div className="logout_dropdown">
-                    <p className="name">Charles mambo</p>
-                    <p onClick={handleSettingsClick} className='settings'><IoSettingsOutline />Settings</p>
-                    <p onClick={handleSettingsClick} className='settings'>Profile</p>
+                    <ul className='user_drops_info'>
+                      <li className='user_name'>Charles Mambo</li>
+                      <li onClick={handleSettingsClick} >Profile</li>
+                      <li>Settings</li>
+                    </ul>
+                    
                     <button className="logout_btn" onClick={handleLogout}>
                       Log Out
                       <FaArrowRightLong />
