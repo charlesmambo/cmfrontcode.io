@@ -19,3 +19,34 @@
     transform: scale(1.0);
     background-color: #3452cb;
 }
+
+.global_action_btn button{
+ background-color: transparent;
+ padding: 0.5rem 0.8rem;
+ border-radius: 0.2rem;
+ font-family: inherit;
+ font-weight: 500;
+ cursor: pointer;
+  transition: background-color 0.6s ease, color 0.6s ease, border-color 0.6s ease;
+}
+.edit_btn{
+ color: var(--primary-color);
+border: 1px solid var(--primary-color);
+display: flex;
+align-items: center;
+gap: 0.5rem;
+}
+.edit_btn:hover{
+ color: var(--primary-white-color);
+border: 1px solid var(--primary-color);
+background-color: var(--primary-color);
+}
+.cancel_btn{
+ color: var(--danger-color);
+border: 1px solid var(--danger-color);
+}
+.cancel_btn:hover{
+ color: var(--primary-white-color);
+border: 1px solid var(--danger-color);
+background-color: var(--danger-color);
+}

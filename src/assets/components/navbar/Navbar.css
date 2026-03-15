@@ -1,12 +1,11 @@
-.nav-wrapper {
-  background-color: var(--header-bg-color);
-}
+/* .nav-wrapper {
+  background-image: linear-gradient(to top, #37ecba 0%, #72afd3 100%) !important;
+} */
 
 nav {
   display: flex;
   justify-content: space-between;
   gap: 4rem;
-  background-color: #E9E9E9;
   width: 100%;
   box-sizing: border-box;
   align-items: center;
@@ -68,8 +67,8 @@ nav {
 .sub-navbar-container {
   padding: 1.5rem 4rem;
   display: flex;
-  align-items: end;
-  background-color: var(--primary-white-color);
+  align-items: center;
+  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
   justify-content: space-between;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
     rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;

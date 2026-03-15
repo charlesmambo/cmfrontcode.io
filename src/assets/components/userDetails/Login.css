@@ -22,6 +22,9 @@
     text-transform: capitalize;
     font-weight: 800;
 }
+.login-form-wrapper p {
+    font-weight: 500;
+}
 
 .form-control {
     display: flex;
@@ -35,6 +38,20 @@
     top: 2.4rem;
     right: 0.8rem;
     color: #909090;
+    cursor: pointer;
+}
+.psswd-icon-active {
+    position: absolute;
+    top: 2.4rem;
+    right: 0.8rem;
+    color: #1f5defd5;
+     cursor: pointer;
+}
+.psswd-icon-wrapper{
+     position: absolute;
+    top: 0rem;
+    right: 0.8rem; 
+    background-color: #ab4116;  
 }
 
 .sf-password {
@@ -161,7 +178,7 @@
 /* Side Container Styles */
 .side-form-container {
     width: 50%;
-    background-image: linear-gradient(to top, #b0c2d062 0%, #cccccc62 100%);
+  background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
     padding: 1.5rem;
     border-radius: 0.2rem;
     position: relative;
@@ -170,6 +187,9 @@
 .side-form-container h2 {
     line-height: 2.4rem;
     font-size: 2rem;
+}
+.side-form-container p {
+   font-weight: 500;
 }
 
 .side-form-styled-text {
@@ -210,7 +230,7 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    background-image: linear-gradient(to top, #b0c2d062 0%, #cccccc62 100%);
+    background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
     border-radius: 0.2rem;
 }
 
@@ -231,11 +251,6 @@
     transition: transform 0.6s ease, background-color 0.6s ease;
     background-color: transparent;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
-}
-
-.side-form-btn-container button:hover {
-    background-color: #3452cb;
-    color: #f5f5f5;
 }
 
 .reset-psswd-container {
@@ -262,7 +277,9 @@
 }
 
 .bubble:nth-child(even) {
-  background-color: #d18f1c4b; /* dark orange */
+background-color: #CDDCDC;
+ background-image: radial-gradient(at 50% 100%, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%), linear-gradient(to bottom, rgba(255,255,255,0.25) 0%, rgba(0,0,0,0.25) 100%);
+ background-blend-mode: screen, overlay;
 }
 
 @media only screen and (max-width: 600px) {

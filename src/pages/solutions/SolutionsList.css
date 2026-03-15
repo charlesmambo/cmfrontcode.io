@@ -8,8 +8,27 @@
 .all_solution_container{
     display: flex;
     align-items: center;
-    gap: 1.5rem;
+    gap: 2rem;
     width: 76vw;
     flex-wrap: wrap;
     justify-content: space-between;
+}
+
+.solution_search_bar{
+    margin-bottom: 2rem;
+    box-sizing: border-box;
+    width: 66vw;
+}
+.solution_search_input{
+    width: 100% !important;
+    box-sizing: border-box;
+}
+.solution_bar{
+    width: 100% !important;
+}
+
+@media only screen and (min-width: 1544px) {
+ .all_solution_container{
+    width: 66vw;
+}
 }

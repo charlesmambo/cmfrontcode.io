@@ -262,4 +262,7 @@
     .custom_card {
         width: 422px;
     }
+    .dashboard_custom_card {
+    width: 250px;
+}
 }

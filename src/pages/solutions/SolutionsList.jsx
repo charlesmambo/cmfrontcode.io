@@ -6,10 +6,22 @@ import IMG4 from '../../../public/sn5.png';
 import SolutionCard from '../../assets/components/solutionsCard/SolutionCard';
 import '../solutions/SolutionsList.css';
 import ViewSolution from '../../assets/components/viewSolution/ViewSolution';
+import { RiSearchLine } from "react-icons/ri";
 
 const SolutionsList = () => {
   return (
     <div className='all_solution_wrapper'>
+      <div className="filter_section_container solution_search_bar">
+        <div className="search_bar solution_bar">
+          <RiSearchLine className="search_bar_icon" />
+          <input
+          type="text"
+          className="search_bar_input solution_search_input"
+          name="search-bar"
+          placeholder="Search challenges..."
+          />
+          </div>
+      </div>
       <div className="all_solution_container">
       <SolutionCard
         title="Interactive rating component"

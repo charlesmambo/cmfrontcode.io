@@ -25,7 +25,7 @@ const SubNavbar = () => {
 
     // 👇 dynamic logo click based on login
   const handleSettingsClick = () => {
-      navigate("/settings");
+      navigate("/profile");
     }
 
     // 👇 toggle dropdown when clicking profile icon

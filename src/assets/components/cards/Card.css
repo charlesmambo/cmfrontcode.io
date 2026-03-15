@@ -393,3 +393,15 @@
     box-sizing: border-box;
   }
 }
+
+@media only screen and (min-width: 1544px) {
+  .recent_card_wrapper {
+  width: 47.4vw;
+}
+.action_card {
+  width: 250px;
+}
+.achivements_action_card {
+  width: 250px;
+}
+}

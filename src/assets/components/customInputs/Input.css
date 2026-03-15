@@ -1,19 +1,22 @@
 .text-input-container input {
   outline: none;
-  border: 1px solid #e4e4e4;
+  border: 1px solid #b8c3c7;
   padding: 0.7rem 0.8rem;
   border-radius: 0.2rem;
   width: 100%;
   box-sizing: border-box;
   position: relative;
   padding-left: 2rem;
+  font-weight: 500;
+  background-color: transparent !important;
 }
 
 .custom-input-icon {
-  color: #909090;
+  color: #323567;
   position: absolute;
   bottom: 0.7rem;
   left: 0.7rem;
+  
 }
 
 .custom-input-label {

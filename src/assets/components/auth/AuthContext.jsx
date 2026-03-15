@@ -5,7 +5,7 @@ export const AuthProvider = ({ children }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const login = (email, password) => {
-    if (email === "chylah11st@gmail.com" && password === "1126") {
+    if (email === "chylah11st@gmail.com" && password === "chylah25#") {
       setIsLoggedIn(true);
       return { success: true, message: "Logged in successfully!" };
     } else {

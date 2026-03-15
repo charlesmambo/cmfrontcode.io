@@ -12,41 +12,47 @@ import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../auth/AuthContext'; 
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { FaRegEye } from "react-icons/fa6";
 
 const LoginForm = ({ onSwitchToSignUp }) => {
-  const { login } = useAuth();
-  const navigate = useNavigate();
-
+  const [showLoginPassword, setShowLoginPassword] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showReset, setShowReset] = useState(false);
 
+  const { login } = useAuth();
+  const navigate = useNavigate();
+
+  const togglePassword = () => setShowLoginPassword(prev => !prev);
   const handleForgotPasswordClick = () => setShowReset(true);
 
+  // Validation function
   const validateForm = () => {
     if (!email) return "Email is required.";
     if (!/\S+@\S+\.\S+/.test(email)) return "Please enter a valid email.";
     if (!password) return "Password is required.";
+    if (password.length < 8) return "Password must be at least 8 characters.";
+    if (!/[!@#$%^&*(),.?":{}|<>]/.test(password))
+      return "Password must include at least one special character.";
     return null;
   };
 
-const handleSubmit = async (e) => {
-  e.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const validationError = validateForm();
+    if (validationError) {
+      toast.error(validationError, { position: "top-right", autoClose: 6000 });
+      return;
+    }
 
-  const validationError = validateForm();
-  if (validationError) {
-    toast.error(validationError, { position: "top-right", autoClose: 6000 });
-    return;
-  }
-
-  const result = await login(email, password); // wait for login
-  if (result.success) {
-    toast.success(result.message, { position: "top-right", autoClose: 6000 });
-    setTimeout(() => navigate("/dashboard"), 300);
-  } else {
-    toast.error(result.message, { position: "top-right", autoClose: 6000 });
-  }
-};
+    const result = await login(email, password);
+    if (result.success) {
+      toast.success(result.message, { position: "top-right", autoClose: 6000 });
+      setTimeout(() => navigate("/dashboard"), 300);
+    } else {
+      toast.error(result.message, { position: "top-right", autoClose: 6000 });
+    }
+  };
 
   return (
     <div className="login-form-main">
@@ -55,10 +61,7 @@ const handleSubmit = async (e) => {
           Join thousands of devs building{" "}
           <span className="side-form-styled-text">creative frontend solutions</span>
         </h2>
-        <p>
-          Level up your skills with real-world challenges that matter. Build,
-          learn, and showcase your talent.
-        </p>
+        <p>Level up your skills with real-world challenges that matter. Build, learn, and showcase your talent.</p>
 
         <div className="challenges-count">
           <h3>500+ <span>Challenges</span></h3>
@@ -76,6 +79,7 @@ const handleSubmit = async (e) => {
         <p>Sign in to continue building with cmfrontendcode Challenges.</p>
 
         <form onSubmit={handleSubmit} className="login-form">
+          {/* Email */}
           <div className="form-control">
             <TextInput
               label="Email Address"
@@ -88,6 +92,7 @@ const handleSubmit = async (e) => {
             />
           </div>
 
+          {/* Password */}
           <div className="form-control">
             <TextInput
               label="Password"
@@ -97,11 +102,18 @@ const handleSubmit = async (e) => {
               icon={RiLockPasswordLine}
               name="password"
               required
-              type="password"
+              type={showLoginPassword ? "text" : "password"}
             />
-            <IoEyeOffOutline className="psswd-icon" />
+            <span onClick={togglePassword} className="psswd-icon-wrapper">
+              {showLoginPassword ? (
+                <FaRegEye className="psswd-icon-active" />
+              ) : (
+                <IoEyeOffOutline className="psswd-icon" />
+              )}
+            </span>
           </div>
 
+          {/* Remember & Forgot Password */}
           <div className="form-control sf-password">
             <div className="save-passsword">
               <input type="checkbox" />
@@ -112,10 +124,12 @@ const handleSubmit = async (e) => {
             </p>
           </div>
 
+          {/* Submit */}
           <div className="login-form-submit-btn">
             <Primary type="submit">Sign In</Primary>
           </div>
 
+          {/* Other login options */}
           <div className="other-login-option">
             <div className="login-option-headings">
               <div className="divider"></div>
@@ -124,12 +138,8 @@ const handleSubmit = async (e) => {
             </div>
 
             <div className="google-github-btn-container">
-              <button type="button">
-                <IoLogoGithub /> GitHub
-              </button>
-              <button type="button">
-                <FcGoogle /> Google
-              </button>
+              <button type="button"><IoLogoGithub /> GitHub</button>
+              <button type="button"><FcGoogle /> Google</button>
             </div>
 
             <p className="create-account-text">
@@ -140,13 +150,14 @@ const handleSubmit = async (e) => {
         </form>
       </div>
 
+      {/* Reset Password Modal */}
       {showReset && (
         <div className="reset-psswd-container">
           <ResetPassword onClose={() => setShowReset(false)} />
         </div>
       )}
 
-      {/* ToastContainer to show top-right popups */}
+      {/* Toast Notifications */}
       <ToastContainer
         position="top-right"
         autoClose={3000}

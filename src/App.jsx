@@ -9,12 +9,13 @@ import HomePage from './pages/home/HomePage'
 import Challenges from './pages/Challenges/Challenges'
 import SolutionsList from './pages/solutions/SolutionsList'
 import Dashboard from './pages/dashboard/Dashboard'
+import Profile from './pages/profile/Profile'
 import { AuthProvider, useAuth } from './assets/components/auth/AuthContext'
-import Settings from './assets/components/settings/Settings';
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Settings from './pages/settings/Settings';
 
-// Route guard for authenticated pages
+// Route guard
 const ProtectedRoute = ({ children }) => {
   const { isLoggedIn } = useAuth();
   return isLoggedIn ? children : <Navigate to="/login" replace />;
@@ -24,24 +25,53 @@ function App() {
   return (
     <AuthProvider>
       <Router>
+
         <Navbar />
 
         <Routes>
+
+          {/* Public routes */}
           <Route path="/" element={<HomePage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/learning-path" element={<LearningPath />} />
           <Route path="/leaderboard" element={<LeaderBoard />} />
           <Route path="/challenges" element={<Challenges />} />
           <Route path="/solutions" element={<SolutionsList />} />
-          <Route path="/settings" element={<Settings />} />
 
-          {/* Only logged-in users can access this route */}
-          <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
+          {/* Protected routes */}
+          <Route 
+            path="/dashboard" 
+            element={
+              <ProtectedRoute>
+                <Dashboard />
+              </ProtectedRoute>
+            } 
+          />
+
+          <Route 
+            path="/profile" 
+            element={
+              <ProtectedRoute>
+                <Profile />
+              </ProtectedRoute>
+            } 
+          />
+          <Route 
+            path="/settings" 
+            element={
+              <ProtectedRoute>
+                <Settings/>
+              </ProtectedRoute>
+            } 
+          />
+
         </Routes>
 
         <Footer />
       </Router>
+
       <ToastContainer position="top-right" autoClose={5000} />
+
     </AuthProvider>
   );
 }
