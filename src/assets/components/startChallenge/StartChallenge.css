@@ -379,19 +379,22 @@
 
     .start_challenge_design_review,
     .rs_card {
-        width: 42vw !important;
+        width: 57.1vw !important;
     }
 
     .challenge-steps {
-        width: 70vw;
+        width: 100%;
     }
 
     .start_challenge_steps {
-        width: 70vw;
+        width: 100%;
         box-sizing: border-box;
     }
 
     .start_challenge_content_card {
         width: 21.5vw;
     }
+    .start_challenge_wrapper {
+     width: var(--container-width-xl);
+}
 }

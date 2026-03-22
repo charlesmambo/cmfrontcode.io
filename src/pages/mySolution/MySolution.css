@@ -1,0 +1,59 @@
+.mysolution_wrapper{
+    width: var(--container-width);
+    margin: 4rem auto;
+}
+.mysolution_content_container_achievement_container{
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+.ms_achievement_card{
+   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px; 
+   padding: 1.2rem;
+   border-radius: 0.3rem;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 0.5rem;
+}
+.ms_achievement_card h4{
+   font-weight: 700;
+   font-size: 1.5rem;
+}
+.ms_achievement_card span{
+  margin-top: -0.4rem;
+  color: var(--dark-grey-color);
+  text-transform: capitalize;
+  font-size: 0.9rem;
+}
+.ms_achievement_icon{
+    font-size: 1.2rem;
+}
+.trophy{
+    color: var(--gold-bg);
+}
+.heart{
+    color: var(--danger-color);
+}
+.eye{
+    color: var(--primary-color);
+}
+.comments{
+    color: var(--header-bg-color);
+}
+
+.mysolution_card_wrapper{
+    margin-top: 2rem;
+    display: flex;
+    gap: 1.5rem;
+}
+
+@media only screen and (min-width: 1544px) {
+.mysolution_wrapper{
+    width: var(--container-width-xl);
+}
+}

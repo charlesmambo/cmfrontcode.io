@@ -4,8 +4,7 @@ import { LuClock } from "react-icons/lu";
 import { FaRegHeart } from "react-icons/fa6";
 import { FiMessageCircle, FiEye } from "react-icons/fi";
 import { HiOutlineExternalLink } from "react-icons/hi";
-import { IoLogoGithub } from "react-icons/io5";
-import { IoMdHeart } from "react-icons/io";
+import { IoLogoGithub, IoMdHeart } from "react-icons/io";
 
 const SolutionCard = ({
   title,
@@ -19,16 +18,13 @@ const SolutionCard = ({
   views,
   externalLink,
   githubLink,
+  hideUserInfo = false, // <-- new prop, default false
 }) => {
   const [liked, setLiked] = useState(false);
   const [likeCount, setLikeCount] = useState(likes);
 
   const handleLikeToggle = () => {
-    if (liked) {
-      setLikeCount(likeCount - 1);
-    } else {
-      setLikeCount(likeCount + 1);
-    }
+    setLikeCount(liked ? likeCount - 1 : likeCount + 1);
     setLiked(!liked);
   };
 
@@ -52,22 +48,25 @@ const SolutionCard = ({
       </div>
 
       <div className="solution_card_content">
-        <h3>{title}</h3>
+        <h4>{title}</h4>
 
-        <div className="solution_card_content_profile">
-          <div className="solution_card_content_profile_img">
-            <img src={profileImage} alt={userName} />
+        {/* Profile section - only show if hideUserInfo is false */}
+        {!hideUserInfo && (
+          <div className="solution_card_content_profile">
+            <div className="solution_card_content_profile_img">
+              <img src={profileImage} alt={userName} />
+            </div>
+            <div className="solution_card_content_profile_info">
+              <p className='solution_user_name'>{userName}</p>
+              <p className='solution_user_points'>
+                <span>{points} points</span>
+                <span className='solution_user_points_icon'>
+                  <LuClock /> {timeAgo}
+                </span>
+              </p>
+            </div>
           </div>
-          <div className="solution_card_content_profile_info">
-            <p className='solution_user_name'>{userName}</p>
-            <p className='solution_user_points'>
-              <span>{points} points</span>
-              <span className='solution_user_points_icon'>
-                <LuClock /> {timeAgo}
-              </span>
-            </p>
-          </div>
-        </div>
+        )}
 
         <div className="social_card_user_interactions">
           <p

@@ -1,4 +1,4 @@
-.dasboard_wrapper {
+.dashboard_wrapper {
     margin: var(--margin-top-lg);
     padding: 0 6rem;
 }
@@ -26,9 +26,13 @@
     justify-content: space-between;
 }
 
+
 @media only screen and (min-width: 1544px) {
-  .dasboard_wrapper {
-    width: 67vw;
+.dashboard_wrapper{
+    width: var(--container-width-xl);
     margin: 4rem auto;
-  }
+}
+.dashboard_card_container {
+   width: 67.8vw;
+}
 }

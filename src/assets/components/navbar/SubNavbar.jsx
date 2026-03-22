@@ -100,9 +100,20 @@ document.removeEventListener("mousedown", handleClickOutside);
             to="/solutions"
             className={({ isActive }) => (isActive ? 'active-link' : '')}
           >
-            Solutions
+            Community
           </NavLink>
         </li>
+          {/* Only show My Solutions if logged in */}
+          {isLoggedIn && (
+            <li>
+              <NavLink
+                to="/my_solution"
+                className={({ isActive }) => (isActive ? 'active-link' : '')}
+              >
+                My Solutions
+              </NavLink>
+            </li>
+          )}
       </ul>
                 <div className="navbar-login-btn-container">
             {/* LOGIN BUTTON */}

@@ -15,12 +15,14 @@ import Achievement from '../../assets/components/cards/Achievement';
 
 const Dashboard = () => {
   return (
-    <div className='dasboard_wrapper'>
+    <div className='dashboard_wrapper'>
         <div className="dashboard_intro_container">
           <h2>Welcome back, <span>Charles Mambo</span> 👋</h2>
           <p>Level: <span className='dashboard_level'>Advanced</span> • Member since <span>15/08/2025</span></p>
         </div>
 
+        <div className='dc_wrapper'>
+        <div className='dc_combined'>
         <div className="dashboard_card_container">
           <DashboardCard
             icon={GoTrophy}
@@ -59,12 +61,15 @@ const Dashboard = () => {
         {/* Quick Action Wrapper */}
         <div className="quick_action_cards_wrapper">
           <RecentCard/>
-
-          <div className="action_cards_wrapper">
-              <ActionCard/>
-              <Achievement/>
-          </div>
         </div>
+        </div>
+
+        
+       <div className="action_cards_wrapper">
+        <ActionCard/>
+        <Achievement/>
+       </div>
+       </div>
     </div>
   )
 }

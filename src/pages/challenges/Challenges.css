@@ -52,7 +52,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 
 .custom_card_container {
@@ -61,7 +60,6 @@
   margin-top: 2rem;
   flex-wrap: wrap;
   justify-content: center;
-  width: 82vw;
 }
 
 .level_badge {
@@ -76,7 +74,18 @@
 
 
 @media only screen and (min-width: 1544px) {
-  .custom_card_container {
-    width: 78vw;
-  }
+ .custom_card_container {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  justify-content: left;
+}
+.challenges_main_wrapper{
+    width: var(--container-width-xl);
+    margin: 4rem auto;
+}
+.search_bar_input {
+  min-width: 56vw;
+}
 }

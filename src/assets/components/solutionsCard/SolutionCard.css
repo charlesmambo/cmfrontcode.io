@@ -14,9 +14,10 @@
      transition: all 0.6s ease;
     }
 
-.solution_card_content h3{
+.solution_card_content h4{
   transition: all 0.6s ease;
   text-transform: capitalize;
+  font-weight: 600;
 }
 .solution_card_content h3:hover{
   color: var(--primary-color);  
@@ -33,7 +34,7 @@
     display: flex;
     align-items: center;
     gap: 0.4rem;
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: 500;
 }
 .social_card_user_interactions_icon:hover{
@@ -68,8 +69,8 @@
 }
 
 .solution_card_content_profile_img{
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
     background-color: #c4a9a92c; 
     border-radius: 8rem; 
     border: 2px solid var(--gold-bg-opacity);  
@@ -80,13 +81,13 @@
     gap: 0.3rem;
 }
 .solution_user_name{
-    font-weight: 700;
+    font-weight: 600;
     color: var(--primary-black-color);
-    font-size: var(--md-text-size);
+    font-size: 0.9rem;
     text-transform: capitalize;
 }
 .solution_user_points{
-    font-size: var(--sm-text-size);
+    font-size: 0.8rem;
     font-weight: 500;
     color: var(--dim-dark-grey-color);
     display: flex;
@@ -130,6 +131,6 @@ box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px
 
 @media only screen and (min-width: 1544px) {
  .solution_card_container{
-    width: 401px;
+    width: 390px;
 }
 }

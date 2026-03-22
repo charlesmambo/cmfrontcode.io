@@ -257,12 +257,23 @@
     color: var(--dim-dark-grey-color);
     font-weight: 500;
 }
+.dc_wrapper{
+   display: flex;
+   gap: 1.5rem;
+}
+.action_cards_wrapper{
+    margin-top: 1.9rem;
+    display: flex;
+    flex-direction: column;
+    gap: -0.8rem;
+}
 
 @media only screen and (min-width: 1544px) {
     .custom_card {
-        width: 422px;
+        width: 390px;
     }
     .dashboard_custom_card {
-    width: 250px;
+    width: 258px;
 }
+
 }

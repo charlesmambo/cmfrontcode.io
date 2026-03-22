@@ -102,3 +102,12 @@
   color: #666;
   text-align: center;
 }
+
+@media only screen and (min-width: 1544px) {
+.container {
+  width: 81vw;
+}
+.table-wrapper {
+  margin-bottom: 0rem;
+}
+}
