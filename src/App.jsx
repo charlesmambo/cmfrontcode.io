@@ -14,6 +14,7 @@ import { AuthProvider, useAuth } from './assets/components/auth/AuthContext'
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Settings from './pages/settings/Settings';
+import Premium from './pages/upgradePremium/Premium';
 
 // Route guard
 const ProtectedRoute = ({ children }) => {
@@ -64,8 +65,17 @@ function App() {
               </ProtectedRoute>
             } 
           />
+          <Route 
+            path="/upgrade" 
+            element={
+              <ProtectedRoute>
+                <Premium/>
+              </ProtectedRoute>
+            } 
+          />
 
         </Routes>
+        
 
         <Footer />
       </Router>

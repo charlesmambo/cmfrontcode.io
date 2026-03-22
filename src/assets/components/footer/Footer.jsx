@@ -14,7 +14,7 @@ const Footer = () => {
   return (
     <footer>
       <div className="footer_intro">
-        <h2>cmFrontendCode</h2>
+        <h3>cmFrontendCode</h3>
         <p>
           Master frontend development through hands-on challenges and real-world projects.
           Join thousands of developers improving their skills daily.

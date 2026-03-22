@@ -8,6 +8,7 @@ import { AiOutlineDesktop } from "react-icons/ai";
 import { HiOutlineDevicePhoneMobile } from "react-icons/hi2";
 import { PiCursor } from "react-icons/pi";
 import SubmitChallenge from "../submitChallenge/SubmitChallenge";
+import BackBtn from "../buttons/BackBtn";
 
 // Step Card Component
 const StepCard = ({ number, title, text, active }) => (
@@ -66,10 +67,10 @@ const StartChallenge = ({ steps = [], challenge = {}, resources = [], stats = []
     <div className="start_challenge_wrapper">
       {/* Back Button */}
       <div className="challenge-steps">
-        <div className="back_btn" onClick={onBack}>
-          <MdOutlineArrowBack className="back_icon" />
-          back to challenge
+        <div className="">
+          <BackBtn onClick={onBack}/>
         </div>
+        
 
         {/* Steps */}
         <div className="start_challenge_steps">

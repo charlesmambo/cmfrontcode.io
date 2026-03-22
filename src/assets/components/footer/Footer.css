@@ -9,9 +9,9 @@ footer{
 .footer_intro{
     width: 22vw;
 }
-.footer_intro h2{
+.footer_intro h3{
     color: var(--primary-lightgrey-color) !important;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: var(--gold-bg) !important;
 }
 

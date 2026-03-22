@@ -1,12 +1,16 @@
 import React from 'react'
 
-const CancelBtn = () => {
+const CancelBtn = ({ onClick }) => {
   return (
-            <div className="global_action_btn">
-                <button type="button" className='cancel_btn'>
-                   Cancel
-                </button>
-            </div>
+    <div className="global_action_btn">
+      <button
+        type="button"
+        className="cancel_btn"
+        onClick={onClick}
+      >
+        Cancel
+      </button>
+    </div>
   )
 }
 

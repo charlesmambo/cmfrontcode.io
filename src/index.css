@@ -106,12 +106,17 @@ h4 {
 
   --h3-card-fontsize: 1.6rem;
   --berry-color: #D91656;
+
+  --card-divider:#c5c5c5;
 }
 
 .container-flex {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+h2{
+  font-weight: 800;
 }
 
 body{

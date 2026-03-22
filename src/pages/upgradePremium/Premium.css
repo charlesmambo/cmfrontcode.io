@@ -1,0 +1,166 @@
+.premium_wrapper{
+display: flex;
+flex-direction: column;
+gap: 1.7rem !important;
+width: var(--container-width);
+margin: 4rem auto;
+}
+.premium_content{
+    width: 100%;
+    margin-top: -1rem;
+}
+.premium_content_title{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+.premium_content_title p{
+   color: var(--dim-dark-grey-color);
+}
+
+.premium_card_wrapper{
+    display: flex;
+    align-items: center;
+    gap: 1.8rem;
+    margin-top: 2rem;
+}
+
+.premium_card_description{
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    border-radius: 0.4rem;
+    background-color: #0d116405;
+    width: 35vw;
+    padding: 1.5rem;
+}
+.premium_card_description p{
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+.premium_card_description h4{
+    font-size: 2.3rem;
+    margin-top: 0.9rem;
+}
+.premium_price_normal_font{
+    font-weight: 400;
+    font-size: 1rem;
+    margin-left: -0.3rem;
+}
+.premium_trial{
+    font-size: 0.9rem;
+    color: var(--dim-dark-grey-color);
+}
+.premium_benefits_list{
+    list-style: none;
+    margin-top: 1rem;
+    border-top: 1px solid var(--card-divider);
+    padding-top: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+}
+.premium_benefits_list li{
+   display: flex;
+   align-items: center;
+   gap: 0.6rem;
+}
+.premium_icon_list{
+    color: var(--greencolor);
+    font-size: 1.2rem;
+}
+.card_payment{
+    margin-top: 1rem;
+}
+.card_payment_content{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.card_payment_content input{
+  border-radius: 0.2rem;
+  border: 1px solid var(--card-divider);
+  padding: 0.5rem;
+  width: 100%;
+  padding-left: 2.3rem;
+  background-color: rgba(240, 248, 255, 0.329);
+  outline: none;
+  font-family: inherit;
+  color: var(--primary-black-color);
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.card_payment_icon{
+ position: absolute;
+ left: 0.7rem;
+ color: var(--small-card-color);
+}
+.payments_date{
+    margin-top: 0.8rem;
+    gap: 0.8rem;
+}
+.payments_date input{
+      padding-left: 0.8rem;
+}
+.payment_divider_wrapper{
+    font-size: 0.8rem;
+}
+.payment_divider{
+    height: 1px;
+    background-color: var(--card-divider);
+    width: 100%;
+    border: none;
+}
+.payment_totals{
+    display: flex;
+    border-top: 1px solid rgba(209, 209, 209, 0.637);
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0.8rem;
+    margin-top: 0.4rem;
+    padding-bottom: 0;
+    margin-bottom: -0.8rem;
+}
+.payment_totals p{
+  font-size: 0.8rem;
+}
+.payment_btn_wrapper{
+    margin-top: 0.8rem;
+    color: var(--primary-black-color);
+}
+.payment_btn{
+    width: 100% !important;
+    font-size: 0.8rem !important;
+    background-color: var(--card-divider);
+}
+.payment_trials_text{
+    text-align: center;
+    margin: 0.7rem 0;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.1rem;
+    color: var(--dim-dark-grey-color);
+    margin-bottom: -0.4rem;
+}
+.other_payment_method button{
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.5rem;
+  width: 100%;
+  justify-content: center;
+  border: 1px solid rgba(209, 209, 209, 0.637);
+  border-radius: 0.2rem;
+  cursor: pointer;
+  background-color: transparent;
+  font-weight: 500;
+}
+.other_payments_icon{
+    font-size: 1.1rem;
+    color: var(--primary-color);
+}
+.paypal_btn{
+    color: var(--primary-color);
+}
+.apple_icon{
+    color: var(--dim-dark-grey-color);
+}

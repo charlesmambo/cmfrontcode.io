@@ -1,12 +1,16 @@
 import React from 'react'
 
-const SaveBtn = () => {
+const SaveBtn = ({ onClick }) => {
   return (
-        <div className="global_action_btn">
-            <button type="button" className='edit_btn'>
-                Save Changes
-            </button>
-        </div>
+    <div className="global_action_btn">
+      <button
+        type="button"
+        className="edit_btn"
+        onClick={onClick}
+      >
+        Save Changes
+      </button>
+    </div>
   )
 }
 
