@@ -87,6 +87,7 @@ margin: 4rem auto;
   color: var(--primary-black-color);
   font-weight: 500;
   letter-spacing: 1px;
+  text-transform: capitalize;
 }
 .card_payment_icon{
  position: absolute;
@@ -163,4 +164,10 @@ margin: 4rem auto;
 }
 .apple_icon{
     color: var(--dim-dark-grey-color);
+}
+.error{
+  color: var(--danger-color);
+  font-size:12px;
+  margin-top:4px;
+  display:block;
 }

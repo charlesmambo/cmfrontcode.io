@@ -15,6 +15,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Settings from './pages/settings/Settings';
 import Premium from './pages/upgradePremium/Premium';
+import "react-toastify/dist/ReactToastify.css";
 
 // Route guard
 const ProtectedRoute = ({ children }) => {
@@ -27,10 +28,11 @@ function App() {
     <AuthProvider>
       <Router>
 
+        <ToastContainer position="top-right" autoClose={5000} />
+
         <Navbar />
 
         <Routes>
-
           {/* Public routes */}
           <Route path="/" element={<HomePage />} />
           <Route path="/login" element={<Login />} />
@@ -48,7 +50,6 @@ function App() {
               </ProtectedRoute>
             } 
           />
-
           <Route 
             path="/profile" 
             element={
@@ -73,15 +74,11 @@ function App() {
               </ProtectedRoute>
             } 
           />
-
         </Routes>
-        
 
         <Footer />
+
       </Router>
-
-      <ToastContainer position="top-right" autoClose={5000} />
-
     </AuthProvider>
   );
 }
