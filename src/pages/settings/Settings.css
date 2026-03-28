@@ -1,0 +1,146 @@
+.settings_container{
+display: flex;
+flex-direction: column;
+gap: 1.7rem !important;
+width: var(--container-width);
+margin: 4rem auto;
+}
+
+.account{
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+    display: flex;
+    flex-direction: column;
+    gap: var(--column-gap);
+}
+
+.account_content{
+display: flex;
+flex-direction: column;
+gap: var(--xsm-gap);
+}
+.account_content label{
+font-weight: 500;
+font-size: var(--sm-text-size);
+}
+.account_content input{
+    padding: var(--input-padding);
+    border-radius: var(--input-border-radius);
+    border: 1px solid var(--disabled-input-border-color);
+}
+
+.settings_title h2{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.settings_title p{
+    color: var(--dark-grey-color);
+    font-size: var(--sm-text-size);
+}
+.settings_icon{
+    color: var(--primary-color);
+}
+.account_title{
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+.account_title span{
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    background-color: var(--primary-color-bg);
+    color: var(--primary-color);
+    padding: var(--icon-padding);
+    border-radius: var(--border-radius);
+}
+.account_title_content p{
+    font-size: var(--sm-text-size);
+    color: var(--dark-grey-color);
+}
+.account_password_input_container{
+    display: flex;
+    align-items: center;
+    gap: var(--sm-column-gap);
+    position: relative;
+}
+.account_password_input_container button{
+    min-width: 100px;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 0.2rem;
+    background-color: var(--primary-color);
+    text-transform: capitalize;
+    font-weight: 500;
+    color: #fff;
+    letter-spacing: 1px;
+    font-size: 1rem;
+    transition: transform 0.6s ease, background-color 0.6s ease;
+    cursor: pointer;
+    font-family: "Nata Sans", sans-serif;
+}
+.account_password_input_container button:hover {
+    transform: scale(1.0);
+    background-color: #3452cb;
+}
+
+.account_password_input{
+    padding: var(--input-padding);
+    border-radius: var(--input-border-radius);
+    border: 1px solid var(--disabled-input-border-color) !important;
+    outline: none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.account_border{
+    border-top: 2px solid var(--card-divider);
+    padding-top: 1.2rem;
+}
+.p_icon{
+    position: absolute;
+    right: 8.2rem;
+    cursor: pointer;
+}
+.hide_eye_icon{
+    color: var(--dark-grey-color);
+}
+.open_eye_icon{
+    color: var(--primary-color);
+}
+.delete_account{
+    border: 1px solid var(--border-danger-color);
+}
+.account_sub_title h4{
+    font-weight: 500;
+    font-size: var(--sm-text-size);
+}
+.email_notify{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.email_notification_title{
+    font-weight: 600;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+.toggle_icon{
+    font-size: 2rem;
+    cursor: pointer;
+}
+.toggle_outline{
+    color: var(--dim-dark-grey-color);
+}
+.toggle_solid{
+    color: var(--primary-color);
+}
+.delete_title_icon span{
+    background-color: var(--op-danger-color);
+    color: var(--danger-color);
+}

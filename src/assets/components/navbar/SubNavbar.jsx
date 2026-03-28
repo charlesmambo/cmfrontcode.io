@@ -10,6 +10,8 @@ import { FaArrowRightLong } from "react-icons/fa6"
 import { IoSettingsOutline } from "react-icons/io5";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { MdOutlineNotifications } from "react-icons/md";
+import NotificationCard from '../customCard/NotificationCard';
 
 const SubNavbar = () => {
   
@@ -26,6 +28,9 @@ const SubNavbar = () => {
     // 👇 dynamic logo click based on login
   const handleSettingsClick = () => {
       navigate("/profile");
+    }
+  const handleSettingClick = () => {
+      navigate("/settings");
     }
 
     // 👇 toggle dropdown when clicking profile icon
@@ -59,6 +64,7 @@ document.removeEventListener("mousedown", handleClickOutside);
 };
 }, []);
 
+const [showNotifications, setShowNotifications] = useState(false);
   
   return (
     <div className="sub-navbar-container">
@@ -128,17 +134,35 @@ document.removeEventListener("mousedown", handleClickOutside);
            {/* PROFILE ICON + DROPDOWN */}
             {isLoggedIn && (
               <div className="navbar-profile-container" ref={dropdownRef}>
-                <CgProfile
-                  className='navbar_profile_icon'
-                  onClick={handleProfileClick}
-                />
+                <div className="navbar_icon_container">
+                <div className="navbar_icon_container">
+                  <div 
+                    className="notify_user_icon_container"
+                    onClick={() => setShowNotifications(prev => !prev)}
+                  >
+                    <MdOutlineNotifications className='notify_user_icon'/>
+                    <p className='notify_num'>3</p>
+                  </div>
+
+                  {showNotifications && (
+                    <div className="notification_card2">
+                      <NotificationCard/>
+                    </div>
+                  )}
+
+                  <CgProfile
+                    className='navbar_profile_icon'
+                    onClick={handleProfileClick}
+                  />
+                </div>
+                </div>
 
                 {showDropdown && (
                   <div className="logout_dropdown">
                     <ul className='user_drops_info'>
                       <li className='user_name'>Charles Mambo</li>
                       <li onClick={handleSettingsClick} >Profile</li>
-                      <li>Settings</li>
+                      <li  onClick={handleSettingClick}>Settings</li>
                     </ul>
                     
                     <button className="logout_btn" onClick={handleLogout}>

@@ -47,7 +47,8 @@ h4 {
 }
 
 :root {
-  --primary-color: #1f5defd5;
+  --primary-color: #1f5def;
+  --primary-color-bg: #1f5def1c;
   --primary-white-color: #f7f7f7;
   --primary-lightgrey-color: #dfdfdf;
   --small-card-bg-color: #00809D;
@@ -61,13 +62,14 @@ h4 {
   --inside-cards-spacing: 0.6rem 0;
   --medium-icon-size: 1.2rem;
 
-  --toggle-bg: #E9E9E9;
+  --toggle-bg: #f3f3f3;
   --toggle-padding: 0.3rem 0.4rem;
   --toggle-container-radius: 1rem;
   --toggle-flex-gap: 1rem;
   --toggle-btn-bg: #6a83b915;
   --toogle-btn-text-size: 0.9rem;
   --dark-grey-color: #8e8e8e;
+  --disabled-input-border-color: #cecece71;
 
   --gold-bg: #e49c21;
   --dark-gold: #b47c19;
@@ -75,6 +77,7 @@ h4 {
 
   --header-bg-color: #0D1164;
   --column-gap: 1.6rem;
+  --sm-column-gap: 1.3rem;
 
   --section-medium-margin-top: 2.8rem;
   --gold-bg-opacity: rgba(100, 255, 218, 0.1);
@@ -87,14 +90,18 @@ h4 {
   --input-padding: 0.6rem 0.7rem;
   --input-border-radius: 0.2rem;
   --danger-color: #FB4141;
+  --op-danger-color: #fb414121;
+  --border-danger-color: #fb41416b;
+  --hover-danger-color: #d83131;
 
   --mr-top: 1.5rem;
-  --xsm-gap: 0.6rem;
+  --xsm-gap: 0.4rem;
   --sm-text-size: 0.9rem;
   --sm-margin-top: 0.8rem;
   --dim-dark-grey-color: #5f5f5f;
   --md-text-size: 1rem;
   --lg-padding: 1.5rem;
+  --icon-padding: 0.8rem;
   --margin-top: 1.5rem;
   --md-margin-top: 2rem;
 
@@ -109,7 +116,9 @@ h4 {
   --h3-card-fontsize: 1.6rem;
   --berry-color: #D91656;
 
-  --card-divider:#c5c5c5;
+  --card-divider:#ddddddb0;
+
+  --border-radius:3rem ;
 }
 
 .container-flex {

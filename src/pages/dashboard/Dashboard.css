@@ -13,6 +13,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 1.5rem;
 }
 
 .dashboard_intro_container p {
@@ -20,10 +21,10 @@
 }
 
 .quick_action_cards_wrapper {
-    margin-top: var(--md-margin-top);
     display: flex;
     gap: 1.5rem;
     justify-content: space-between;
+    margin-top: 1.6rem;
 }
 
 
