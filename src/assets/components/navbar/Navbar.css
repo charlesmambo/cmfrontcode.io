@@ -194,7 +194,7 @@ color: var(--primary-color);
   display: flex;
   align-items: center;
   gap: 1.4rem;
-  position: relative;
+  position: relative;                                       
 }
 .notify_user_icon_container{
   cursor: pointer;

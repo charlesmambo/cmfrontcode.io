@@ -14,7 +14,7 @@ import { MdOutlineNotifications } from "react-icons/md";
 import NotificationCard from '../customCard/NotificationCard';
 
 const SubNavbar = () => {
-  
+  const notificationRef = useRef(null);
   // const { isLoggedIn } = useAuth(); // check login state
   const [showDropdown, setShowDropdown] = useState(false); 
   const { isLoggedIn,logout } = useAuth(); 
@@ -48,20 +48,24 @@ const SubNavbar = () => {
       });
     navigate("/"); 
   };
-  useEffect(() => {
-const handleClickOutside = (event) => {
-if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-setShowDropdown(false);
-}
-};
+useEffect(() => {
+  const handleClickOutside = (event) => {
+    // close profile dropdown
+    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      setShowDropdown(false);
+    }
 
+    // close notifications
+    if (notificationRef.current && !notificationRef.current.contains(event.target)) {
+      setShowNotifications(false);
+    }
+  };
 
-document.addEventListener("mousedown", handleClickOutside);
+  document.addEventListener("mousedown", handleClickOutside);
 
-
-return () => {
-document.removeEventListener("mousedown", handleClickOutside);
-};
+  return () => {
+    document.removeEventListener("mousedown", handleClickOutside);
+  };
 }, []);
 
 const [showNotifications, setShowNotifications] = useState(false);
@@ -136,6 +140,7 @@ const [showNotifications, setShowNotifications] = useState(false);
               <div className="navbar-profile-container" ref={dropdownRef}>
                 <div className="navbar_icon_container">
                 <div className="navbar_icon_container">
+                <div ref={notificationRef}>
                   <div 
                     className="notify_user_icon_container"
                     onClick={() => setShowNotifications(prev => !prev)}
@@ -149,6 +154,7 @@ const [showNotifications, setShowNotifications] = useState(false);
                       <NotificationCard/>
                     </div>
                   )}
+                </div>
 
                   <CgProfile
                     className='navbar_profile_icon'
