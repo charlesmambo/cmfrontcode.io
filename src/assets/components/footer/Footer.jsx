@@ -6,10 +6,17 @@ import { CgCommunity } from "react-icons/cg";
 import { RiUserCommunityFill } from "react-icons/ri";
 import { BsTwitterX } from "react-icons/bs";
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
-import { useAuth } from '../auth/AuthContext'; // 👈 import auth hook
+import { useAuth } from '../auth/AuthContext'; 
+import { useNavigate } from 'react-router-dom';
 
 const Footer = () => {
   const { isLoggedIn } = useAuth(); // 👈 get login status
+
+  const navigate = useNavigate();
+
+  const handleSupportClick =()=> {
+    navigate("/support")
+}
 
   return (
     <footer>
@@ -55,15 +62,15 @@ const Footer = () => {
         <h3>Community</h3>
         <ul>
           <li>
-            <a href="#">
-              <PiNewspaperClipping className='footer_icon' />
-              Blog
-            </a>
+              <NavLink to="/support">
+    <PiNewspaperClipping className='footer_icon' />
+    Support
+  </NavLink>
           </li>
           <li>
             <a href="#">
-              <CgCommunity className='footer_icon' />
-              Forum
+              <PiNewspaperClipping className='footer_icon' />
+              Blog
             </a>
           </li>
           <li>

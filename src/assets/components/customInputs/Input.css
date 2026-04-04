@@ -24,3 +24,27 @@
   display: inline-block;
   font-size: 0.9rem;
 }
+.secondary_input{
+   outline: none;
+  border: 1px solid #b8c3c7;
+  padding: 0.7rem 0.8rem;
+  border-radius: 0.2rem;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  font-weight: 500;
+  background-color: transparent !important; 
+}
+.textarea_wrapper textarea{
+  outline: none;
+  border: 1px solid #b8c3c7;
+  padding: 0.7rem 0.8rem;
+  border-radius: 0.2rem;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  font-weight: 500;
+  background-color: transparent !important; 
+  resize: none;
+  min-height: 100px;
+}

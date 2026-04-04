@@ -18,7 +18,7 @@ const LeaderBoard = () => {
     <div className='leaderboard-wrapper'>
       <div className="leaderboard-intro-headings">
         <h2>Leaderboard</h2>
-        <p>Top performers in the cmfrontendcode community</p>
+        <p>See who's crushing it this week. Climb the ranks and earn your place <br />among the best.</p>
       </div>
 
       <div className="leaderboard-toggle">

@@ -130,7 +130,7 @@ const [showNotifications, setShowNotifications] = useState(false);
             {!isLoggedIn && (
               <div className="navbar-login-btn">
                 <Primary type="button" onClick={handleLoginClick}>
-                  LOG IN
+                  Sign In
                 </Primary>
               </div>
             )}

@@ -17,6 +17,7 @@ import Settings from './pages/settings/Settings';
 import Premium from './pages/upgradePremium/Premium';
 import "react-toastify/dist/ReactToastify.css";
 import MySolution from './pages/mySolution/MySolution';
+import Contact from './pages/contact/Contact';
 
 // Route guard
 const ProtectedRoute = ({ children }) => {
@@ -41,6 +42,7 @@ function App() {
           <Route path="/leaderboard" element={<LeaderBoard />} />
           <Route path="/challenges" element={<Challenges />} />
           <Route path="/solutions" element={<SolutionsList />} />
+          <Route path="/support" element={<Contact />} />
 
           {/* Protected routes */}
           <Route 
