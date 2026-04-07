@@ -19,6 +19,7 @@ const SolutionsList = () => {
         </div>
       <div className="all_solution_container">
       <SolutionCard
+        id={1}
         title="Interactive rating component"
         image={IMG1}
         profileImage={IMG1}
@@ -32,6 +33,7 @@ const SolutionsList = () => {
         githubLink="https://github.com/example"
       />
       <SolutionCard
+        id={2}
         title="Landing page"
         image={IMG2}
         profileImage={IMG2}
@@ -45,6 +47,7 @@ const SolutionsList = () => {
         githubLink="https://github.com/example"
       />
       <SolutionCard
+        id={3}
         title="Interactive rating component"
         image={IMG1}
         profileImage={IMG1}
@@ -58,6 +61,7 @@ const SolutionsList = () => {
         githubLink="https://github.com/example"
       />
       <SolutionCard
+        id={4}
         title="Job listing landing page"
         image={IMG3}
         profileImage={IMG3}
@@ -71,6 +75,7 @@ const SolutionsList = () => {
         githubLink="https://github.com/example"
       />
       <SolutionCard
+        id={5}
         title="Interactive rating component"
         image={IMG1}
         profileImage={IMG1}
@@ -84,6 +89,7 @@ const SolutionsList = () => {
         githubLink="https://github.com/example"
       />
       <SolutionCard
+        id={6}
         title="Interactive rating component"
         image={IMG4}
         profileImage={IMG4}

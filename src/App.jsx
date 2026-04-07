@@ -18,6 +18,7 @@ import Premium from './pages/upgradePremium/Premium';
 import "react-toastify/dist/ReactToastify.css";
 import MySolution from './pages/mySolution/MySolution';
 import Contact from './pages/contact/Contact';
+import ViewSolution from './pages/viewSolution/ViewSolution';
 
 // Route guard
 const ProtectedRoute = ({ children }) => {
@@ -43,6 +44,8 @@ function App() {
           <Route path="/challenges" element={<Challenges />} />
           <Route path="/solutions" element={<SolutionsList />} />
           <Route path="/support" element={<Contact />} />
+          <Route path="/view-solution/:id" element={<ViewSolution />} />
+        
 
           {/* Protected routes */}
           <Route 

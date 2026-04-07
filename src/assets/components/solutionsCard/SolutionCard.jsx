@@ -5,6 +5,7 @@ import { FaRegHeart } from "react-icons/fa6";
 import { FiMessageCircle, FiEye } from "react-icons/fi";
 import { HiOutlineExternalLink } from "react-icons/hi";
 import { IoLogoGithub, IoMdHeart } from "react-icons/io";
+import { useNavigate } from 'react-router-dom';
 
 const SolutionCard = ({
   title,
@@ -18,7 +19,8 @@ const SolutionCard = ({
   views,
   externalLink,
   githubLink,
-  hideUserInfo = false, // <-- new prop, default false
+  hideUserInfo = false, 
+  id,
 }) => {
   const [liked, setLiked] = useState(false);
   const [likeCount, setLikeCount] = useState(likes);
@@ -28,8 +30,13 @@ const SolutionCard = ({
     setLiked(!liked);
   };
 
+   const navigate = useNavigate();
+    const handleClick = () => {
+    navigate(`/view-solution/${id}`);
+  };
+
   return (
-    <div className='solution_card_container'>
+    <div className='solution_card_container' onClick={handleClick}>
       <div className="solution_links">
         {externalLink && (
           <a href={externalLink} target="_blank" rel="noopener noreferrer">

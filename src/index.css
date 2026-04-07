@@ -49,11 +49,13 @@ h4 {
 :root {
   --primary-color: #1f5def;
   --primary-color-bg: #1f5def1c;
+  --primary-black-color: #051a4d;
   --primary-white-color: #f7f7f7;
   --primary-lightgrey-color: #dfdfdf;
   --small-card-bg-color: #00809D;
   --small-card-color: #004858;
   --card-padding: 1.3rem 1.3rem;
+  --card-padding-md: 1.5rem;
   --card-border-radius: 0.4rem;
   --section-margin-top: 2rem;
   --small-text-size: 0.8rem;
@@ -89,6 +91,7 @@ h4 {
 
   --input-padding: 0.6rem 0.7rem;
   --input-border-radius: 0.2rem;
+  --card-border-radius: 0.3rem;
   --danger-color: #FB4141;
   --op-danger-color: #fb414121;
   --border-danger-color: #fb41416b;
@@ -119,6 +122,7 @@ h4 {
   --card-divider:#ddddddb0;
 
   --border-radius:3rem ;
+  --vs-card-shadow:rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px; 
 }
 
 .container-flex {
