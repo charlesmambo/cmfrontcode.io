@@ -11,6 +11,7 @@ import { LuCircleCheck } from "react-icons/lu";
 import { useNavigate } from "react-router-dom";
 import UserProfile from '../userProfile/UserProfile';
 import { NavLink } from 'react-router-dom';
+import { GoDotFill } from "react-icons/go";
 
 
 const HomePage = () => {
@@ -74,38 +75,83 @@ const HomePage = () => {
 
   return (
     <div className="home_container">
-      <div className="home_intro_section">
-        <h1>
-          Master Frontend Development with <span className='home_intro_span'>Real Design Challenges</span>
-        </h1>
-        <p>
-          Solve real-world UI challenges, get instant feedback, and showcase your work to the dev community.
-        </p>
+<div className="hero_section">
+  <div className="hero_left">   
+    <span className="version"><GoDotFill className='version_icon' /> V2.0 IS LIVE</span>
+    <h1>
+      Master <span>Frontend</span><br />
+      Development with
+      Real Challenges
+    </h1>
+    <p>
+      Elevate your coding skills by building real-world projects. 
+      Get AI-powered feedback, professional design files, 
+      and join a community of top-tier developers.
+    </p>
+    <div className="hero_buttons">
+      <button className="btn_primary" onClick={handleLoginClick}>
+        Get Started Free →
+      </button>
 
-        <div className="home_intro_btns">
-          <Primary type="submit" className='home_intro_solid_btn'  onClick={handleLoginClick}>
-            Get Started Free
-          </Primary>
-          <Primary type="submit" className='home_intro_outline_btn' onClick={handleBrowseChallenges}>
-            Browse Challenges
-          </Primary>
-        </div>
+      <button className="btn_secondary" onClick={handleBrowseChallenges}>
+        Browse Challenges
+      </button>
+    </div>
 
-        <div className="home_intro_abt">
-          <div className="home_intro_abt_card">
-            <h3>5,000 +</h3>
-            <p>Active Developers</p>
-          </div>
-          <div className="home_intro_abt_card home_intro_abt_card-last">
-            <h3>100 +</h3>
-            <p>Challenges</p>
-          </div>
-          <div className="home_intro_abt_card home_intro_abt_card-last">
-            <h3>25,000 +</h3>
-            <p>Submissions</p>
-          </div>
-        </div>
+    <div className="hero_social">
+      <div className="avatars">
+        <div></div><div></div><div></div>
       </div>
+      <p>
+        <strong>Join 5,000+</strong> developers building today.
+      </p>
+    </div>
+  </div>
+
+ <div className="hero_right">
+  <div className="code_card">
+
+    {/* TOP BAR */}
+    <div className="code_header">
+      <div className="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div className="url">app.cmfrontend.code</div>
+    </div>
+
+    {/* CODE CONTENT */}
+    <div className="code_body">
+      <div className="code_body_content">
+      <p className="code_title">AI Feedback Analysis</p>
+
+      <div className="cd_content">
+        <p><span className='const'>const</span> accessibility = <span className='cd_blue'>"Excellent"</span> ;</p>
+        <p><span className='const'>const</span> performance = <span className='cd_blue'>"Optimized"</span> ;</p>
+        <p className='cds'>// Suggestion: Consider using React.memo for the Card component</p>
+      </div>
+
+      <div className="score">Score: 94/100</div>
+      </div>
+    </div>
+
+    {/* BOTTOM STATS */}
+    <div className="code_footer">
+      <div className="stat_show">
+        <p>Current Streak</p>
+        <h3>14 🔥</h3>
+      </div>
+
+      <div className="stat_show">
+        <p>Global Rank</p>
+        <h3>#42 🏆</h3>
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
 
       <div className="home_everything_you_need">
         <h2>Everything You Need to Level Up</h2>

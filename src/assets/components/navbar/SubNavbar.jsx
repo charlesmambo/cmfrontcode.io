@@ -12,6 +12,7 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { MdOutlineNotifications } from "react-icons/md";
 import NotificationCard from '../customCard/NotificationCard';
+import Btn from '../buttons/Btn';
 
 const SubNavbar = () => {
   const notificationRef = useRef(null);
@@ -69,119 +70,69 @@ useEffect(() => {
 }, []);
 
 const [showNotifications, setShowNotifications] = useState(false);
-  
-  return (
-    <div className="sub-navbar-container">
-      <div className="logo">
-       <NavLink to={isLoggedIn ? "/dashboard" : "/"}>
-          <h4 className='logo'>cmFrontendCode</h4>
-        </NavLink>
-      </div>
-      <ul>
-          {/*Only show Dashboard if logged in */}
-        {isLoggedIn && (
-          <li>
-            <NavLink
-              to="/dashboard"
-              className={({ isActive }) => (isActive ? 'active-link' : '')}
-            >
-              Dashboard
-            </NavLink>
-          </li>
-        )}
-        <li>
-          <NavLink
-            to="/leaderboard"
-            className={({ isActive }) => (isActive ? 'active-link' : '')}
-          >
-            Leaderboard
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/challenges"
-            className={({ isActive }) => (isActive ? 'active-link' : '')}
-          >
-            Challenges
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/solutions"
-            className={({ isActive }) => (isActive ? 'active-link' : '')}
-          >
-            Community
-          </NavLink>
-        </li>
-          {/* Only show My Solutions if logged in */}
-          {isLoggedIn && (
-            <li>
-              <NavLink
-                to="/my_solution"
-                className={({ isActive }) => (isActive ? 'active-link' : '')}
-              >
-                My Solutions
-              </NavLink>
-            </li>
-          )}
+return (
+  <nav className="navbar">
+    {/* LEFT */}
+    <div className="nav_left">
+      <NavLink to={isLoggedIn ? "/dashboard" : "/"} className="logo">
+        <div className="logo_icon">&lt;/&gt;</div>
+        <h2>cm<span>Frontend</span>Code</h2>
+      </NavLink>
+
+      <ul className="nav_links">
+        <li><NavLink to="/challenges">Challenges</NavLink></li>
+        <li><NavLink to="/leaderboard">Leaderboard</NavLink></li>
+        <li><NavLink to="/solutions">Community</NavLink></li>
+        <li className="premium">👑 Premium</li>
       </ul>
-                <div className="navbar-login-btn-container">
-            {/* LOGIN BUTTON */}
-            {!isLoggedIn && (
-              <div className="navbar-login-btn">
-                <Primary type="button" onClick={handleLoginClick}>
-                  Sign In
-                </Primary>
-              </div>
-            )}
+    </div>
 
-           {/* PROFILE ICON + DROPDOWN */}
-            {isLoggedIn && (
-              <div className="navbar-profile-container" ref={dropdownRef}>
-                <div className="navbar_icon_container">
-                <div className="navbar_icon_container">
-                <div ref={notificationRef}>
-                  <div 
-                    className="notify_user_icon_container"
-                    onClick={() => setShowNotifications(prev => !prev)}
-                  >
-                    <MdOutlineNotifications className='notify_user_icon'/>
-                    <p className='notify_num'>3</p>
-                  </div>
+    {/* RIGHT */}
+    <div className="nav_right">
+      {!isLoggedIn ? (
+        <>
+          <span className="signin" onClick={handleLoginClick}>Sign in</span>
+          <Btn text='Start Free' onClick={handleLoginClick}/>
+        </>
+      ) : (
+        <div className="nav_icons">
+          <div className="notify_wrapper" ref={notificationRef}>
+            <MdOutlineNotifications
+              className="icon"
+              onClick={() => setShowNotifications(prev => !prev)}
+            />
+            <span className="badge">3</span>
 
-                  {showNotifications && (
-                    <div className="notification_card2">
-                      <NotificationCard/>
-                    </div>
-                  )}
-                </div>
-
-                  <CgProfile
-                    className='navbar_profile_icon'
-                    onClick={handleProfileClick}
-                  />
-                </div>
-                </div>
-
-                {showDropdown && (
-                  <div className="logout_dropdown">
-                    <ul className='user_drops_info'>
-                      <li className='user_name'>Charles Mambo</li>
-                      <li onClick={handleSettingsClick} >Profile</li>
-                      <li  onClick={handleSettingClick}>Settings</li>
-                    </ul>
-                    
-                    <button className="logout_btn" onClick={handleLogout}>
-                      Log Out
-                      <FaArrowRightLong />
-                    </button>
-                  </div>
-                )}
+            {showNotifications && (
+              <div className="notification_dropdown">
+                <NotificationCard />
               </div>
             )}
           </div>
+
+          <div className="profile_wrapper" ref={dropdownRef}>
+            <CgProfile
+              className="icon"
+              onClick={handleProfileClick}
+            />
+
+            {showDropdown && (
+              <div className="dropdown">
+                <p className="user">Charles Mambo</p>
+                <span onClick={handleSettingsClick}>Profile</span>
+                <span onClick={handleSettingClick}>Settings</span>
+
+                <button onClick={handleLogout}>
+                  Log Out <FaArrowRightLong />
+                </button>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
     </div>
-  );
-};
+  </nav>
+);
+}
 
 export default SubNavbar;

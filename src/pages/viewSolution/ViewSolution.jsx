@@ -4,6 +4,7 @@ import '../viewSolution/ViewSolution.css';
 import { FaRegHeart } from "react-icons/fa";
 import { FaRegComments } from "react-icons/fa";
 import { MdOutlineRemoveRedEye } from "react-icons/md";
+import Primary from '../../assets/components/buttons/Primary';
 
 const ViewSolution = () => {
     const { id } = useParams();
@@ -52,6 +53,7 @@ const ViewSolution = () => {
                 <div className="pn_content">
                     <h4>Charles Mambo</h4>
                     <p>Frontend Dev</p>
+                    <Primary className='outline_btn'>Follow</Primary>
                 </div>
                 </div>
 

@@ -72,3 +72,27 @@ background-color: var(--danger-color);
 .delete_btn:hover{
     background-color: var(--hover-danger-color);
 }
+
+.outline_btn {
+    background-color: transparent !important;
+    border: 1px solid var(--primary-color) !important;
+    min-width: 180px !important;
+    width: 100% !important;
+    color: var(--primary-color) !important;
+    padding: 0.4rem 1rem !important;
+}
+.outline_btn:hover {
+    background-color: var(--primary-color) !important;
+    color: var(--primary-white-color) !important;
+}
+
+/* CTA */
+.cta {
+  background: var(--purple-bg);
+  border: none;
+  padding: var(--btn-padding);
+  border-radius: var(--btn-radius);
+  color: var(--primary-white-color);
+  font-weight: 500;
+  cursor: pointer;
+}
