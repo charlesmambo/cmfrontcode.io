@@ -1,0 +1,113 @@
+/* CommunitySection.css */
+
+.join_community {
+  color: var(--whitish-color);
+  padding: var(--section-padding);
+  overflow: hidden;
+}
+
+/* Container */
+.join_community_container {
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.join_community_tag {
+  color: var(--purple-color);
+  letter-spacing: 2px;
+  font-size: var(--small-text-size);
+  margin-bottom: 12px;
+}
+
+.join_community_title {
+  font-size: var(--heading-text);
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--whitish-color);
+}
+
+.join_community_subtitle {
+  color: var(--greyish-color);
+  max-width: 600px;
+  margin: 0 auto 60px;
+}
+
+/* Cards grid */
+.join_community_cards{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+/* Card */
+.join_community_card{
+  background: rgba(17, 24, 39, 0.6);
+  border: 1px solid #374151;
+  border-radius: 16px;
+  padding: 1.5rem;
+  backdrop-filter: blur(14px);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.join_community_card:hover {
+  transform: translateY(-8px);
+}
+
+/* Icon circle */
+.join_card_icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  margin-bottom: 1rem;
+}
+
+/* Text */
+.join_community_card h3 {
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.join_community_card p {
+  color: #9ca3af;
+  font-size: var(--md-text-size);
+  margin-bottom: 12px;
+}
+
+.join_community_card a {
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Color Variants */
+.join_community_card--indigo .join_card_icon {
+  background: rgba(99, 102, 241, 0.2);
+  color: #818cf8;
+}
+.join_community_card--indigo a { color: #818cf8; }
+
+.join_community_card--cyan .join_card_icon {
+  background: rgba(34, 211, 238, 0.2);
+  color: #22d3ee;
+}
+.join_community_card--cyan a { color: #22d3ee; }
+
+.join_community_card--purple .join_card_icon {
+  background: rgba(168, 85, 247, 0.2);
+  color: #c084fc;
+}
+.join_community_card--purple a { color: #c084fc; }
+
+.join_community_card--pink .join_card_icon {
+  background: rgba(236, 72, 153, 0.2);
+  color: #f472b6;
+}
+.join_community_card--pink a { color: #f472b6; }

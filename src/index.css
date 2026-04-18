@@ -58,6 +58,7 @@ h4 {
   --card-border-radius: 0.4rem;
   --section-margin-top: 2rem;
   --small-text-size: 0.8rem;
+  --md-text-size: 0.9rem;
   --medium-text-size: 1.2rem;
   --lg-icon-size: 1.5rem;
   --inside-cards-spacing: 0.6rem 0;
@@ -121,12 +122,15 @@ h4 {
   --card-divider:#ddddddb0;
 
   --navbar-padding:16px 48px;
+  --section-padding:4rem 6rem;
 
   --border-radius:3rem ;
   --icon-radius: 8px;
 
   --btn-padding: 10px 18px;
   --btn-radius: 2rem;
+  --card-radius:20px;
+  --card-padding:20px;
 
   --vs-card-shadow:rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px; 
 
@@ -135,13 +139,18 @@ h4 {
   --purple-text-bg:linear-gradient(90deg, #7c3aed, #3b82f6);
 
   --purple-color:#a855f7;
+  --purple-color-op:rgba(168,85,247,0.2);
   --whitish-color:#e5e7eb;
   --greyish-color:#9ca3af;
   --premium-color:#22d3ee;
   --pink-color:#DE69A7;
+  --blue-color:#3b82f6;
+  --green-color:#22c55e;
+  --orange-color:#FB923C;
 
   --icon-font-size:0.8rem;
   --logo-font-size:1.1rem;
+  --heading-text:2.5rem;
 }
 
 .container-flex {
@@ -154,7 +163,19 @@ h2{
 }
 
 body{
-  background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+background: radial-gradient(circle at top, #0f172a, #020617);
+position: relative;
+}
+/* subtle grid overlay */
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity: 0.2;
+  pointer-events: none;
 }
 
 

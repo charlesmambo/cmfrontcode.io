@@ -1,0 +1,144 @@
+.leader_ad_container {
+  position: relative;
+  background: #090d18;
+  padding: var(--section-padding);
+  color: var(--whitish-color);
+  overflow: hidden;
+}
+
+/* Grid background */
+.leader_ad_grid {
+  position: absolute;
+  inset: 0;
+  opacity: 0.08;
+  background-image:
+    linear-gradient(to right, #1f2937 1px, transparent 1px),
+    linear-gradient(to bottom, #1f2937 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Container */
+.leader_ad_content {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.leader_ad_tag {
+  color: var(--premium-color);
+  letter-spacing: 2px;
+  font-size: var(--small-text-size);
+  margin-bottom: 10px;
+}
+
+.leader_ad_title {
+  margin-bottom: 40px;
+  font-size: var(--heading-text);
+  color: var(--whitish-color);
+}
+
+/* Card */
+.leader_ad_card{
+  background: rgba(17, 24, 39, 0.7);
+  border: 1px solid #1f2937;
+  border-radius: var(--card-radius);
+  padding: var(--card-padding);
+  backdrop-filter: blur(14px);
+}
+
+/* Rows */
+.leader_ad_row{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--card-padding);
+  border-radius: var(--card-radius);
+  margin-bottom: 14px;
+  border: 1px solid transparent;
+  transition: 0.3s ease;
+}
+
+/* Rank styles */
+.rank-1 {
+  border: 1px solid #facc15;
+  background: linear-gradient(90deg, rgba(250,204,21,0.1), transparent);
+}
+
+.rank-2 {
+  border: 1px solid #6b7280;
+  background: linear-gradient(90deg, rgba(107,114,128,0.1), transparent);
+}
+
+.rank-3 {
+  border: 1px solid #f97316 !important;
+  background: linear-gradient(90deg, rgba(249,115,22,0.1), transparent);
+}
+
+/* Left section */
+.leader_ad_left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.king{
+    color: #facc15;
+}
+
+.rank_username h4{
+color: var(--whitish-color);
+}
+.leader_ad_rank {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #111827;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+   border: 1px solid var(--greyish-color);
+}
+
+.leader_ad_avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 2px solid var(--greyish-color);
+}
+
+.leader_ad_left h4 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.leader_ad_left span {
+  font-size: var(--small-text-size);
+  color: var(--greyish-color);
+}
+
+/* Points */
+.leader_ad_points {
+  text-align: right;
+}
+
+.leader_ad_points strong {
+  font-size: 22px;
+}
+
+.leader_ad_points span {
+  display: block;
+  font-size: var(--small-text-size);
+  color: var(--greyish-color);
+}
+
+/* Footer */
+.leader_ad_footer {
+  margin-top: 20px;
+}
+
+.leader_ad_footer a {
+  color: var(--premium-color);
+  font-size: var(--small-text-size);
+  text-decoration: none;
+}

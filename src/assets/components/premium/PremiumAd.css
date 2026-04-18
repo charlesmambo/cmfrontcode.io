@@ -1,0 +1,137 @@
+/* Section */
+.premium_ad_container {
+  padding: var(--section-padding);
+  background: radial-gradient(circle at top, #1a1a40, #0b0b1f 70%);
+  color: var(--whitish-color);
+}
+
+/* Header */
+.premium_ad_header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.premium_ad_header span {
+  color: var(--premium-color);
+  font-size: var(--small-text-size);
+  letter-spacing: 2px;
+}
+
+.premium_ad_header h1 {
+  font-size: 48px;
+  margin: 10px 0;
+  color: var(--whitish-color);
+}
+
+.premium_ad_header p {
+  color: var(--greyish-color);
+}
+
+/* Card */
+.premium_ad_card {
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem;
+  width: 55vw;
+  border-radius: 24px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: linear-gradient(135deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+  backdrop-filter: blur(10px);
+  position: relative;
+}
+
+/* Glow border */
+.premium_ad_card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  opacity: 0.2;
+  filter: blur(40px);
+  z-index: 0;
+}
+
+/* LEFT */
+.premium_ad_left {
+  z-index: 1;
+}
+
+.premium_ad_left h2 {
+  margin-bottom: 25px;
+  color: var(--whitish-color);
+}
+
+/* Benefit */
+.premium_ad_benefit {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.premium_ad_benefit p{
+font-size: var(--small-text-size);
+color: var(--greyish-color);
+}
+.premium_ad_benefit h4{
+color: var(--whitish-color);
+}
+
+.premium_ad_check {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: var(--purple-color-op);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--purple-color);
+}
+
+/* RIGHT */
+.premium_ad_right {
+  text-align: center;
+  z-index: 1;
+  position: relative;
+}
+
+.premium_ad_badge {
+  position: absolute;
+  top: -10px;
+  right: 0;
+  background: linear-gradient(90deg, #a855f7, #ff4ecd);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: var(--small-text-size);
+}
+
+/* Price */
+.premium_ad_price{
+  font-size: 56px;
+  margin: 20px 0;
+  color: var(--whitish-color);
+  margin-top: 3rem;
+}
+.premium_ad_price_m{
+    font-size: var(--medium-text-size);
+    color: var(--greyish-color);
+}
+
+.price span {
+  font-size: var(--medium-text-size);
+  color: var(--greyish-color);
+}
+
+/* Billing */
+.premium_ad_billing {
+  color: var(--greyish-color);
+  margin-bottom: 20px;
+}
+
+/* Guarantee */
+.premium_ad_guarantee {
+  margin-top: 15px;
+  font-size: var(--small-text-size);
+  color: var(--greyish-color);
+}

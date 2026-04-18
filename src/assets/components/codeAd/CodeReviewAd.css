@@ -1,0 +1,146 @@
+.code_review_ad {
+  padding: var(--section-padding);
+  color: white;
+}
+
+/* Container */
+.code_review_ad_container {
+  margin: auto;
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  border-radius: 24px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: linear-gradient(135deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+  backdrop-filter: blur(10px);
+}
+
+/* LEFT */
+.code_review_ad_left h1 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  color: var(--primary-white-color);
+}
+
+.code_review_ad_left p {
+  color: var(--greyish-color);
+  margin-bottom: 25px;
+  max-width: 500px;
+}
+
+.code_review_ad_badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: 1px solid var(--pink-color);
+  color: var(--pink-color);
+  font-size: 12px;
+}
+
+/* Features */
+.code_review_ad_features {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.code_review_ad_feature {
+  display: flex;
+  gap: 15px;
+}
+.code_review_ad_feature h4{
+ color: var(--primary-white-color);
+}
+.code_review_ad_feature p{
+ font-size: var(--small-text-size);
+}
+
+.code_review_ad_icon {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.green { background: rgba(34,197,94,0.15); color: #22c55e; }
+.blue { background: rgba(59,130,246,0.15); color: #3b82f6; }
+.purple { background: rgba(168,85,247,0.15); color: #a855f7; }
+.cyan { background: rgba(34,211,238,0.15); color: #22d3ee; }
+
+/* RIGHT PANEL */
+.code_review_ad_right {
+width: 38vw;
+}
+.code_review_ad_right .code_review_ad_report {
+  background: #0b0f1f;
+  padding: 25px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.code_review_ad_report_header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  color: var(--greyish-color);
+  align-items: center;
+}
+.code_review_ad_report_header span:first-child{
+color: var(--pink-color);
+font-size: var(--small-text-size);
+}
+
+.code_review_ad_score{
+  background: rgba(34,197,94,0.15);
+  color: var(--green-color);
+  padding: 4px 10px;
+  border-radius: 10px;
+  font-size: 0.7rem;
+}
+
+/* Metrics */
+.metric {
+  margin-bottom: 15px;
+}
+
+.metric_top {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #bbb;
+}
+
+.code_review_ad_bar {
+  height: 6px;
+  border-radius: 10px;
+  margin-top: 5px;
+}
+
+.code_review_ad_bar.green { background: #22c55e; }
+.code_review_ad_bar.blue { background: #3b82f6; }
+.code_review_ad_bar.purple { background: #a855f7; }
+.code_review_ad_bar.cyan { background: #22d3ee; }
+
+/* Suggestion */
+.suggestion {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.08);
+  color: #ccc;
+}
+.suggestion  span{
+    color: var(--greyish-color);
+    font-size: var(--small-text-size);
+}
+.suggestion  p{
+    color: var(--primary-white-color);
+    font-size: var(--small-text-size);
+    margin-top: 0.5rem;
+}

@@ -12,6 +12,13 @@ import { useNavigate } from "react-router-dom";
 import UserProfile from '../userProfile/UserProfile';
 import { NavLink } from 'react-router-dom';
 import { GoDotFill } from "react-icons/go";
+import LearningPaths from '../../assets/components/learnPath/LearnPath';
+import CodeReviewAd from '../../assets/components/codeAd/CodeReviewAd';
+import PremiumAd from '../../assets/components/premium/PremiumAd';
+import JoinCommunity from '../../assets/components/joinCommunity/JoinCommunity';
+import LeaderAd from '../../assets/components/leaderAd/LeaderAd';
+import Fq from '../../assets/components/fq/Fq';
+import Btn from '../../assets/components/buttons/Btn';
 
 
 const HomePage = () => {
@@ -153,104 +160,147 @@ const HomePage = () => {
 </div>
 </div>
 
-      <div className="home_everything_you_need">
-        <h2>Everything You Need to Level Up</h2>
-        <p>Our platform provides all the tools and resources you need to improve your frontend skills</p>
+<div class="cm_user_container">
+  <div class="cm_user_card">
+    <div class="cm_user_number">5,000+</div>
+    <div class="cm_user_label">ACTIVE DEVELOPERS</div>
+  </div>
 
-        <div className="home_everything_you_need_card_container">
-          <div className="home_everything_you_need_card">
-            <div className="home_everything_you_need_card_icon">
-              <PiBracketsAngleBold />
-            </div>
-            <div className="home_everything_you_need_card_content">
-              <h4>100+ Design Challenges</h4>
-              <p>Premium UI/UX designs converted into coding challenges for skill development.</p>
-            </div>
-          </div>
+  <div class="cm_user_card">
+    <div class="cm_user_number">100+</div>
+    <div class="cm_user_label">PRO CHALLENGES</div>
+  </div>
 
-          <div className="home_everything_you_need_card">
-            <div className="home_everything_you_need_card_icon">
-              <GoTrophy />
-            </div>
-            <div className="home_everything_you_need_card_content">
-              <h4>Points & Leaderboard</h4>
-              <p>Earn points for quality submissions and climb the global leaderboard.</p>
-            </div>
-          </div>
+  <div class="cm_user_card">
+    <div class="cm_user_number">25,000+</div>
+    <div class="cm_user_label">SUBMISSIONS</div>
+  </div>
+</div>
 
-          <div className="home_everything_you_need_card">
-            <div className="home_everything_you_need_card_icon">
-              <TbUsers />
-            </div>
-            <div className="home_everything_you_need_card_content">
-              <h4>Code Reviews</h4>
-              <p>Get feedback from peers and review others' code to improve together.</p>
-            </div>
-          </div>
+<div className="home_everything_you_need">
+  <h2>Everything You Need to Level Up</h2>
 
-          <div className="home_everything_you_need_card">
-            <div className="home_everything_you_need_card_icon">
-              <HiStar />
-            </div>
-            <div className="home_everything_you_need_card_content">
-              <h4>Premium Content</h4>
-              <p>Access exclusive premium challenges and advanced design systems.</p>
-            </div>
-          </div>
+  <div className="home_everything_you_need_card_container">
+
+    {/* Card */}
+    <div className="card">
+      <div className="icon purple">
+        <PiBracketsAngleBold />
+      </div>
+      <h4>100+ Design Challenges</h4>
+      <p>Real-world projects from beginner to advanced. Build portfolio-ready applications.</p>
+    </div>
+
+    <div className="card">
+      <div className="icon blue">
+        <GoTrophy />
+      </div>
+      <h4>Points & Leaderboard</h4>
+      <p>Earn points for every submission. Compete globally and track progress.</p>
+    </div>
+
+    <div className="card">
+      <div className="icon cyan">
+        <TbUsers />
+      </div>
+      <h4>Code Reviews</h4>
+      <p>Get detailed feedback from experienced developers.</p>
+    </div>
+
+    <div className="card">
+      <div className="icon purple">
+        <HiStar />
+      </div>
+      <h4>Premium Content</h4>
+      <p>Access exclusive challenges and advanced materials.</p>
+    </div>
+
+    <div className="card">
+      <div className="icon pink">
+        🤖
+      </div>
+      <h4>AI Feedback</h4>
+      <p>Instant AI-powered code analysis and insights.</p>
+    </div>
+
+    <div className="card">
+      <div className="icon green">
+        📈
+      </div>
+      <h4>Learning Paths</h4>
+      <p>Structured roadmaps from beginner to expert.</p>
+    </div>
+
+  </div>
+</div>
+
+<div className="how_it_works">
+  <h2>How It Works</h2>
+
+  <div className="how_it_works_steps">
+
+    <div className="how_it_works_step">
+      <div className="circle purple">1</div>
+      <h4>Choose a Challenge</h4>
+      <p>
+        Browse challenges by difficulty and technology.
+        Download design files and assets.
+      </p>
+    </div>
+
+    <div className="how_it_works_step">
+      <div className="circle blue">2</div>
+      <h4>Build & Code</h4>
+      <p>
+        Use any framework or tools you prefer.
+        Build at your own pace with full creative freedom.
+      </p>
+    </div>
+
+    <div className="how_it_works_step">
+      <div className="circle cyan">3</div>
+      <h4>Submit & Get Feedback</h4>
+      <p>
+        Receive AI + community feedback.
+        Earn points and climb the leaderboard.
+      </p>
+    </div>
+
+  </div>
+
+</div>
+
+<LearningPaths/>
+<CodeReviewAd/>
+<PremiumAd/>
+<JoinCommunity/>
+<LeaderAd/>
+<Fq/>
+
+<div className="start_wrapper">
+      <div className="start_card">
+        <h1>
+          Start Building Real-World <br />
+          Projects Today
+        </h1>
+
+        <p>
+          Join thousands of developers mastering frontend development through
+          hands-on challenges and AI-powered feedback.
+        </p>
+
+        <div className="start_buttons">
+          <Btn text='Get Started Free' />
+          <button className="secondary-btn">
+            Browse Challenges
+          </button>
         </div>
+
+        <small>
+          No credit card required • 30-day money-back guarantee
+        </small>
       </div>
-
-      {/* How it works section with bubbles */}
-      <div className="home_everything_you_need how_it_works_container">
-        <div className="coding-bubbles" id="codingBubbles"></div>
-        <h2>How It Works</h2>
-        <p>Simple steps to start your coding journey</p>
-
-        <div className="home_everything_you_need_card_container">
-          <div className="home_everything_you_need_card home_how_works_card">
-            <div className="home_everything_you_need_card_icon home_how_works_card_icon">
-              <MdOutlineDownload />
-            </div>
-            <div className="home_everything_you_need_card_content">
-              <h4>1. Choose & Download</h4>
-              <p>Select a challenge and download the design files and requirements</p>
-            </div>
-          </div>
-
-          <div className="home_everything_you_need_card home_how_works_card">
-            <div className="home_everything_you_need_card_icon home_how_works_card_icon">
-              <RiBracesLine />
-            </div>
-            <div className="home_everything_you_need_card_content">
-              <h4>2. Build & Code</h4>
-              <p>Code the design using your preferred framework and tools</p>
-            </div>
-          </div>
-
-          <div className="home_everything_you_need_card home_how_works_card">
-            <div className="home_everything_you_need_card_icon home_how_works_card_icon">
-              <LuCircleCheck />
-            </div>
-            <div className="home_everything_you_need_card_content">
-              <h4>3. Submit & Earn</h4>
-              <p>Submit your solution, get reviewed, and earn points for quality work</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Ready to Start Your Journey? */}
-      <div className="home_to_start_your_journey_container">
-        <h2>Ready to Start Your Journey?</h2>
-        <p>Join thousands of developers improving their skills with real design challenges</p>
-
-        
-      <div className="home_to_start_your_journey_btns">
-          <Primary type="submit" className=''   onClick={handleLoginClick}>
-            Start Free Today
-          </Primary>
-      </div>
-      </div>
+    </div>
 
       {/* <UserProfile/> */}
     </div>
