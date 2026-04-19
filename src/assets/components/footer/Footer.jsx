@@ -1,106 +1,79 @@
 import React from 'react';
 import '../footer/Footer.css';
-import { NavLink } from 'react-router-dom';
-import { PiNewspaperClipping } from "react-icons/pi";
-import { CgCommunity } from "react-icons/cg";
-import { RiUserCommunityFill } from "react-icons/ri";
+import { NavLink, useNavigate } from 'react-router-dom';
 import { BsTwitterX } from "react-icons/bs";
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
-import { useAuth } from '../auth/AuthContext'; 
-import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../auth/AuthContext';
 
 const Footer = () => {
-  const { isLoggedIn } = useAuth(); // 👈 get login status
-
+  const { isLoggedIn } = useAuth();
   const navigate = useNavigate();
 
-  const handleSupportClick =()=> {
-    navigate("/support")
-}
-
   return (
-    <footer>
-      <div className="footer_intro">
-        <h3>cmFrontendCode</h3>
-        <p>
-          Master frontend development through hands-on challenges and real-world projects.
-          Join thousands of developers improving their skills daily.
-        </p>
+    <footer className="footer">
+      <div className="footer_container">
+
+        {/* LEFT INTRO */}
+        <div className="footer_brand">
+                <NavLink to={isLoggedIn ? "/dashboard" : "/"} className="logo">
+                  <div className="logo_icon">&lt;/&gt;</div>
+                  <h2>cm<span>Frontend</span>Code</h2>
+                </NavLink>
+          <p>
+            The most advanced platform to master frontend development
+            through real-world challenges.
+          </p>
+
+          <div className="footer_socials">
+            <a href="#"><BsTwitterX /></a>
+            <a href="#"><FaGithub /></a>
+            <a href="#"><FaLinkedin /></a>
+          </div>
+        </div>
+
+        {/* PLATFORM */}
+        <div className="footer_column">
+          <h3>Platform</h3>
+          <ul>
+            <li><NavLink to="/challenges">Challenges</NavLink></li>
+            <li><NavLink to="/solutions">Solutions</NavLink></li>
+            <li><NavLink to="/leaderboard">Leaderboard</NavLink></li>
+            <li><NavLink to="/premium">Premium</NavLink></li>
+          </ul>
+        </div>
+
+        {/* RESOURCES */}
+        <div className="footer_column">
+          <h3>Resources</h3>
+          <ul>
+            <li><NavLink to="/learning-paths">Learning Paths</NavLink></li>
+            <li><NavLink to="/articles">Articles</NavLink></li>
+            <li><NavLink to="/community">Community</NavLink></li>
+            <li><NavLink to="/help">Help Center</NavLink></li>
+          </ul>
+        </div>
+
+        {/* COMPANY */}
+        <div className="footer_column">
+          <h3>Company</h3>
+          <ul>
+            <li><NavLink to="/about">About</NavLink></li>
+            <li><NavLink to="/terms">Terms</NavLink></li>
+            <li><NavLink to="/privacy">Privacy</NavLink></li>
+            <li onClick={() => navigate("/support")}>Contact</li>
+          </ul>
+        </div>
+
       </div>
 
-      <div className="footer_links">
-        <h3>Quick links</h3>
-        <ul>
-          {/* 👇 Only show Dashboard if logged in */}
-          {isLoggedIn && (
-            <li>
-            <NavLink
-              to="/dashboard">
-              Dashboard
-               </NavLink>
-            </li>
-          )}
-          <li>
-            <NavLink
-              to="/challenges">Challenges
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-            to="/solutions">Solutions
-            </NavLink>
-          </li>
-          <li>
-            <NavLink 
-            to="/leaderboard">Leaderboard
-            </NavLink>
-          </li>
-        </ul>
-      </div>
+      {/* BOTTOM BAR */}
+      <div className="footer_bottom">
+        <p>© {new Date().getFullYear()} cmFrontendCode. All rights reserved.</p>
 
-      <div className="footer_links">
-        <h3>Community</h3>
-        <ul>
-          <li>
-              <NavLink to="/support">
-    <PiNewspaperClipping className='footer_icon' />
-    Support
-  </NavLink>
-          </li>
-          <li>
-            <a href="#">
-              <PiNewspaperClipping className='footer_icon' />
-              Blog
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <RiUserCommunityFill className='footer_icon' />
-              Discord
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      <div className="footer_links footer_socials_icon">
-        <h3>Follow Us</h3>
-        <ul>
-          <li>
-            <a href="#">
-              <BsTwitterX />
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <FaGithub />
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <FaLinkedin />
-            </a>
-          </li>
-        </ul>
+        <div className="footer_status">
+          <span className="status_dot"></span>
+          <span>All systems operational</span>
+        </div>
       </div>
     </footer>
   );

@@ -1,92 +1,77 @@
 import React from "react";
 import "../customCard/CustomCard.css";
 import Primary from "../buttons/Primary";
+import Btn from "../buttons/Btn";
 
-const CustomCard=( {
-    image,
-    title,
-    description,
-    languages=[],
-    buttonText="Start Challenge",
-    challengeLevel,
-    onButtonClick
-  }
+const CustomCard = ({
+  image,
+  title,
+  description,
+  languages = [],
+  buttonText = "Start Challenge",
+  challengeLevel = "Beginner",
+  isPremium = false,
+  onButtonClick
+}) => {
 
-)=> {
-
-  // 🎨 choose background color based on challengeLevel
-  const getLevelColor=()=> {
+  const getLevelColor = () => {
     switch (challengeLevel.toLowerCase()) {
       case "advanced":
-        return "#ff4d4d";
+        return "#ef4444"; // red
       case "intermediate":
-        return "#ffb84d";
+        return "#f97316"; // orange
       default:
-        return "#06923E";
+        return "#22c55e"; // green
     }
-  }
+  };
 
-  ;
+  const truncateText = (text, maxLength = 70) => {
+  if (text.length <= maxLength) return text;
 
-  return (<div className="custom_card"> <div className="custom_card_img"> <img src= {
-      image
-    }
+  const trimmed = text.slice(0, maxLength);
 
-    alt= {
-      title
-    }
+  return trimmed.slice(0, trimmed.lastIndexOf(" ")) + "...";
+};
 
-    /> {
-      challengeLevel && (<div className="challenge_level"
+  return (
+    <div className="custom_card">
 
-        style= {
-            {
-            backgroundColor: getLevelColor()
-          }
-        }
+      {/* IMAGE */}
+      <div className="custom_card_img">
+        <img src={image} alt={title} />
 
-        > {
-          challengeLevel
-        }
+        <span className={`badge ${isPremium ? "premium" : "free"}`}>
+          {isPremium ? "Premium" : "Free"}
+        </span>
+      </div>
 
-        </div>)
-    }
+      {/* CONTENT */}
+      <div className="custom_card_content">
+        <h3>{title}</h3>
+        <p>{truncateText(description, 70)}</p>
 
-    </div> <div className="custom_card_content"> <h3> {
-      title
-    }
+        {/* TAGS */}
+        <div className="custom_card_lang">
+          {languages.map((lang, index) => (
+            <span key={index} className="lang">{lang}</span>
+          ))}
+        </div>
 
-    </h3> <p> {
-      description
-    }
+        {/* FOOTER */}
+        <div className="custom_card_footer">
+          <div className="level">
+            <span
+              className="dot"
+              style={{ backgroundColor: getLevelColor() }}
+            ></span>
+            <span>{challengeLevel}</span>
+          </div>
+          <Btn text="Start Challenge" onClick={onButtonClick}/>
+        </div>
+      </div>
 
-    </p> {
-      languages.length > 0 && (<div className="custom_card_lang"> {
-          languages.map((lang, index)=> (<div key= {
-                index
-              }
-
-              className="lang"> {
-                lang
-              }
-
-              </div>))
-        }
-
-        </div>)
-    }
-
-    <div className="custom_card_btn"> <Primary type="button"onClick= {
-      onButtonClick
-    }
-
-    > {
-      buttonText
-    }
-
-    </Primary> </div> </div> </div>);
-}
-
-;
+    </div>
+  );
+};
 
 export default CustomCard;

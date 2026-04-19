@@ -1,52 +1,13 @@
 .challenges_main_wrapper {
-  text-align: center;
-  margin: 4rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: var(--section-padding);
+  text-align: center;
 }
 
-.filter_section_container {
-  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  padding: 1.5rem;
-  border-radius: 0.4rem;
- background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-}
 
-.search_bar {
-  position: relative;
-  width: fit-content;
-}
-
-.search_bar_input {
-  background-color: transparent;
-  padding: 0.7rem 1rem;
-  border-radius: 0.2rem;
-  font-weight: 400;
-  outline: none;
-  border: 1px solid rgba(146, 146, 146, 0.699);
-  padding-left: 2.7rem !important;
-  font-size: var(--toogle-btn-text-size);
-  color: var(--primary-black-color);
-  min-width: 40vw;
-}
-
-.search_bar_input::placeholder {
-  font-family: "Open Sans", sans-serif;
-  font-weight: 500;
-}
-
-.search_bar_icon {
-  position: absolute;
-  color: rgba(146, 146, 146, 0.699);
-  font-size: 1.4rem;
-  top: 0.6rem;
-  left: 0.8rem;
-}
 
 .custom_card_container_wrapper {
   display: flex;
@@ -69,7 +30,74 @@
   font-weight: bold;
   display: inline-block;
 }
+.challenges_page {
+  background: #f8fafc;
+  min-height: 100vh;
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
 
+/* HEADER */
+.challenges_header h1 {
+  font-size: var(--heading-text);
+  font-weight: 700;
+  color: var(--whitish-color);
+}
+
+.subtitle {
+  margin-top: 0.8rem;
+  font-size: 1.1rem;
+  color: var(--greyish-color);
+}
+
+.count {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  color: var(--whitish-color);
+}
+
+/* FILTER CONTAINER */
+.filter_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+   background: var(--card-background);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 1.5rem;
+  border-radius: var(--card-radius);
+  margin-top: 2rem;
+  width: 80%;
+}
+
+
+/* INPUT + SELECT SHARED STYLE */
+.filter_input,
+.filter_select {
+  width: 36%;
+}
+
+.filter_select {
+  min-width: 200px;
+}
+.filter_input,
+.filter_select {
+  padding:0.7rem 1rem;
+   background: var(--bg-black);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--card-radius);
+  color: var(--whitish-color);
+  font-size: var(--small-text-size);
+
+  outline: none;
+  transition: 0.2s ease;
+}
+
+/* FOCUS STATE */
+.filter_input:focus,
+.filter_select:focus {
+  border-color: var(--purple-color);
+  background: transparent;
+}
 
 
 
