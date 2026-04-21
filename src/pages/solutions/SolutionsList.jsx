@@ -25,7 +25,7 @@ const SolutionsList = () => {
         profileImage={IMG1}
         userName="Charles Mambo"
         points={160}
-        timeAgo="about 2 hours ago"
+        timeAgo="2hrs ago"
         likes={12}
         comments={4}
         views={45}
@@ -39,7 +39,7 @@ const SolutionsList = () => {
         profileImage={IMG2}
         userName="Charles Mambo"
         points={160}
-        timeAgo="about 2 hours ago"
+        timeAgo="2hrs ago"
         likes={22}
         comments={4}
         views={88}
@@ -53,7 +53,7 @@ const SolutionsList = () => {
         profileImage={IMG1}
         userName="Charles Mambo"
         points={160}
-        timeAgo="about 2 hours ago"
+        timeAgo="2hrs ago"
         likes={17}
         comments={4}
         views={65}
@@ -67,7 +67,7 @@ const SolutionsList = () => {
         profileImage={IMG3}
         userName="Charles Mambo"
         points={200}
-        timeAgo="about 2 hours ago"
+        timeAgo="2hrs ago"
         likes={32}
         comments={9}
         views={95}
@@ -81,7 +81,7 @@ const SolutionsList = () => {
         profileImage={IMG1}
         userName="Charles Mambo"
         points={160}
-        timeAgo="about 2 hours ago"
+        timeAgo="1d ago"
         likes={52}
         comments={9}
         views={75}
@@ -95,7 +95,7 @@ const SolutionsList = () => {
         profileImage={IMG4}
         userName="Charles Mambo"
         points={160}
-        timeAgo="about 2 hours ago"
+        timeAgo="2d ago"
         likes={82}
         comments={14}
         views={45}

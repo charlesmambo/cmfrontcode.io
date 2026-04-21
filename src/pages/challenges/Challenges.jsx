@@ -95,7 +95,7 @@ const Challenges = () => {
 
             <div className="select_wrapper">
               <select className="filter_select">
-                <option>All Difficulties</option>
+                <option>All Levels</option>
                 <option>Newbie</option>
                 <option>Intermediate</option>
                 <option>Advanced</option>
@@ -104,7 +104,7 @@ const Challenges = () => {
 
             <div className="select_wrapper">
               <select className="filter_select">
-                <option>All Technologies</option>
+                <option>All Languages</option>
                 <option>HTML</option>
                 <option>CSS</option>
                 <option>JavaScript</option>
@@ -114,7 +114,7 @@ const Challenges = () => {
 
             <div className="select_wrapper">
               <select className="filter_select">
-                <option>Sort: Newest</option>
+                <option>Newest</option>
                 <option>Oldest</option>
               </select>
             </div>

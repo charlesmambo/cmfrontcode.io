@@ -502,17 +502,17 @@
 
   /* Background */
 .start_wrapper {
-  height: 100vh;
+  height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #0b0f1a;
-  background-image: linear-gradient(
+  background: #070b14;
+  /* background-image: linear-gradient(
       rgba(255, 255, 255, 0.03) 1px,
       transparent 1px
     ),
     linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-  background-size: 40px 40px;
+  background-size: 40px 40px; */
 }
 
 /* Card */
@@ -533,7 +533,7 @@
 .start_card h1 {
   font-size: 3rem;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--primary-white-color);
   line-height: 1.2;
   margin-bottom: 20px;
 }
@@ -541,7 +541,7 @@
 /* Subtitle */
 .start_card p {
   font-size: 1.1rem;
-  color: #a0a7b8;
+  color: var(--greyish-color);
   margin-bottom: 40px;
   line-height: 1.6;
 }

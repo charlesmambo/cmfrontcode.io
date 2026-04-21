@@ -6,6 +6,8 @@ import { FiMessageCircle, FiEye } from "react-icons/fi";
 import { HiOutlineExternalLink } from "react-icons/hi";
 import { IoLogoGithub, IoMdHeart } from "react-icons/io";
 import { useNavigate } from 'react-router-dom';
+import { GoDotFill } from "react-icons/go";
+
 
 const SolutionCard = ({
   title,
@@ -36,70 +38,90 @@ const SolutionCard = ({
   };
 
   return (
-    <div className='solution_card_container' onClick={handleClick}>
-      <div className="solution_links">
-        {externalLink && (
-          <a href={externalLink} target="_blank" rel="noopener noreferrer">
-            <HiOutlineExternalLink className="solution_links_icon" />
-          </a>
-        )}
-        {githubLink && (
-          <a href={githubLink} target="_blank" rel="noopener noreferrer">
-            <IoLogoGithub className="solution_links_icon" />
-          </a>
-        )}
-      </div>
+<div className='solution_card_container'>
+  
+  {/* Links */}
+  <div className="solution_links">
+    {externalLink && (
+      <a href={externalLink} target="_blank" rel="noopener noreferrer">
+        <HiOutlineExternalLink className="solution_links_icon" />
+      </a>
+    )}
+    {githubLink && (
+      <a href={githubLink} target="_blank" rel="noopener noreferrer">
+        <IoLogoGithub className="solution_links_icon" />
+      </a>
+    )}
+  </div>
 
-      <div className="solution_card_img">
-        <img src={image} alt={title} />
-      </div>
+  {/* IMAGE WITH OVERLAY */}
+  <div className="solution_card_img">
 
-      <div className="solution_card_content">
-        <h4>{title}</h4>
+    <img src={image} alt={title} />
 
-        {/* Profile section - only show if hideUserInfo is false */}
-        {!hideUserInfo && (
-          <div className="solution_card_content_profile">
-            <div className="solution_card_content_profile_img">
-              <img src={profileImage} alt={userName} />
-            </div>
-            <div className="solution_card_content_profile_info">
-              <p className='solution_user_name'>{userName}</p>
-              <p className='solution_user_points'>
-                <span>{points} points</span>
-                <span className='solution_user_points_icon'>
-                  <LuClock /> {timeAgo}
-                </span>
-              </p>
-            </div>
-          </div>
-        )}
 
-        <div className="social_card_user_interactions">
-          <p
-            className='social_card_user_interactions_icon'
-            onClick={handleLikeToggle}
-            style={{ cursor: "pointer" }}
-          >
-            {liked ? (
-              <IoMdHeart className='social_card_user_interactions_hearticon' />
-            ) : (
-              <FaRegHeart />
-            )}
-            <span>{likeCount}</span>
-          </p>
+    {/* hover overlay */}
+    <div className="solution_card_overlay">
+      <button className="view_solution_btn" onClick={handleClick}>
+        View Solution
+      </button>
+    </div>
 
-          <p className='social_card_user_interactions_icon'>
-            <FiMessageCircle />
-            <span>{comments}</span>
-          </p>
-          <p className='social_card_user_interactions_icon'>
-            <FiEye />
-            <span>{views}</span>
-          </p>
+  </div>
+
+  {/* CONTENT */}
+  <div className="solution_card_content">
+    <h4>{title}</h4>
+
+    {!hideUserInfo && (
+      <div className="sc">
+      <div className="solution_card_content_profile">
+        <div className="solution_card_content_wrapper">
+          <div className="solution_card_content_profile_wrapper">
+        <div className="solution_card_content_profile_img">
+          <img src={profileImage} alt={userName} />
+        </div>
+        <div className="solution_card_content_profile_info">
+          <p className='solution_user_name'>{userName}</p>
+        </div>
+        </div>
+        </div>
+        <div className="solution_card_content_level_tag">
+          <GoDotFill className='solution_card_content_level_tag_icon'/>
+          Beginner
         </div>
       </div>
+      <div className="sc_lang">
+         <span>html</span>
+         <span>css</span>
+         <span>javascript</span>
+      </div>
+      </div>
+    )}
+
+    <div className="social_card_user_interactions">
+      <div className='social_card_user_interactions_content'>
+      <p onClick={handleLikeToggle}>
+        {liked ? <IoMdHeart /> : <FaRegHeart />}
+        <span>{likeCount}</span>
+      </p>
+
+            <p>
+        <FiEye />
+        <span>{views}</span>
+      </p>
+
+      <p>
+        <FiMessageCircle />
+        <span>{comments}</span>
+      </p>
+      </div>
+            <span>
+               {timeAgo}
+            </span>
     </div>
+  </div>
+</div>
   );
 };
 
