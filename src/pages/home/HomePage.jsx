@@ -36,7 +36,7 @@ const HomePage = () => {
     <div className="home_container">
 <div className="hero_section">
   <div className="hero_left">   
-    <span className="version"><GoDotFill className='version_icon' /> V2.0 IS LIVE</span>
+    <span className="version"><GoDotFill className='version_icon' /> V1.0 IS LIVE</span>
     <h1>
       Master <span>Frontend</span><br />
       Development with

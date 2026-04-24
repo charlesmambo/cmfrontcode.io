@@ -111,3 +111,11 @@
   color: #f472b6;
 }
 .join_community_card--pink a { color: #f472b6; }
+
+@media (min-width: 1554px){
+ .join_community {
+  padding: var( --desktop-section-padding);
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+} 
+}

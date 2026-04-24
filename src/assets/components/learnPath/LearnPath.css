@@ -130,3 +130,9 @@
 .learn_card button:hover {
   background: var(--purple-bg);
 }
+@media (min-width: 1554px){
+ .learning {
+  padding: var(--desktop-section-padding);
+}
+ 
+}

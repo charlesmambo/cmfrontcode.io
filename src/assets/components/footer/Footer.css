@@ -18,8 +18,8 @@
 }
 
 .footer_container {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  display: flex;
+  justify-content: space-between;
   gap: 3rem;
   position: relative;
   z-index: 2;
@@ -125,4 +125,10 @@
     gap: 1rem;
     align-items: flex-start;
   }
+}
+
+@media (min-width: 1554px){
+ .footer {
+  padding: var(--desktop-section-padding);
+} 
 }

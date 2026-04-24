@@ -81,3 +81,16 @@
 .faq_content_item.active .faq_content_answer {
   max-height: 200px;
 }
+@media (min-width: 1554px){
+ .faq_container {
+  padding: var(--desktop-section-padding);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+} 
+
+/* Item */
+.faq_content_wrapper{
+  position: relative;
+  max-width: 1100px;
+}
+}

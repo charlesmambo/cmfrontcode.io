@@ -135,3 +135,13 @@ color: var(--whitish-color);
   font-size: var(--small-text-size);
   color: var(--greyish-color);
 }
+@media (min-width: 1554px){
+ .premium_ad_container {
+  padding: var(--desktop-section-padding);
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+} 
+.premium_ad_card {
+  width: 59vw;;
+}
+}

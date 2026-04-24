@@ -144,3 +144,10 @@ font-size: var(--small-text-size);
     font-size: var(--small-text-size);
     margin-top: 0.5rem;
 }
+@media (min-width: 1554px){
+ .code_review_ad {
+  padding: var(--desktop-section-padding);
+  padding-top: 0rem;
+  padding-bottom: 4rem;
+} 
+}
