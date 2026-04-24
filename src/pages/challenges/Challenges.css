@@ -84,7 +84,7 @@
   padding:0.7rem 1rem;
    background: var(--bg-black);
   border: 1px solid rgba(255,255,255,0.08);
-  border-radius: var(--card-radius);
+  border-radius: 0.5rem;
   color: var(--whitish-color);
   font-size: var(--small-text-size);
 
@@ -119,5 +119,15 @@
 }
 .search_bar_input {
   min-width: 56vw;
+}
+.filter_container {
+  width: 96%;
+}
+.filter_input,
+.filter_select {
+  width: 49%;
+}
+.filter_select {
+  min-width: 240px;
 }
 }

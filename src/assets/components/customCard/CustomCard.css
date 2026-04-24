@@ -373,7 +373,7 @@ flex-direction: column;
 
 @media only screen and (min-width: 1544px) {
     .custom_card {
-        width: 390px;
+        width: 384px;
     }
     .dashboard_custom_card {
     width: 258px;

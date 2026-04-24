@@ -229,8 +229,8 @@
    border-radius: 2rem;
 }
 .sc_lang span:nth-child(1) {
-  background: #adb0b5a3;
-  color: var(--dark-greyish-color); 
+  background: #06923e3d;
+  color: #06923E; 
 }
 
 .sc_lang span:nth-child(2) {

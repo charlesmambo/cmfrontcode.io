@@ -22,9 +22,14 @@
 display: flex;
 align-items: center;
 gap: 0.5rem;
+color: var(--whitish-color);
+font-size: 1.4rem;
+}
+.all_solution_content_container_title p{
+color: var(--greyish-color);
 }
 .users{
-    color: var(--primary-color);
+    color: var(--whitish-color);
 }
 .solution_search_bar{
     margin-bottom: 2rem;
