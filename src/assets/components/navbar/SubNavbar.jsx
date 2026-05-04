@@ -98,10 +98,10 @@ return (
         <div className="nav_icons">
           <div className="notify_wrapper" ref={notificationRef}>
             <MdOutlineNotifications
-              className="icon"
+              className="notify_icon"
               onClick={() => setShowNotifications(prev => !prev)}
             />
-            <span className="badge">3</span>
+            <span className="notify_badge">3</span>
 
             {showNotifications && (
               <div className="notification_dropdown">
@@ -112,7 +112,7 @@ return (
 
           <div className="profile_wrapper" ref={dropdownRef}>
             <CgProfile
-              className="icon"
+              className="profile_icon"
               onClick={handleProfileClick}
             />
 

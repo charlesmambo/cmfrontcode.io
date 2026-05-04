@@ -93,8 +93,13 @@
   gap: 20px;
 }
 
-.icon {
-  font-size: 20px;
+.profile_icon{
+  font-size: 2rem;
+  color: var(--greyish-color);
+  cursor: pointer;
+}
+.notify_icon{
+  font-size: 1.4rem;
   color: var(--greyish-color);
   cursor: pointer;
 }
@@ -108,7 +113,7 @@
   position: relative;
 }
 
-.badge {
+.notify_badge{
   position: absolute;
   top: -6px;
   right: -6px;
@@ -130,14 +135,16 @@
 }
 
 .dropdown {
-  position: absolute;
+  position: absolute !important;
   top: 40px;
   right: 0;
-  background: #111827;
+  background: var(--bg-black);
   padding: 12px;
   border-radius: 8px;
   width: 180px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  border: 2px solid var( --card-background);
+  z-index: 100;
 }
 
 .dropdown .user {
@@ -174,9 +181,6 @@
 
 
 @media (min-width: 1554px) {
- body{
-    background-color: red !important;
-  } 
   .navbar {
   padding: var( --desktop-navbar-padding);
 }

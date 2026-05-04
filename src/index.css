@@ -140,6 +140,7 @@ h4 {
   --purple-bg: linear-gradient(135deg, #7c3aed, #a855f7);
   --purple-text-bg:linear-gradient(90deg, #7c3aed, #3b82f6);
   --card-background:rgba(255, 255, 255, 0.03);
+  --card-border-color:rgba(255,255,255,0.08);
 
   --purple-color:#a855f7;
   --purple-color-op:rgba(168,85,247,0.2);

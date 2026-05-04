@@ -1,11 +1,10 @@
 .custom_card {
   width: 350px;
-    background: var(--card-background);
-  border: 1px solid rgba(255,255,255,0.08);
+  background: var(--card-background);
+  border: 1px solid var(--card-border-color);
   border-radius: var(--card-radius);
   overflow: hidden;
   box-shadow: 0 10px 25px rgba(0,0,0,0.06);
-
   transition: all 0.3s ease;
 }
 
@@ -309,10 +308,12 @@
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px; 
   border-radius: var(--card-border-radius); 
   padding: var(--card-padding);
-  background-color: var(--toggle-bg);
+  background: var(--bg-black);
   width: 290px;
   z-index: 2000;  
   position: relative;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  border: 2px solid var( --card-background);
 }
 .notification_card h4{
  font-weight: 600;
@@ -320,6 +321,7 @@
  margin-bottom: 0.5rem;
  border-bottom: 1px solid var(--card-divider);
  padding-bottom: 1rem;
+ color: var(--whitish-color);
 }
 .notification_content{
     padding-top: 1rem;
@@ -348,7 +350,7 @@ font-size: 0.85rem;
 margin-top: 0.3rem;
 display: flex;
 line-height: 19px;
-color: var(--dim-dark-grey-color);
+color: var(--greyish-color);
 padding-left: 1.2rem;
 padding-right: 1rem;
 }

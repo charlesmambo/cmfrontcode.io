@@ -6,15 +6,19 @@ width: var(--container-width);
 margin: 4rem auto;
 }
 .top_deck{
-  background-image: linear-gradient(to top, #f3e7e973 0%, #e3eeff 99%, #e3eeff 100%);
+  background: var(--card-background);
+  border: 1px solid var(--card-border-color);
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
   padding: 1.4rem;
   border-radius: 0.5rem;
   width: 100%;
- border: 2px solid #d9d9d986;
  display: flex;
  align-items: center;
  gap: 1.4rem;
  position: relative;
+ box-sizing: border-box;
 }
 .profile_img_container{
     width: 110px;
@@ -79,6 +83,13 @@ background-color: var(--danger-color);
     display: flex;
     flex-direction: column;
     gap: 0.6rem;
+    color: var(--greyish-color);
+}
+.top_deck_content h4{
+   color: var(--primary-white-color);
+}
+.top_deck_content p{
+   color: var(--greyish-color);
 }
 .top_deck_location,
 .top_deck_plan{
@@ -104,29 +115,34 @@ background-color: var(--danger-color);
 }
 
 .profile_social_links {
-  border: 2px dashed #d9d9d9;
+  border: 2px dashed var(--card-border-color);
   padding: 1.4rem;
   border-radius: 0.5rem;
   width: 100%;
+  box-sizing: border-box;
 }
 .profile_social_links legend{
  font-weight: 600;
+ color: var(--primary-white-color);
 }
 
 .profile_social_links_content{
     display: flex;
     align-items: center;
     gap: 1.3rem;
+    flex-wrap: wrap;
+    box-sizing: border-box;
 }
 .profile_social_links_content p{
     display: flex;
     align-items: center;
     gap: 0.8rem;
-    border: 2px solid #d6d6d6;
+    border: 2px solid var(--card-border-color);
     padding: 0.5rem 0.6rem;
     border-radius: 0.2rem;
    transition: border-color 0.6s ease, color 0.6s ease;
    cursor: pointer;
+   color: var(--greyish-color);
 }
 .profile_skills_links_content{
     display: flex;
@@ -137,13 +153,14 @@ background-color: var(--danger-color);
     display: flex;
     align-items: center;
     gap: 0.3rem;
-    border: 2px solid #d6d6d677;
+    border: 2px solid var(--card-border-color);
     padding: 0.5rem 0.6rem;
     border-radius: 0.2rem;
    transition: border-color 0.6s ease, color 0.6s ease;
    cursor: pointer;
    width: fit-content;
-   background-image: linear-gradient(to top, #f3e7e98a 0%, #d8e4f7 99%, #e3eeff 100%);
+   background: var(--card-background);
+   color: var(--greyish-color);
 }
 .skills_close_icon:hover{
     color: var(--danger-color);
@@ -170,10 +187,12 @@ font-size: 0.9rem;
 display: flex;
 align-items: center;
 gap: 0.6rem;
+color: var(--greyish-color);
 }
 .premium_membership_content p{
  font-weight: 500;
  font-size: 0.95rem;
+ color: var(--primary-white-color);
 }
 .premium_icon{
     color: var(--primary-color);

@@ -10,6 +10,7 @@ import Primary from '../buttons/Primary';
 import { FaRegEye } from "react-icons/fa6";
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Btn from '../buttons/Btn';
 
 const SignUp = ({ onSwitchToLogin }) => {
   // Form state
@@ -25,50 +26,6 @@ const SignUp = ({ onSwitchToLogin }) => {
   // Password toggle functions
   const togglePassword = () => setShowPassword(prev => !prev);
   const toggleConfirm = () => setShowConfirm(prev => !prev);
-
-  // Code bubble effect (optional)
-  const codeSnippets = [
-    '{ }', '< >', '[ ]', '( )', '&&', '||', '===', '!==', 
-    'JS', 'CSS', 'HTML', 'React', 'Bootstrap', 'Tailwind',
-    'if', 'else', 'for', 'while', 'try', 'catch',
-    '→', '←', '↑', '↓', '⚡', '⭐', '🚀', '💻',
-    'API', 'JSON', 'HTTP', 'DOM', 'UI', 'UX',
-    'git', 'npm', 'dev', 'prod', 'build'
-  ];
-
-  useEffect(() => {
-    function createBubble() {
-      const bubble = document.createElement('div');
-      bubble.className = 'bubble';
-      const size = Math.random() * 100 + 60;
-      bubble.style.width = size + 'px';
-      bubble.style.height = size + 'px';
-      bubble.style.left = Math.random() * 100 + '%';
-      bubble.style.animationDuration = Math.random() * 10 + 15 + 's';
-      bubble.style.animationDelay = Math.random() * 5 + 's';
-      const snippet = codeSnippets[Math.floor(Math.random() * codeSnippets.length)];
-      bubble.textContent = snippet;
-      bubble.style.fontSize = Math.max(8, Math.min(16, size / snippet.length * 2)) + 'px';
-      return bubble;
-    }
-
-    const container = document.getElementById('codingBubbles');
-    if (!container) return;
-
-    // Initial bubbles
-    for (let i = 0; i < 15; i++) {
-      container.appendChild(createBubble());
-    }
-
-    // Continuous bubbles
-    const bubbleInterval = setInterval(() => {
-      const bubble = createBubble();
-      container.appendChild(bubble);
-      setTimeout(() => bubble.remove(), 25000);
-    }, 2000);
-
-    return () => clearInterval(bubbleInterval);
-  }, []);
 
   // Form validation
   const validateForm = () => {
@@ -97,7 +54,6 @@ const SignUp = ({ onSwitchToLogin }) => {
   return (
     <div className="login-form-main">
       <div className="side-form-container">
-        <div className="coding-bubbles" id="codingBubbles"></div>
         <h2>
           Start your <span className="side-form-styled-text">creative coding journey</span> today
         </h2>
@@ -170,7 +126,7 @@ const SignUp = ({ onSwitchToLogin }) => {
           </div>
 
           <div className="login-form-submit-btn">
-            <Primary type="submit">Create Account</Primary>
+            <Btn text="Create Account" type="submit"/>
           </div>
 
           <div className="other-login-option">

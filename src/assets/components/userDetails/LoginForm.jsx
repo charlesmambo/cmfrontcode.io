@@ -13,6 +13,7 @@ import { useAuth } from '../auth/AuthContext';
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { FaRegEye } from "react-icons/fa6";
+import Btn from '../buttons/Btn';
 
 const LoginForm = ({ onSwitchToSignUp }) => {
   const [showLoginPassword, setShowLoginPassword] = useState(false);
@@ -126,7 +127,7 @@ const LoginForm = ({ onSwitchToSignUp }) => {
 
           {/* Submit */}
           <div className="login-form-submit-btn">
-            <Primary type="submit">Sign In</Primary>
+            <Btn text="Sign In" type="submit"/>
           </div>
 
           {/* Other login options */}

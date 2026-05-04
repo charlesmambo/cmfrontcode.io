@@ -17,6 +17,7 @@ import Primary from '../../assets/components/buttons/Primary';
 import CancelBtn from '../../assets/components/buttons/CancelBtn';
 import SaveBtn from '../../assets/components/buttons/SaveBtn';
 import EditBtn from '../../assets/components/buttons/EditBtn';
+import Btn from '../../assets/components/buttons/Btn';
 
 const Profile = () => {
   const navigate = useNavigate();
@@ -228,10 +229,7 @@ const Profile = () => {
               Courses and documents
             </li>
           </ul>
-
-          <Primary type="button" onClick={handleUpgradeClick}>
-            Upgrade to Premium
-          </Primary>
+          <Btn text='Upgrade to Premium' type='submit' onClick={handleUpgradeClick}/>
 
         </div>
       </fieldset>
