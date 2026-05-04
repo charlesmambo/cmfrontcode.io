@@ -2,12 +2,15 @@
 display: flex;
 flex-direction: column;
 gap: 1.7rem !important;
-width: var(--container-width);
-margin: 4rem auto;
+padding: var( --desktop-section-padding);
 }
 
 .account{
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+      background: var(--card-background);
+  border: 1px solid var(--card-border-color);
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
     border-radius: var(--card-border-radius);
     padding: var(--card-padding);
     display: flex;
@@ -23,20 +26,26 @@ gap: var(--xsm-gap);
 .account_content label{
 font-weight: 500;
 font-size: var(--sm-text-size);
+color: var(--greyish-color);
 }
 .account_content input{
     padding: var(--input-padding);
     border-radius: var(--input-border-radius);
-    border: 1px solid var(--disabled-input-border-color);
+    border: 1px solid var(--card-border-color);
+    background-color: transparent;
+    color: var(--greyish-color) !important;
 }
-
+::placeholder{
+    color: var(--greyish-color) !important;
+}
 .settings_title h2{
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    color: var(--whitish-color);
 }
 .settings_title p{
-    color: var(--dark-grey-color);
+    color: var(--greyish-color);
     font-size: var(--sm-text-size);
 }
 .settings_icon{
@@ -56,9 +65,12 @@ font-size: var(--sm-text-size);
     padding: var(--icon-padding);
     border-radius: var(--border-radius);
 }
+.account_title_content h4{
+    color: var(--whitish-color);
+}
 .account_title_content p{
     font-size: var(--sm-text-size);
-    color: var(--dark-grey-color);
+    color: var(--greyish-color);
 }
 .account_password_input_container{
     display: flex;
@@ -97,7 +109,7 @@ font-size: var(--sm-text-size);
 }
 
 .account_border{
-    border-top: 2px solid var(--card-divider);
+    border-top: 2px solid var(--card-border-color);;
     padding-top: 1.2rem;
 }
 .p_icon{
@@ -129,13 +141,14 @@ font-size: var(--sm-text-size);
     display: flex;
     align-items: center;
     gap: 0.3rem;
+    color: var(--greyish-color);
 }
 .toggle_icon{
     font-size: 2rem;
     cursor: pointer;
 }
 .toggle_outline{
-    color: var(--dim-dark-grey-color);
+    color: var(--greyish-color);
 }
 .toggle_solid{
     color: var(--primary-color);

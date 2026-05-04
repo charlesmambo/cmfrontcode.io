@@ -12,6 +12,7 @@ import { LiaToggleOnSolid } from "react-icons/lia";
 import { MdOutlineNotificationsActive } from "react-icons/md";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { MdOutlineDeleteSweep } from "react-icons/md";
+import Btn from '../../assets/components/buttons/Btn';
 
 
 const Settings = () => {
@@ -48,7 +49,7 @@ const [showPassword, setShowPassword] = useState(false);
            <label>Password</label>
            <div className="account_password_input_container">
             <input  placeholder='********' className='account_password_input' disabled  type={showPassword ? "text" : "password"} />
-             <Primary>Change</Primary>
+             <Btn text='Change' type='submit'/>
               {showPassword ? (
                 <FiEye
                   className='p_icon open_eye_icon'
