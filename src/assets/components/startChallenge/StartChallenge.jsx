@@ -63,150 +63,126 @@ const StartChallenge = ({ steps = [], challenge = {}, resources = [], stats = []
     setShowSubmit(true);
   };
 
-  return (
-    <div className="start_challenge_wrapper">
-      {/* Back Button */}
-      <div className="challenge-steps">
-        <div className="">
-          <BackBtn onClick={onBack}/>
-        </div>
-        
+return (
+  <div className="challenge_page">
 
-        {/* Steps */}
-        <div className="start_challenge_steps">
-          {steps.map((step, i) => (
-            <StepCard key={i} {...step} />
-          ))}
-        </div>
+    {/* HEADER */}
+    <div className="challenge_header">
+      <BackBtn onClick={onBack} />
+      <h2>{challenge.title}</h2>
+      <div className="challenge_badges">
+        <span className="badge green">{challenge.level}</span>
+        <span className="badge outline">FREE</span>
       </div>
-
-      {/* Main Content */}
-      <div className="start_challenge_content_wrapper">
-        <div className="start_challenge_content">
-          {/* Challenge Info */}
-          <div className="start_challenge_content_card">
-            <div className="start_challenge_content_card_headings">
-              <div className="start_challenge_content_card_headings_info">
-                <div
-                  className={`start_challenge_content_card_headings_level ${getLevelColor(
-                    challenge.level
-                  )}`}
-                >
-                  {challenge.level}
-                </div>
-              </div>
-              <div className="start_challenge_content_card_headings_offer">
-                {challenge.price}
-              </div>
-            </div>
-
-            <div className="start_challenge_content_details">
-              <h3>{challenge.title}</h3>
-              <p>{challenge.description}</p>
-            </div>
-            <p className="start_challenge_content_card_headings_lang">
-              {challenge.language}
-            </p>
-            <Primary type="submit" className="start_challenge">
-              Download Assets
-            </Primary>
-          </div>
-
-          {/* Resources */}
-          <div className="start_challenge_content_card start_challenge_content_card_resources">
-            <h3>Actions</h3>
-            <div className="start_challenge_content_resources_wrapper tw">
-              {resources.map((res, i) => (
-                <ResourceCard key={i} {...res} />
-              ))}
-            </div>
-            <Primary type="button" className="start_challenge" onClick={handleSubmitClick}>
-              Submit Solution
-            </Primary>
-          </div>
-
-          {/* Challenge Stats */}
-          <div className="start_challenge_content_card start_challenge_content_card_resources">
-            <h3>Challenge Stats</h3>
-            <div className="start_challenge_content_resources_wrapper">
-              {stats.map((stat, i) => (
-                <StatCard key={i} {...stat} />
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Design & Stats */}
-        <div className="start_challenge_design_review_wrapper">
-          <div className="start_challenge_design_review start_challenge_content_card">
-            <h3>Design Preview</h3>
-            <div className="start_challenge_design_review_card"></div>
-            <div className="start_challenge_design_review_toggles">
-              <div className="design_review_toggle_btn">
-                <AiOutlineDesktop />
-                Desktop Design
-              </div>
-              <div className="design_review_toggle_btn design_review_toggle_outline">
-                <HiOutlineDevicePhoneMobile />
-                Mobile Design
-              </div>
-              <div className="design_review_toggle_btn design_review_toggle_outline">
-                <PiCursor />
-                Active Design
-              </div>
-            </div>
-          </div>
-
-          <div className="start_challenge_content_card rs_card">
-            <h3>Requirements</h3>
-            <ul className="rs_list_items">
-              <li>
-                <GoDotFill className="rs_list_items_icon" />
-                Responsive design that works on mobile, tablet, and desktop
-              </li>
-              <li>
-                <GoDotFill className="rs_list_items_icon" />
-                Product image with zoom functionality on hover
-              </li>
-              <li>
-                <GoDotFill className="rs_list_items_icon" />
-                Price display with discount calculations
-              </li>
-              <li>
-                <GoDotFill className="rs_list_items_icon" />
-                Add to cart button with loading state
-              </li>
-            </ul>
-          </div>
-
-          <div className="start_challenge_content_card rs_card">
-            <h3>Submission Guidelines</h3>
-            <ul className="rs_list_items">
-              <li>
-                <GoDotFill className="rs_list_items_icon" />
-                Upload your completed code as a zip file or provide a GitHub repository link
-              </li>
-              <li>
-                <GoDotFill className="rs_list_items_icon" />
-                Include a README.md with setup instructions and demo screenshots
-              </li>
-              <li>
-                <GoDotFill className="rs_list_items_icon" />
-                Ensure your code is well-commented and follows best practices
-              </li>
-              <li>
-                <GoDotFill className="rs_list_items_icon" />
-                Submissions will be reviewed by peers and scored based on code quality, design accuracy, and functionality
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      {/* Conditionally render SubmitChallenge */}
-      {showSubmit && <SubmitChallenge onClose={() => setShowSubmit(false)} />}
     </div>
-  );
-};
+
+    <div className="challenge_layout">
+
+      {/* LEFT CONTENT */}
+      <div className="challenge_main">
+
+        {/* OVERVIEW */}
+        <div className="card">
+          <h3>Challenge Overview</h3>
+          <p>{challenge.description}</p>
+
+          <div className="tech_stack">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JS (Optional)</span>
+          </div>
+        </div>
+
+        {/* REQUIREMENTS */}
+        <div className="card">
+          <h3>Project Requirements</h3>
+
+          <div className="requirement_item">
+            <h4>Responsive Layout</h4>
+            <p>View optimal layout across devices</p>
+          </div>
+
+          <div className="requirement_item">
+            <h4>Interactive Elements</h4>
+            <p>Hover states for all buttons</p>
+          </div>
+
+          <div className="requirement_item">
+            <h4>Asset Integration</h4>
+            <p>Use provided SVGs correctly</p>
+          </div>
+        </div>
+
+        {/* SUBMISSION */}
+        <div className="card">
+          <h3>Submission Guidelines</h3>
+
+          <div className="accordion active">
+            <p>1. Set up your workspace</p>
+          </div>
+
+          <div className="accordion open">
+            <p>2. Write your code</p>
+            <span>
+              Structure HTML semantically, then style with CSS variables.
+            </span>
+          </div>
+
+          <div className="accordion">
+            <p>3. Submit your solution</p>
+          </div>
+        </div>
+
+      </div>
+
+      {/* RIGHT SIDEBAR */}
+      <div className="challenge_sidebar">
+
+        {/* PREVIEW */}
+        <div className="card preview">
+          <div className="tabs">
+            <span className="active">Desktop</span>
+            <span>Mobile</span>
+            <span>Active</span>
+          </div>
+
+          <div className="preview_box"></div>
+
+          <button className="primary_btn">Start Challenge</button>
+
+          <div className="actions">
+            <button>Download Assets</button>
+            <button onClick={handleSubmitClick}>Submit Solution</button>
+          </div>
+        </div>
+
+        {/* STATS */}
+        <div className="card stats">
+          <h4>Challenge Stats</h4>
+
+          <div className="stat">
+            <span>Participants</span>
+            <strong>15,420</strong>
+          </div>
+
+          <div className="stat">
+            <span>Completed</span>
+            <strong>11,256</strong>
+          </div>
+
+          <div className="progress">
+            <div className="bar"></div>
+          </div>
+
+          <small>73% completion rate</small>
+        </div>
+
+      </div>
+    </div>
+
+    {showSubmit && <SubmitChallenge onClose={() => setShowSubmit(false)} />}
+  </div>
+);
+}
 
 export default StartChallenge;
